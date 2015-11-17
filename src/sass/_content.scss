@@ -1,0 +1,73 @@
+// Pricing table
+
+.pricingTable {
+  margin-bottom: 25px;
+  color: $darkBlue;
+  h2 {
+    margin-bottom: 30px;
+  }
+  .panel {
+    border-color: $darkBlue;
+    span {
+      color: $highlightDarker;
+    }
+  }
+  .panel-heading {
+    background-color: $darkBlue;
+    border-color: $darkBlue;
+  }
+  .lead {
+    p {
+      margin-bottom: 0;
+    }
+    strong {
+      font-size: 250%;
+      font-weight: 300;
+    }
+  }
+}
+
+
+small {
+  a {
+    text-decoration: underline;
+  }
+}
+
+
+
+// News page (Blog listing)
+.post-preview {
+  a {
+    &:hover,
+    &:active,
+    &:focus {
+      text-decoration: none;
+      .post-title {
+        text-decoration: underline;
+        color: $highlightDarker
+      }
+    }
+    .post-subtitle {
+      color: $darkGrey;
+    }
+  }
+  .post-meta {
+    color: $lightGreyText;
+  }
+}
+
+
+
+.text-content {
+  margin: 25px 0;
+  h3 {
+    margin: 1.5em 0 1em 0;
+  }
+  a {
+    text-decoration: underline;
+  }
+  a.btn {
+    text-decoration: none;
+  }
+}

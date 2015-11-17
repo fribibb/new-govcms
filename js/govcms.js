@@ -1,0 +1,1 @@
+$(document).ready(function(){$(".drupal-version-list").toggleClass("sr-only"),$(".drupal-version-checkbox").change(function(){$(".drupal-version-list").toggleClass("sr-only")}),$(".site-info-add").click(function(){var e=$(".site-info")[0].outerHTML,n=$(".site-info").length,i=n+1;return e=e.replace(/1\"/g,i+'"'),$(".site-info").last().after(e),!1})});

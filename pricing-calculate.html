@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-AU">
+<head>
+		<meta charset="utf-8">
+		<link rel="preload" 		href="img/crest.svg" as="image">
+		<link rel="preload" 		href="img/govcms.svg" as="image">
+		<link rel="preload" 		href="css/styles.css" as="style">
+		<link rel="preconnect"  href="https://fonts.googleapis.com/" crossorigin>
+		<link rel="preconnect"  href="https://cdnjs.cloudflare.com/" crossorigin>
+		<link rel="prefetch" 		href="./signup.html">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>govCMS - Pricing Calculator</title>
+    <meta name="author" content="govCMS">
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+		<link href="css/styles.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,400italic" rel="stylesheet" type="text/css">
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+		<link rel="mask-icon" href="favicons/outline.svg" color="#71C39E">
+		<link rel="icon" sizes="16x16 32x32 48x48 64x64" href="favicon.ico"/>
+		<!--[if IE]>
+			<link rel="shortcut icon" href="favicon.ico"/>
+		<![endif]-->
+		<link rel="apple-touch-icon-precomposed" href="favicons/favicon-152.png"/>
+		<meta name="msapplication-TileColor" content="#FFFFFF"/>
+		<meta name="msapplication-TileImage" content="favicons/favicon-144.png"/>
+		<link rel="apple-touch-icon-precomposed" sizes="152x152" href="favicons/favicon-152.png"/>
+		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="favicons/favicon-144.png"/>
+		<link rel="apple-touch-icon-precomposed" sizes="120x120" href="favicons/favicon-120.png"/>
+		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="favicons/favicon-114.png"/>
+		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="favicons/favicon-72.png"/>
+		<link rel="apple-touch-icon-precomposed" href="favicons/favicon-57.png"/>
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+</head>
+<body>
+		<section id="top-and-first-wrapper">
+			<header id="top">
+	      <div class="container">
+	          <div class="row">
+	              <div class="col-md-4 logos">
+	                <a href="./homepage-2.html">
+	          				<div class="coa-stacked">
+	                    <div class="coa-coa">
+	                      <span class="crest"></span>
+											</div>
+												<!--[if lte IE 7]>
+													<style>.coa-titles { display: block; }</style>
+												<![endif]-->
+	                      <div class="coa-titles-stacked">
+	                        <div class="coa-titles">
+	                          <span class="coa-line-one coa-lines-1">Australian Government</span>
+	                      </div>
+	                    </div>
+	                  </div>
+	                  <img src="img/govcms.svg" class="logo" alt="govCMS" width="74" height="74">
+	                </a>
+	              </div>
+	              <div class="col-md-8">
+									<ul class="nav nav-pills pull-right">
+										<li><a href="./homepage-2.html">Home</a></li>
+										<li class="active"><a href="./pricing.html">Pricing</a></li>
+										<li><a href="./news.html">News</a></li>
+										<li><a href="./support.html">Support</a></li>
+										<li><a href="./about.html">About</a></li>
+									</ul>
+	              </div>
+	          </div>
+	      </div>
+			</header>
+
+			<section id="about" class="about">
+					<div class="container">
+							<div class="row">
+									<div class="col-md-12 text-center">
+									<!-- <div class="col-md-6 col-md-offset-3 text-center"> -->
+											<!-- <h2>Content management and website hosting service for Australian Government agencies.</h2> -->
+											<h2>Pricing Calculator</h2>
+	                </div>
+	                <div class="col-md-10 col-md-offset-1">
+	                    <p class="lead">
+	                      These plans are designed to allow agencies the freedom to migrate one or multiple websites to the govCMS platform. The total usage of all the websites determine which is the most suitable plan for you.
+	                    </p>
+	                    <small>
+	                      <strong>Note: </strong>All hosting includes <a href="/product-services/govcms-support">govCMS&nbsp;support</a> as defined from the <a href="/about/news/product-and-services-guide">Product and Service Guide</a>.
+	                    </small>
+									</div>
+							</div>
+					</div>
+			</section>
+		</section>
+
+<!-- go for something like this: http://codepen.io/vivek-kumar/full/KoLwz/ -->
+
+
+		<section class="pricingTable">
+				<div class="container">
+						<div class="row text-center">
+								<h2>Which plan&apos;s right for you?</h2>
+								<div class="container">
+							    <div class="row">
+
+							        <div class="col-md-3">
+							            <div class="panel panel-primary">
+							                <div class="panel-heading">
+							                    <h4 class="text-center">Micro</h4>
+							                </div>
+							                <div class="panel-body text-center">
+							                    <p class="lead">
+							                        $<strong>10,500</strong> <br>/ year
+							                    </p>
+							                </div>
+							                <ul class="list-group list-group-flush text-center">
+							                    <li class="list-group-item">
+							                        <strong>15,000</strong> page views / month
+							                        <!-- <span class="glyphicon glyphicon-ok pull-right"></span> -->
+							                    </li>
+							                    <li class="list-group-item">
+							                        <span>(Optional)</span><br>
+																			$3,000 / year per additional sites<br>
+																			capped at $9,000
+							                    </li>
+							                </ul>
+							                <div class="panel-footer">
+							                    <a class="btn btn-lg btn-block btn-primary">Sign up</a>
+							                </div>
+							            </div>
+							        </div>
+
+							        <div class="col-md-3">
+							            <div class="panel panel-primary">
+							                <div class="panel-heading">
+							                    <h4 class="text-center">Small</h4>
+							                </div>
+							                <div class="panel-body text-center">
+							                    <p class="lead">
+							                        $<strong>26,000</strong> <br>/ year
+							                    </p>
+							                </div>
+							                <ul class="list-group list-group-flush text-center">
+							                    <li class="list-group-item">
+							                        <strong>125,000</strong> page views / month
+							                    </li>
+							                    <li class="list-group-item">
+							                        <span>(Optional)</span><br>
+																			$6,000 / year per additional sites<br>
+																			capped at $18,000
+							                    </li>
+							                </ul>
+							                <div class="panel-footer">
+							                    <a class="btn btn-lg btn-block btn-primary">Sign up</a>
+							                </div>
+							            </div>
+							        </div>
+
+							        <div class="col-md-3">
+							            <div class="panel panel-primary">
+							                <div class="panel-heading">
+							                    <h4 class="text-center">Medium</h4>
+							                </div>
+							                <div class="panel-body text-center">
+							                    <p class="lead">
+							                        $<strong>56,000</strong> <br>/ year
+							                    </p>
+							                </div>
+							                <ul class="list-group list-group-flush text-center">
+							                    <li class="list-group-item">
+							                        <strong>600,000</strong> page views / month
+							                    </li>
+							                    <li class="list-group-item">
+							                        <span>(Optional)</span><br>
+																			$6,000 / year per additional sites<br>
+																			capped at $30,000
+							                    </li>
+							                </ul>
+							                <div class="panel-footer">
+							                    <a class="btn btn-lg btn-block btn-primary">Sign up</a>
+							                </div>
+							            </div>
+							        </div>
+
+							        <div class="col-md-3">
+							            <div class="panel panel-primary">
+							                <div class="panel-heading">
+							                    <h4 class="text-center">Large</h4>
+							                </div>
+							                <div class="panel-body text-center">
+							                    <p class="lead">
+							                        $<strong>125,000</strong> <br>/ year
+							                    </p>
+							                </div>
+							                <ul class="list-group list-group-flush text-center">
+							                    <li class="list-group-item">
+							                        <strong>2,000,000</strong> page views / month
+							                    </li>
+							                    <li class="list-group-item">
+							                        <span>(Optional)</span><br>
+																			$15,000 / year per additional sites<br>
+																			capped at $75,000
+							                    </li>
+							                </ul>
+							                <div class="panel-footer">
+							                    <a class="btn btn-lg btn-block btn-primary">Sign up</a>
+							                </div>
+							            </div>
+							        </div>
+
+											<h4 class="lead text-center">
+												<strong>+</strong><br>
+												a once off <strong>$2,500</strong> setup fee for each site.
+											</h4>
+
+							    </div>
+							</div>
+						</div>
+				</div>
+		</section>
+
+
+		<section id="services" class="icons-grid bg-primary">
+				<div class="container">
+						<div class="row text-center">
+								<div class="col-md-10 col-md-offset-1">
+										<h2>What does the hosting costs cover?</h2>
+										<div class="row">
+												<div class="col-md-3 col-sm-6">
+														<div class="grid-item">
+																<i class="icon-harddrive text-primary"></i>
+																<h4>Website hosting</h4>
+														</div>
+												</div>
+												<div class="col-md-3 col-sm-6">
+														<div class="grid-item">
+																<i class="icon-bug text-primary"></i>
+																<h4>Patching and testing</h4>
+														</div>
+												</div>
+												<div class="col-md-3 col-sm-6">
+														<div class="grid-item">
+																<i class="icon-alert text-primary"></i>
+																<h4>Disaster recovery</h4>
+														</div>
+												</div>
+												<div class="col-md-3 col-sm-6">
+														<div class="grid-item">
+																<i class="icon-headset text-primary"></i>
+																<h4>Support</h4>
+														</div>
+												</div>
+												<div class="col-md-3 col-sm-6">
+														<div class="grid-item">
+																<i class="icon-shield text-primary"></i>
+																<h4><abbr title="Distributed Denial of Service">DDoS</abbr> prevention</h4>
+														</div>
+												</div>
+												<div class="col-md-3 col-sm-6">
+														<div class="grid-item">
+																<!-- <i class="icon-dashboard text-primary"></i> -->
+																<i class="icon-stats-up text-primary"></i>
+																<h4>99.95% uptime <abbr title="Service level agreement">SLA</abbr></h4>
+														</div>
+												</div>
+												<div class="col-md-3 col-sm-6">
+														<div class="grid-item">
+																<i class="icon-lock text-primary"></i>
+																<h4><abbr title="InfoSec Registered Assessors Program">IRAP</abbr> Assessment</h4>
+														</div>
+												</div>
+												<div class="col-md-3 col-sm-6">
+														<div class="grid-item">
+																<i class="icon-archive text-primary"></i>
+																<h4><abbr title="National Archives of Australia">NAA</abbr> level archiving</h4>
+														</div>
+												</div>
+										</div>
+								</div>
+						</div>
+				</div>
+		</section>
+
+
+
+		<section id="support-cats" class="icons-grid">
+				<div class="container">
+						<div class="row text-center">
+								<div class="col-md-10 col-md-offset-1">
+										<h2>Additional <!--design and development -->services</h2>
+										<div class="row">
+												<div class="col-md-4 col-sm-6">
+														<div class="grid-item">
+																<i class="icon-package text-primary"></i>
+																<h4>Assisted &apos;lift and shift&apos;</h4>
+																<p>
+																	Where an agency requires assistance to migrate their site to govCMS.
+																</p>
+														</div>
+												</div>
+												<div class="col-md-4 col-sm-6">
+														<div class="grid-item">
+																<i class="icon-search text-primary"></i>
+																<h4>Discovery phase</h4>
+																<p>
+																	Where an agency requires support to identify business and technical requirements for their websites.
+																</p>
+														</div>
+												</div>
+												<div class="col-md-4 col-sm-6">
+														<div class="grid-item">
+																<i class="icon-brush text-primary"></i>
+																<h4>Complete Redesign</h4>
+																<p>
+																	Where an agency requires full redesign, development and implementation of their websites.
+																</p>
+														</div>
+												</div>
+										</div>
+								</div>
+						</div>
+				</div>
+		</section>
+
+
+
+		<section class="split">
+			<div class="container">
+					<div class="row">
+							<div class="col-md-6 text-left">
+									<h2>Not what you&apos;re after?</h2>
+									<p>
+										If you need more page views or wish to enquire about our
+										<abbr title="Platform as a service">PaaS</abbr> solutions.
+									</p>
+									<a href="#" class="btn btn-lg btn-primary">Contact us</a>
+							</div>
+							<div class="col-md-3 col-md-offset-3 text-right">
+									<form action="./pricing-calculate.html">
+										<h2>Recalculate</h2>
+
+										<label for="number-of-sites">Number of websites</label>
+									  <input type="number" class="form-control" id="number-of-sites">
+
+										<label for="page-views">Total page views per month</label>
+									  <input type="number" class="form-control" id="page-views">
+
+										<button type="submit" class="btn btn-primary">Calculate</button>
+									</form>
+							</div>
+					</div>
+			</div>
+		</section>
+
+
+		<aside class="call-to-action bg-primary">
+				<div class="container">
+						<div class="row">
+								<div class="col-md-6 text-right">
+										<h3>Ready to go?</h3>
+								</div>
+								<div class="col-md-6">
+										<a href="./signup.html" class="btn btn-lg btn-primary">Sign up now</a>
+								</div>
+						</div>
+				</div>
+		</aside>
+
+
+		<footer>
+				<div class="container">
+						<div class="row">
+								<div class="col-md-10 col-md-offset-1 text-center">
+										<ul class="list-inline social">
+												<li>
+														<a href="#"><i class="icon-youtube-play fa-fw fa-3x"></i><span class="sr-only">YouTube</span></a>
+												</li>
+												<li>
+														<a href="#"><i class="icon-twitter fa-fw fa-3x"></i><span class="sr-only">Twitter</span></a>
+												</li>
+												<li>
+														<a href="#"><i class="icon-rss-square fa-fw fa-3x"></i><span class="sr-only">RSS</span></a>
+												</li>
+										</ul>
+										<hr class="small">
+										<ul class="list-inline small-links">
+												<li>
+														<a href="#">Copyright</a>
+												</li>
+												<li>
+														<a href="#">Privacy</a>
+												</li>
+												<li>
+														<a href="#">Site Map</a>
+												</li>
+												<li>
+														<a href="#">Terms of Use</a>
+												</li>
+										</ul>
+								</div>
+						</div>
+				</div>
+		</footer>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		<script src="js/govcms.js"></script>
+</body>
+</html>

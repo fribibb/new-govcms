@@ -1,0 +1,368 @@
+// * Based off Start Bootstrap - Stylish Portfolio Bootstrap Theme
+
+
+// Global Styles
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.text-vertical-center {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 4.5em;
+    font-weight: 700;
+  }
+}
+
+
+// General Overrides
+a {
+  color: $brighterBlue;
+  transition: 0.3s;
+}
+.text-primary {
+  color: $darkBlue;
+}
+.bg-primary {
+  background-color: $darkBlue;
+  color: #fff;
+  h4 {
+    color: #fff;
+  }
+  hr.small {
+    border-color: $highlight;
+  }
+  [class^="icon-"], [class*=" icon-"] {
+    &.text-primary {
+      color: #fff;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+// Custom Button Styles
+.btn-dark {
+  border-radius: 0;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.4);
+  &:hover, &:focus, &:active {
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+}
+
+.btn-light {
+  border-radius: 0;
+  color: #333;
+  background-color: rgb(255, 255, 255);
+  &:hover, &:focus, &:active {
+    color: #333;
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+}
+
+.btn-primary {
+  transition: 0.3s;
+  color: #fff;
+  background-color: $highlightDarker;
+  border-color: darken($highlightDarker, 5%);
+}
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary.focus,
+.btn-primary:active,
+.btn-primary.active,
+.open > .dropdown-toggle.btn-primary {
+  color: #fff;
+  background-color: darken($highlightDarker, 5%);
+  border-color: darken($highlightDarker, 10%);
+}
+
+.btn-default {
+  color: $highlightDarker;
+  border-color: $highlightDarker;
+  &:hover,
+  &:focus,
+  &.focus,
+  &:active,
+  &.active {
+    color: darken($highlightDarker, 10%);
+    border-color: darken($highlightDarker, 10%);
+    // background-color: $lightGrey;
+    background-color: lighten($highlight, 38%);
+  }
+}
+
+
+
+// Forms
+form {
+  fieldset {
+    margin-top: 2em;
+    legend {
+      margin-bottom: 15px;
+      color: $darkBlue;
+    }
+  }
+  label {
+    margin-top: 1em;
+    // color: $darkBlue;
+    color: $brighterBlue;
+    font-weight: 400;
+  }
+  .checkbox label {
+    margin-top: 0;
+  }
+  small {
+    color: $lightGreyText;
+  }
+}
+.mandatory {
+  color: $highlightDarker;
+}
+
+// conditionally shown form sections
+
+// conditional_form_part
+.drupal-version-list {
+  // display: none;
+}
+// conditional_form_part_activator:checked + conditional_form_part {
+.drupal-version-checkbox:checked + .drupal-version-list {
+  // display: block;
+}
+
+
+
+// Custom Horizontal Rule
+hr.small {
+  max-width: 100px;
+  border-color: $borderGrey;
+}
+
+
+
+
+
+// header
+.logos {
+  margin-top: 21px;
+  .logo {
+    margin-left: 30px;
+  }
+}
+
+
+
+
+
+
+
+// Call to Action
+.call-to-action {
+  @include background-gradient( darken($brighterBlue,10%), lighten($brighterBlue,10%) );
+  padding: 50px 0;
+  .btn {
+    margin: 10px;
+    font-size: 1.5em;
+  }
+}
+
+
+// Nav Pill, active/selected item
+.nav-pills > li {
+  &.active > a {
+    &,
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: transparent;
+      color: $brighterBlue;
+      font-weight: bold;
+      border-bottom: 1px solid $darkBlue;
+    }
+  }
+  & > a {
+    border-radius: 0;
+    &:focus,
+    &:active,
+    &:hover {
+      text-decoration: none;
+      background-color: transparent;
+      border-bottom: 1px solid $highlightDarker;
+    }
+  }
+}
+
+
+header {
+  .nav-pills {
+    margin-top: 35px;
+    font-size: 115%;
+  }
+}
+
+
+
+
+
+
+// used on "Why use govCMS?" and support homepage
+.icons-grid {
+  padding: 25px 0;
+  &.bg-primary {
+    color: #fff;
+    @include background-gradient($highlight, lighten($brighterBlue,5%));
+  }
+  h2 {
+    margin-bottom: 2em;
+  }
+  span.int,
+  [class^="icon-"], [class*=" icon-"] {
+    transition: all .2s;
+    border: 2px solid;
+    border-radius: 100%;
+    position: relative;
+    line-height: 2em;
+    vertical-align: middle;
+    display: inline-block;
+    min-width: 104px;
+    br {
+      border-color: #fff;
+      margin: 1em;
+    }
+  }
+  span.int {
+    // font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 3em;
+    line-height: 2.8em;
+    min-width: 2.8em;
+    font-weight: 300;
+  }
+  h4 {
+    margin-top: 1em;
+    font-weight: 400;
+  }
+  .grid-item {
+    margin-bottom: 3em;
+    display: block;
+  }
+  a {
+    transition: all .2s;
+    &:hover,
+    &:active,
+    &:focus {
+      text-decoration: none;
+      color: $highlightDarker;
+      h4 {
+        text-decoration: underline;
+      }
+      [class^="icon-"], [class*=" icon-"] {
+        color: $highlightDarker;
+      }
+    }
+    [class^="icon-"], [class*=" icon-"] {
+      color: $brighterBlue;
+    }
+  }
+  // &#stats {
+  //   .grid-item {
+  //     color: $highlightDarker;
+  //   }
+  // }
+}
+
+
+
+
+
+
+// Split
+.split {
+  background: linear-gradient(90deg, #fff 50%, #f5f7f9 50%);
+  border-top: 1px solid $borderGrey;
+  .container .text-left,
+  .container .text-right {
+    padding: 50px 0;
+    h2 {
+      color: $brighterBlue;
+    }
+  }
+  .text-left {
+    border-right: 1px solid #e9eaec;
+    .btn {
+      margin: 1.75em 0 1em 0;
+    }
+    p > a {
+      text-decoration: underline;
+    }
+  }
+  .text-right {
+    label {
+      margin-top: 0.5em;
+      font-weight: 300;
+      color: $darkBlue;
+    }
+    .btn {
+      margin-top: 1em;
+    }
+  }
+}
+
+
+
+
+
+
+// Footer
+footer {
+  padding: 50px 0;
+  ul.social {
+    margin-bottom: 0;
+    a {
+      color: $brighterBlue;
+      opacity: 0.9;
+      &:hover,
+      &:active,
+      &:focus {
+        opacity: 1;
+        text-decoration: none;
+        color: $highlightDarker;
+      }
+    }
+  }
+  .small-links {
+    padding-top: 10px;
+    li {
+      margin-right: 10px;
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+
+.pager li {
+  & >a,
+  & >span {
+    border-radius: 6px;
+  }
+}

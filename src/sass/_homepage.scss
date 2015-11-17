@@ -1,0 +1,105 @@
+#top-and-first-wrapper {
+  @include background-gradient($highlight, lighten($brighterBlue, 10%));
+  p,
+  a {
+    color: #fff;
+  }
+  a .coa-titles {
+    color: $darkBlue;
+  }
+
+
+  #about {
+    background: transparent;
+    h2 {
+      color: $darkBlue;
+      font-size: 380%;
+      font-weight: 300;
+      padding: 0 5%;
+      text-shadow: 1px 1px 45px rgba(#fff, 0.5);
+    }
+    .btn-primary {
+      float: right;
+      color: $darkBlue;
+      background-color: #fff;
+      &:hover, &:focus, &:active {
+        color: #fff;
+        background-color: $highlightDarker;
+      }
+    }
+    .lead {
+      color: rgba(#fff, 0.8);
+      margin-top: -5px;
+    }
+    small {
+      color: rgba(#fff, 0.7);
+      font-size: 90%;
+      margin-top: -2px;
+      margin-bottom: 1.1em;
+    }
+  }
+}
+
+
+
+// About
+#about {
+  background: #f5f7f9;
+  padding: 25px 0;
+  margin: 25px 0;
+  h2 {
+    color: $brighterBlue;
+    margin-bottom: 1.5em;
+  }
+  .btn-lg {
+    float: left;
+  }
+}
+body.front {
+  #about {
+    small {
+      display: block;
+      float: left;
+      width: 50%;
+      margin-left: 25px;
+    }
+  }
+}
+
+.about, .services {
+  padding: 50px 0;
+}
+
+
+
+
+
+
+// Portfolio
+.portfolio {
+  padding: 50px 0;
+}
+
+.portfolio-item {
+  margin-bottom: 30px;
+}
+
+.img-portfolio {
+  margin: 0 auto;
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+
+
+#clients {
+  margin: 3em 0 2em 0;
+  h2 {
+    color: $darkBlue;
+  }
+  img {
+    margin-bottom: 30px;
+    opacity: 0.66;
+  }
+}
