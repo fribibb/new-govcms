@@ -1,5 +1,5 @@
 #top-and-first-wrapper {
-  @include background-gradient($highlight, lighten($brighterBlue, 10%));
+  @include background-gradient( darken($highlight, 5%), lighten($brighterBlue, 10%)); // this passes AA for large text everywhere on homepage
   p,
   a {
     color: #fff;
@@ -29,13 +29,11 @@
       }
     }
     .lead {
-      // color: rgba(#fff, 0.8);
       color: #fff;
       text-shadow: 1px 1px 35px rgba($darkBlue, 0.25);
       margin-top: -5px;
     }
     small {
-      // color: rgba(#fff, 0.7);
       color: #fff;
       text-shadow: 1px 1px 35px rgba($darkBlue, 0.25);
       font-size: 90%;
@@ -106,5 +104,8 @@ body.front {
   img {
     margin-bottom: 30px;
     opacity: 0.66;
+  }
+  .highlight {
+    color: $darkBlue;
   }
 }

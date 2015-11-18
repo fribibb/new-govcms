@@ -272,6 +272,13 @@ hr.small {
 .logos {
   margin-top: 21px;
 }
+.logos .coa-stacked,
+.logos img {
+  background: radial-gradient(rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0) 50%);
+}
+.logos .coa-titles-stacked {
+  text-shadow: 1px 1px 30px rgba(255, 255, 255, 0.4);
+}
 .logos .logo {
   margin-left: 30px;
 }
@@ -352,8 +359,8 @@ header .nav-pills {
 }
 .icons-grid.bg-primary {
   color: #fff;
-  background-color: #71C39E;
-  background: linear-gradient(25deg, #71C39E, #336b91);
+  background-color: #54A283;
+  background: linear-gradient(25deg, #54A283, #336b91);
   background-size: 400% 400%;
   -webkit-animation: bg 30s ease infinite;
   -moz-animation: bg 30s ease infinite;
@@ -465,12 +472,12 @@ header .nav-pills {
   background: linear-gradient(90deg, #fff 50%, #f5f7f9 50%);
   border-top: 1px solid #D2D2D4;
 }
-.split .container .text-left,
-.split .container .text-right {
+.split .container [class^="text-"],
+.split .container [class*=" text-"] {
   padding: 50px 0;
 }
-.split .container .text-left h2,
-.split .container .text-right h2 {
+.split .container [class^="text-"] h2,
+.split .container [class*=" text-"] h2 {
   color: #2C5D7E;
 }
 .split .text-left {
@@ -489,6 +496,48 @@ header .nav-pills {
 }
 .split .text-right .btn {
   margin-top: 1em;
+}
+.split .arrow:after {
+  width: 0;
+  height: 0;
+  border-top: 60px solid transparent;
+  border-bottom: 60px solid transparent;
+  border-left: 60px solid #fff;
+  content: " ";
+  float: right;
+  position: absolute;
+  display: inherit;
+  right: -60px;
+  top: 35%;
+  top: calc(50% - 48px);
+  z-index: 1;
+}
+.split.testimonial .text-center img {
+  margin-left: 90px;
+}
+.split.testimonial blockquote {
+  border-left: 0;
+  margin: 1em;
+  quotes: "\201C" "\201D" "\2018" "\2019";
+}
+.split.testimonial blockquote:before {
+  color: #71C39E;
+  content: open-quote;
+  font-size: 5em;
+  line-height: 0;
+  margin-right: 0.15em;
+  vertical-align: -0.4em;
+  margin-left: -0.55em;
+  font-family: sans-serif;
+}
+.split.testimonial cite span {
+  display: block;
+}
+.split.testimonial cite .cite-name {
+  color: #54A283;
+}
+.split.testimonial cite .cite-pos {
+  color: #777;
 }
 
 footer {
@@ -650,8 +699,8 @@ a.coa-link {
 }
 
 #top-and-first-wrapper {
-  background-color: #71C39E;
-  background: linear-gradient(25deg, #71C39E, #3979a4);
+  background-color: #5fbb92;
+  background: linear-gradient(25deg, #5fbb92, #3979a4);
   background-size: 400% 400%;
   -webkit-animation: bg 30s ease infinite;
   -moz-animation: bg 30s ease infinite;
@@ -782,6 +831,9 @@ body.front #about small {
 #clients img {
   margin-bottom: 30px;
   opacity: 0.66;
+}
+#clients .highlight {
+  color: #37424A;
 }
 
 body.support.front .about .navbar-form {

@@ -157,6 +157,13 @@ hr.small {
 // header
 .logos {
   margin-top: 21px;
+  .coa-stacked,
+  img {
+    background: radial-gradient( rgba(#fff,0.1), transparent 50% );
+  }
+  .coa-titles-stacked {
+    text-shadow: 1px 1px 30px rgba(#fff, 0.4);
+  }
   .logo {
     margin-left: 30px;
   }
@@ -222,7 +229,7 @@ header {
   padding: 25px 0;
   &.bg-primary {
     color: #fff;
-    @include background-gradient($highlight, lighten($brighterBlue,5%));
+    @include background-gradient($highlightDarker, lighten($brighterBlue,5%));
     a {
       &:hover,
       &:active,
@@ -299,8 +306,8 @@ header {
 .split {
   background: linear-gradient(90deg, #fff 50%, #f5f7f9 50%);
   border-top: 1px solid $borderGrey;
-  .container .text-left,
-  .container .text-right {
+  .container [class^="text-"],
+  .container [class*=" text-"] {
     padding: 50px 0;
     h2 {
       color: $brighterBlue;
@@ -323,6 +330,65 @@ header {
     }
     .btn {
       margin-top: 1em;
+    }
+  }
+  .arrow:after {
+    width: 0;
+    height: 0;
+    border-top: 60px solid transparent;
+    border-bottom: 60px solid transparent;
+    border-left: 60px solid #fff;
+    content: " ";
+    float: right;
+    position: absolute;
+    display: inherit;
+    right: -60px;
+    // top: 60px;
+    top: 35%;
+    top: calc(50% - 48px);
+    z-index: 1;
+  }
+  &.testimonial {
+    .text-center {
+      // padding: 25px;
+      img {
+        margin-left: 90px;
+      }
+    }
+    blockquote {
+      border-left: 0;
+      margin: 1em;
+      quotes: "\201C" "\201D" "\2018" "\2019";
+      &:before {
+        color: $highlight;
+        content: open-quote;
+        font-size: 5em;
+        line-height: 0;
+        margin-right: 0.15em;
+        vertical-align: -0.4em;
+        margin-left: -0.55em;
+        font-family: sans-serif;
+      }
+      // &:after {
+      //   color: $highlight;
+      //   content: close-quote;
+      //   font-size: 4em;
+      //   line-height: 0.15em;
+      //   float: right;
+      //   margin-top: 7.5%;
+      // }
+    }
+    cite {
+      span {
+        // margin-left: 2.8em;
+        display: block;
+      }
+      .cite-name {
+        color: $highlightDarker;
+      }
+      .cite-pos {
+        color: $lightGreyText;
+      }
     }
   }
 }
