@@ -150,7 +150,7 @@ html {
 body {
   width: 100%;
   height: 100%;
-  font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .text-vertical-center {
@@ -243,10 +243,14 @@ form fieldset legend {
   margin-bottom: 15px;
   color: #37424A;
 }
+form fieldset legend .mandatory {
+  font-size: 0.65em;
+}
 form label {
   margin-top: 1em;
   color: #2C5D7E;
   font-weight: 400;
+  width: 100%;
 }
 form .checkbox label {
   margin-top: 0;
@@ -257,6 +261,7 @@ form small {
 
 .mandatory {
   color: #54A283;
+  float: right;
 }
 
 hr.small {
@@ -391,11 +396,21 @@ header .nav-pills {
     background-position: 90% 0%;
   }
 }
+.icons-grid.bg-primary a:hover, .icons-grid.bg-primary a:active, .icons-grid.bg-primary a:focus {
+  color: #fff;
+}
+.icons-grid.bg-primary a:hover [class^="icon-"],
+.icons-grid.bg-primary a:hover [class*=" icon-"], .icons-grid.bg-primary a:active [class^="icon-"],
+.icons-grid.bg-primary a:active [class*=" icon-"], .icons-grid.bg-primary a:focus [class^="icon-"],
+.icons-grid.bg-primary a:focus [class*=" icon-"] {
+  color: #fff;
+}
 .icons-grid h2 {
   margin-bottom: 2em;
 }
 .icons-grid span.int,
-.icons-grid [class^="icon-"], .icons-grid [class*=" icon-"] {
+.icons-grid [class^="icon-"],
+.icons-grid [class*=" icon-"] {
   transition: all .2s;
   border: 2px solid;
   border-radius: 100%;
@@ -406,14 +421,15 @@ header .nav-pills {
   min-width: 104px;
 }
 .icons-grid span.int br,
-.icons-grid [class^="icon-"] br, .icons-grid [class*=" icon-"] br {
+.icons-grid [class^="icon-"] br,
+.icons-grid [class*=" icon-"] br {
   border-color: #fff;
   margin: 1em;
 }
 .icons-grid span.int {
   font-size: 3em;
-  line-height: 2.8em;
-  min-width: 2.8em;
+  line-height: 2.35em;
+  min-width: 2.45em;
   font-weight: 300;
 }
 .icons-grid h4 {
@@ -434,10 +450,14 @@ header .nav-pills {
 .icons-grid a:hover h4, .icons-grid a:active h4, .icons-grid a:focus h4 {
   text-decoration: underline;
 }
-.icons-grid a:hover [class^="icon-"], .icons-grid a:hover [class*=" icon-"], .icons-grid a:active [class^="icon-"], .icons-grid a:active [class*=" icon-"], .icons-grid a:focus [class^="icon-"], .icons-grid a:focus [class*=" icon-"] {
+.icons-grid a:hover [class^="icon-"],
+.icons-grid a:hover [class*=" icon-"], .icons-grid a:active [class^="icon-"],
+.icons-grid a:active [class*=" icon-"], .icons-grid a:focus [class^="icon-"],
+.icons-grid a:focus [class*=" icon-"] {
   color: #54A283;
 }
-.icons-grid a [class^="icon-"], .icons-grid a [class*=" icon-"] {
+.icons-grid a [class^="icon-"],
+.icons-grid a [class*=" icon-"] {
   color: #2C5D7E;
 }
 
@@ -677,6 +697,7 @@ a.coa-link {
 #top-and-first-wrapper p,
 #top-and-first-wrapper a {
   color: #fff;
+  text-shadow: 1px 1px 55px rgba(44, 93, 126, 0.2);
 }
 #top-and-first-wrapper a .coa-titles {
   color: #37424A;
@@ -701,11 +722,13 @@ a.coa-link {
   background-color: #54A283;
 }
 #top-and-first-wrapper #about .lead {
-  color: rgba(255, 255, 255, 0.8);
+  color: #fff;
+  text-shadow: 1px 1px 35px rgba(55, 66, 74, 0.25);
   margin-top: -5px;
 }
 #top-and-first-wrapper #about small {
-  color: rgba(255, 255, 255, 0.7);
+  color: #fff;
+  text-shadow: 1px 1px 35px rgba(55, 66, 74, 0.25);
   font-size: 90%;
   margin-top: -2px;
   margin-bottom: 1.1em;

@@ -28,3 +28,9 @@
   background-size: cover;
   -o-background-size: cover;
 }
+
+
+// Globally used body font declaration
+@mixin body-font() {
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}

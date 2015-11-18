@@ -3,6 +3,7 @@
   p,
   a {
     color: #fff;
+    text-shadow: 1px 1px 55px rgba($brighterBlue, 0.2);
   }
   a .coa-titles {
     color: $darkBlue;
@@ -28,11 +29,15 @@
       }
     }
     .lead {
-      color: rgba(#fff, 0.8);
+      // color: rgba(#fff, 0.8);
+      color: #fff;
+      text-shadow: 1px 1px 35px rgba($darkBlue, 0.25);
       margin-top: -5px;
     }
     small {
-      color: rgba(#fff, 0.7);
+      // color: rgba(#fff, 0.7);
+      color: #fff;
+      text-shadow: 1px 1px 35px rgba($darkBlue, 0.25);
       font-size: 90%;
       margin-top: -2px;
       margin-bottom: 1.1em;
