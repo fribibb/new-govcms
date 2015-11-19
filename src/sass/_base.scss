@@ -221,6 +221,98 @@ header {
 
 
 
+// Header section on all pages
+#top-and-first-wrapper {
+  @include background-gradient( darken($highlight, 5%), lighten($brighterBlue, 10%)); // this passes AA for large text everywhere on homepage
+  p,
+  a {
+    color: #fff;
+    text-shadow: 1px 1px 55px rgba($brighterBlue, 0.2);
+  }
+  a .coa-titles {
+    color: $darkBlue;
+  }
+
+
+  #about {
+    background: transparent;
+    h2 {
+      color: $darkBlue;
+      font-size: 380%;
+      font-weight: 300;
+      padding: 0 5%;
+      text-shadow: 1px 1px 45px rgba(#fff, 0.5);
+    }
+    .btn-primary {
+      float: right;
+      color: $darkBlue;
+      background-color: #fff;
+      &:hover, &:focus, &:active {
+        color: #fff;
+        background-color: $highlightDarker;
+      }
+    }
+    .lead {
+      color: #fff;
+      text-shadow: 1px 1px 35px rgba($darkBlue, 0.25);
+      margin-top: -5px;
+    }
+    small {
+      color: #fff;
+      text-shadow: 1px 1px 35px rgba($darkBlue, 0.25);
+      font-size: 90%;
+      margin-top: -2px;
+      margin-bottom: 1.1em;
+    }
+    &.news-item-header {
+      h2 {
+        margin-bottom: 1em;
+      }
+      .news-meta {
+        color: #fff;
+        .divider {
+          opacity: .4;
+        }
+      }
+    }
+  }
+}
+
+
+
+// About ID
+#about {
+  background: #f5f7f9;
+  padding: 25px 0;
+  margin: 25px 0;
+  h2 {
+    color: $brighterBlue;
+    margin-bottom: 1.5em;
+  }
+  .btn-lg {
+    float: left;
+  }
+}
+body.front {
+  #about {
+    small {
+      display: block;
+      float: left;
+      width: 50%;
+      margin-left: 25px;
+    }
+  }
+}
+
+.about, .services {
+  padding: 50px 0;
+}
+
+
+
+
+
+
 
 
 
@@ -346,12 +438,12 @@ header {
     display: inherit;
     right: -60px;
     // top: 60px;
-    top: 35%;
-    top: calc(50% - 48px);
+    top: 33%;
+    top: calc(50% - 51px);
     z-index: 1;
   }
   &.testimonial {
-    .text-center {
+    .section-two {
       img {
         margin-left: 90px;
       }
@@ -359,19 +451,32 @@ header {
     blockquote {
       border-left: 0;
       margin: 1em;
+      margin-right: 3em;
       quotes: "\201C" "\201D" "\2018" "\2019";
-      &:before {
+      &:before,
+      &:after {
         color: $highlight;
-        content: open-quote;
+        // font-family: sans-serif;
         font-size: 5em;
+      }
+      &:before {
+        content: open-quote;
         line-height: 0;
-        margin-right: 0.15em;
-        vertical-align: -0.4em;
-        margin-left: -0.55em;
-        font-family: sans-serif;
+        margin-right: 0.05em;
+        vertical-align: -0.32em;
+        margin-left: -0.45em;
+      }
+      &:after {
+        content: close-quote;
+        line-height: 0.15em;
+        float: right;
+        margin-top: 0.48em;
+        margin-right: -0.41em;
+        opacity: 0.4;
       }
     }
     cite {
+      font-style: normal;
       span {
         display: block;
       }
@@ -423,5 +528,8 @@ footer {
   &>a,
   &>span {
     border-radius: 6px;
+  }
+  a {
+    text-decoration: none;
   }
 }
