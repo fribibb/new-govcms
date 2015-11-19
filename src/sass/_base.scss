@@ -302,18 +302,20 @@ header {
 
 
 
-// Split
+// Split section
 .split {
   background: linear-gradient(90deg, #fff 50%, #f5f7f9 50%);
   border-top: 1px solid $borderGrey;
-  .container [class^="text-"],
-  .container [class*=" text-"] {
-    padding: 50px 0;
-    h2 {
-      color: $brighterBlue;
+  .container {
+    .section-one,
+    .section-two {
+      padding: 50px 0;
+      h2 {
+        color: $brighterBlue;
+      }
     }
   }
-  .text-left {
+  .section-one {
     border-right: 1px solid #e9eaec;
     .btn {
       margin: 1.75em 0 1em 0;
@@ -322,7 +324,7 @@ header {
       text-decoration: underline;
     }
   }
-  .text-right {
+  .section-two {
     label {
       margin-top: 0.5em;
       font-weight: 300;
@@ -350,7 +352,6 @@ header {
   }
   &.testimonial {
     .text-center {
-      // padding: 25px;
       img {
         margin-left: 90px;
       }
@@ -369,18 +370,9 @@ header {
         margin-left: -0.55em;
         font-family: sans-serif;
       }
-      // &:after {
-      //   color: $highlight;
-      //   content: close-quote;
-      //   font-size: 4em;
-      //   line-height: 0.15em;
-      //   float: right;
-      //   margin-top: 7.5%;
-      // }
     }
     cite {
       span {
-        // margin-left: 2.8em;
         display: block;
       }
       .cite-name {

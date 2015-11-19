@@ -472,29 +472,29 @@ header .nav-pills {
   background: linear-gradient(90deg, #fff 50%, #f5f7f9 50%);
   border-top: 1px solid #D2D2D4;
 }
-.split .container [class^="text-"],
-.split .container [class*=" text-"] {
+.split .container .section-one,
+.split .container .section-two {
   padding: 50px 0;
 }
-.split .container [class^="text-"] h2,
-.split .container [class*=" text-"] h2 {
+.split .container .section-one h2,
+.split .container .section-two h2 {
   color: #2C5D7E;
 }
-.split .text-left {
+.split .section-one {
   border-right: 1px solid #e9eaec;
 }
-.split .text-left .btn {
+.split .section-one .btn {
   margin: 1.75em 0 1em 0;
 }
-.split .text-left p > a {
+.split .section-one p > a {
   text-decoration: underline;
 }
-.split .text-right label {
+.split .section-two label {
   margin-top: 0.5em;
   font-weight: 300;
   color: #37424A;
 }
-.split .text-right .btn {
+.split .section-two .btn {
   margin-top: 1em;
 }
 .split .arrow:after {

@@ -22,7 +22,9 @@ $(document).ready(function() {
     });
 
   // Make left and right split same height, noting the left is shorter
-    rightHeight = $('.split .text-right').height();
-    $('.split .text-left').height(rightHeight);
+    $( ".split" ).each(function() {
+      rightHeight = $('.section-two', this).height();
+      $('.section-one', this).height(rightHeight);
+    });
 
 });
