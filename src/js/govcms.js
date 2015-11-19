@@ -21,4 +21,8 @@ $(document).ready(function() {
         return false;
     });
 
+  // Make left and right split same height, noting the left is shorter
+    rightHeight = $('.split .text-right').height();
+    $('.split .text-left').height(rightHeight);
+
 });
