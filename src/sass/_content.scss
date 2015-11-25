@@ -7,14 +7,28 @@
     margin-bottom: 30px;
   }
   .panel {
-    border-color: $darkBlue;
-    span {
+    border-color: rgba($darkBlue, .3);
+    .heading-style {  // 'heading'
+      color: $darkBlue;
+      font-size: 150%;
+      font-weight: 300;
+    }
+    .optional {  // '(optional)'
       color: $highlightDarker;
+      font-weight: 300;
     }
   }
   .panel-heading {
     background-color: $darkBlue;
-    border-color: $darkBlue;
+    border-color: rgba($darkBlue, .3);
+    font-weight: 300;
+    font-size: 80%;
+    color: rgba(#fff, 0.8);
+    strong {
+      color: #fff;
+      font-weight: 300;
+      font-size: 250%;
+    }
   }
   .lead {
     p {
@@ -24,6 +38,28 @@
       font-size: 250%;
       font-weight: 300;
     }
+  }
+  .list-group-item {
+    padding: 35px 15px;
+  }
+}
+
+.plus-separator {
+  position: relative;
+  height: 0;
+  &:after {
+    position: absolute;
+    top: -0.8em;
+    left: calc(50% - 0.38em);
+    // border-radius: 50%;
+    background-color: white;
+    color: $highlight;
+    font-size: 3em;
+    padding-top: 4px;
+    padding-top: 0.25rem;
+    content: "+";
+    z-index: 2;
+    width: 1em;
   }
 }
 

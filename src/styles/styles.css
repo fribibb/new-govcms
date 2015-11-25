@@ -894,14 +894,28 @@ body.support.front .about .navbar-form .form-control {
   margin-bottom: 30px;
 }
 .pricingTable .panel {
-  border-color: #37424A;
+  border-color: rgba(55, 66, 74, 0.3);
 }
-.pricingTable .panel span {
+.pricingTable .panel .heading-style {
+  color: #37424A;
+  font-size: 150%;
+  font-weight: 300;
+}
+.pricingTable .panel .optional {
   color: #54A283;
+  font-weight: 300;
 }
 .pricingTable .panel-heading {
   background-color: #37424A;
-  border-color: #37424A;
+  border-color: rgba(55, 66, 74, 0.3);
+  font-weight: 300;
+  font-size: 80%;
+  color: rgba(255, 255, 255, 0.8);
+}
+.pricingTable .panel-heading strong {
+  color: #fff;
+  font-weight: 300;
+  font-size: 250%;
 }
 .pricingTable .lead p {
   margin-bottom: 0;
@@ -909,6 +923,27 @@ body.support.front .about .navbar-form .form-control {
 .pricingTable .lead strong {
   font-size: 250%;
   font-weight: 300;
+}
+.pricingTable .list-group-item {
+  padding: 35px 15px;
+}
+
+.plus-separator {
+  position: relative;
+  height: 0;
+}
+.plus-separator:after {
+  position: absolute;
+  top: -0.8em;
+  left: calc(50% - 0.38em);
+  background-color: white;
+  color: #71C39E;
+  font-size: 3em;
+  padding-top: 4px;
+  padding-top: 0.25rem;
+  content: "+";
+  z-index: 2;
+  width: 1em;
 }
 
 small a {
