@@ -21,10 +21,10 @@ $(document).ready(function() {
         return false;
     });
 
-  // Make left and right split same height, noting the left is shorter
+  // Make left and right split same height, noting the right is shorter
     $( ".split" ).each(function() {
-      rightHeight = $('.section-two', this).height();
-      $('.section-one', this).height(rightHeight);
+      rightHeight = $('.section-one', this).height();
+      $('.section-two', this).height(rightHeight);
     });
 
 });

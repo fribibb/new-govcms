@@ -643,7 +643,10 @@ body.front #about small {
   z-index: 1;
 }
 .split.testimonial .section-two img {
-  margin-left: 90px;
+  margin-left: 100px;
+  margin-right: 30px;
+  height: auto;
+  padding-top: 8px;
 }
 .split.testimonial blockquote {
   border-left: 0;
@@ -713,6 +716,12 @@ footer .small-links li:last-of-type {
 }
 .pager li a {
   text-decoration: none;
+}
+.pager.back a {
+  background-color: transparent;
+}
+.pager.back a:hover {
+  background-color: #54A283;
 }
 
 .coa-stacked {

@@ -445,7 +445,10 @@ body.front {
   &.testimonial {
     .section-two {
       img {
-        margin-left: 90px;
+        margin-left: 100px;
+        margin-right: 30px;
+        height: auto;
+        padding-top: 8px; // might change
       }
     }
     blockquote {
@@ -524,12 +527,22 @@ footer {
 }
 
 
-.pager li {
-  &>a,
-  &>span {
-    border-radius: 6px;
+.pager {
+  li {
+    &>a,
+    &>span {
+      border-radius: 6px;
+    }
+    a {
+      text-decoration: none;
+    }
   }
-  a {
-    text-decoration: none;
+  &.back {
+    a {
+      background-color: transparent;
+      &:hover {
+        background-color: $highlightDarker;
+      }
+    }
   }
 }
