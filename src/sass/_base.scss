@@ -448,7 +448,9 @@ body.front {
         margin-left: 100px;
         margin-right: 30px;
         height: auto;
-        padding-top: 8px; // might change
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
       }
     }
     blockquote {

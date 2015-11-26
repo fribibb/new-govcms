@@ -25,6 +25,16 @@
     margin-bottom: 30px;
     opacity: 0.66;
   }
+  a {
+    &:hover,
+    &:active,
+    &:focus {
+      img {
+        opacity: 1;
+        background-color: transparentize($highlight, 0.91);
+      }
+    }
+  }
   .highlight {
     color: $darkBlue;
   }
