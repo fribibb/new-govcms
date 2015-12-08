@@ -154,6 +154,26 @@
   content: '\e031';
 }
 
+.icon-magic-wand:before {
+  content: '\e033';
+}
+
+.icon-stats-up:before {
+  content: '\e034';
+}
+
+.icon-users:before {
+  content: '\e035';
+}
+
+.icon-cog:before {
+  content: '\e036';
+}
+
+.icon-info:before {
+  content: '\e037';
+}
+
 html {
   width: 100%;
   height: 100%;
@@ -200,26 +220,6 @@ a {
   color: #fff;
 }
 
-.btn-dark {
-  border-radius: 0;
-  color: #fff;
-  background-color: rgba(0, 0, 0, 0.4);
-}
-.btn-dark:hover, .btn-dark:focus, .btn-dark:active {
-  color: #fff;
-  background-color: rgba(0, 0, 0, 0.7);
-}
-
-.btn-light {
-  border-radius: 0;
-  color: #333;
-  background-color: white;
-}
-.btn-light:hover, .btn-light:focus, .btn-light:active {
-  color: #333;
-  background-color: rgba(255, 255, 255, 0.8);
-}
-
 .btn-primary {
   transition: 0.3s;
   color: #fff;
@@ -246,6 +246,24 @@ a {
   color: #438068;
   border-color: #438068;
   background-color: #f9fdfb;
+}
+
+.btn-dark {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.btn-dark:hover, .btn-dark:focus, .btn-dark:active {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.btn.btn-light {
+  color: #333 !important;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+.btn.btn-light:hover, .btn.btn-light:focus, .btn.btn-light:active {
+  color: #333;
+  background-color: white;
 }
 
 form fieldset {
@@ -345,6 +363,9 @@ hr.small {
   margin: 10px;
   font-size: 1.5em;
 }
+.call-to-action h2 {
+  font-size: 24px;
+}
 
 .nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:active, .nav-pills > li.active > a:focus {
   background-color: transparent;
@@ -422,6 +443,7 @@ header .nav-pills {
 #top-and-first-wrapper #about {
   background: transparent;
 }
+#top-and-first-wrapper #about h1,
 #top-and-first-wrapper #about h2 {
   color: #37424A;
   font-size: 380%;
@@ -450,6 +472,7 @@ header .nav-pills {
   margin-top: -2px;
   margin-bottom: 1.1em;
 }
+#top-and-first-wrapper #about.news-item-header h1,
 #top-and-first-wrapper #about.news-item-header h2 {
   margin-bottom: 1em;
 }
@@ -465,6 +488,7 @@ header .nav-pills {
   padding: 25px 0;
   margin: 25px 0;
 }
+#about h1,
 #about h2 {
   color: #2C5D7E;
   margin-bottom: 1.5em;
@@ -569,8 +593,10 @@ body.front #about small {
   min-width: 2.45em;
   font-weight: 300;
 }
+.icons-grid h3,
 .icons-grid h4 {
   margin-top: 1em;
+  font-size: 18px;
   font-weight: 400;
 }
 .icons-grid .grid-item {
@@ -982,6 +1008,9 @@ small a {
 .text-content {
   margin: 25px 0;
 }
+.text-content h2 {
+  margin: 0.5em 0 1em 0;
+}
 .text-content h3 {
   margin: 1.5em 0 1em 0;
 }
@@ -1001,6 +1030,13 @@ small a {
   padding-right: 3px;
   line-height: 0.9em;
   color: #54A283;
+}
+
+.alternating.text-content p {
+  font-size: 115%;
+}
+.alternating.text-content .row {
+  margin: 5em 0;
 }
 
 .news-list {
@@ -1042,4 +1078,8 @@ small a {
 }
 .social-btns .btn-twitter {
   background-color: #55acee;
+}
+.social-btns h2 {
+  font-size: 24px;
+  margin: 1.5em 0 1em;
 }
