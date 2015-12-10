@@ -38,9 +38,39 @@
       font-size: 250%;
       font-weight: 300;
     }
+    &.cost {
+      color: $highlightDarker;
+    }
   }
   .list-group-item {
     padding: 35px 15px;
+  }
+}
+
+.fade-in {
+  opacity: 1;
+  transition: opacity 0.2s ease-in;
+  height: auto;
+  left: 0;
+  position: relative;
+}
+.fade-out {
+  opacity: 0;
+  transition:opacity 0.16s ease-out;
+  height: 0;
+  left: -99999999px;
+  position: relative;
+}
+
+#calcResults {
+  p {
+    margin-top: 2px;
+    margin-bottom: 13px;
+    font-weight: 300;
+  }
+  .lead {
+    font-size: 2em;
+    color: $highlightDarker;
   }
 }
 
