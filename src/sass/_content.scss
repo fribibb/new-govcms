@@ -153,16 +153,41 @@ small {
     }
   }
 }
-.alternating.text-content {
-  // margin: 50px 0;
-  // h3 {
-  //   margin: 1em 0;
-  // }
+
+.alternating {
+  h3 {
+    margin-top: 1.4em;
+  }
   p {
-    font-size: 115%;
+    font-size: 125%;
   }
   .row {
-    margin: 5em 0;
+    margin: 5.5em 0;
+  }
+  &.bg-primary .icon-huge {
+    color: $highlightDarker !important;
+    background: #fff;
+    border-radius: 50%;
+    padding: 0.12em;
+    font-size: 10em;
+    display: inline-block;
+    width: 1.65em;
+    height: 1.65em;
+    &.icon-stats-up:before {
+      top: -10px;
+      position: relative;
+    }
+  }
+  &.text-content .icon-hugest {
+    color: #fff !important;
+    background: $highlight;
+    @include background-gradient( adjust-hue( lighten($brighterBlue,15%), -10% ), adjust-hue( $highlight, 10% ) );
+    border-radius: 50%;
+    display: inline-block;
+    font-size: 23em;
+    width: 1.3em;
+    height: 1.3em;
+    line-height: 1.3em;
   }
 }
 

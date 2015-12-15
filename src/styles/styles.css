@@ -174,6 +174,10 @@
   content: '\e037';
 }
 
+.icon-question:before {
+  content: '\e038';
+}
+
 html {
   width: 100%;
   height: 100%;
@@ -516,10 +520,12 @@ body.front #about small {
   padding: 50px 0;
 }
 
-.icons-grid {
+.icons-grid,
+.alternating {
   padding: 25px 0;
 }
-.icons-grid.bg-primary {
+.icons-grid.bg-primary,
+.alternating.bg-primary {
   color: #fff;
   background-color: #54A283;
   background: linear-gradient(25deg, #54A283, #336b91);
@@ -565,14 +571,27 @@ body.front #about small {
     background-position: 90% 0%;
   }
 }
-.icons-grid.bg-primary a:not(.btn):hover, .icons-grid.bg-primary a:not(.btn):active, .icons-grid.bg-primary a:not(.btn):focus {
+.icons-grid.bg-primary a:not(.btn):hover, .icons-grid.bg-primary a:not(.btn):active, .icons-grid.bg-primary a:not(.btn):focus,
+.alternating.bg-primary a:not(.btn):hover,
+.alternating.bg-primary a:not(.btn):active,
+.alternating.bg-primary a:not(.btn):focus {
   color: #fff;
 }
 .icons-grid.bg-primary a:not(.btn):hover [class^="icon-"],
 .icons-grid.bg-primary a:not(.btn):hover [class*=" icon-"], .icons-grid.bg-primary a:not(.btn):active [class^="icon-"],
 .icons-grid.bg-primary a:not(.btn):active [class*=" icon-"], .icons-grid.bg-primary a:not(.btn):focus [class^="icon-"],
-.icons-grid.bg-primary a:not(.btn):focus [class*=" icon-"] {
+.icons-grid.bg-primary a:not(.btn):focus [class*=" icon-"],
+.alternating.bg-primary a:not(.btn):hover [class^="icon-"],
+.alternating.bg-primary a:not(.btn):hover [class*=" icon-"],
+.alternating.bg-primary a:not(.btn):active [class^="icon-"],
+.alternating.bg-primary a:not(.btn):active [class*=" icon-"],
+.alternating.bg-primary a:not(.btn):focus [class^="icon-"],
+.alternating.bg-primary a:not(.btn):focus [class*=" icon-"] {
   color: #fff;
+}
+
+.icons-grid {
+  padding: 25px 0;
 }
 .icons-grid h2 {
   margin-bottom: 2em;
@@ -1076,13 +1095,82 @@ small a {
   color: #54A283;
 }
 
-.alternating.text-content p {
-  font-size: 115%;
+.alternating h3 {
+  margin-top: 1.4em;
 }
-.alternating.text-content .row {
-  margin: 5em 0;
+.alternating p {
+  font-size: 125%;
 }
-
+.alternating .row {
+  margin: 5.5em 0;
+}
+.alternating.bg-primary .icon-huge {
+  color: #54A283 !important;
+  background: #fff;
+  border-radius: 50%;
+  padding: 0.12em;
+  font-size: 10em;
+  display: inline-block;
+  width: 1.65em;
+  height: 1.65em;
+}
+.alternating.bg-primary .icon-huge.icon-stats-up:before {
+  top: -10px;
+  position: relative;
+}
+.alternating.text-content .icon-hugest {
+  color: #fff !important;
+  background: #71C39E;
+  background-color: #409bb7;
+  background: linear-gradient(25deg, #409bb7, #71c3ac);
+  background-size: 400% 400%;
+  -webkit-animation: bg 30s ease infinite;
+  -moz-animation: bg 30s ease infinite;
+  animation: bg 30s ease infinite;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  border-radius: 50%;
+  display: inline-block;
+  font-size: 23em;
+  width: 1.3em;
+  height: 1.3em;
+  line-height: 1.3em;
+}
+@-webkit-keyframes bg {
+  0% {
+    background-position: 90% 0%;
+  }
+  50% {
+    background-position: 11% 100%;
+  }
+  100% {
+    background-position: 90% 0%;
+  }
+}
+@-moz-keyframes bg {
+  0% {
+    background-position: 90% 0%;
+  }
+  50% {
+    background-position: 11% 100%;
+  }
+  100% {
+    background-position: 90% 0%;
+  }
+}
+@keyframes bg {
+  0% {
+    background-position: 90% 0%;
+  }
+  50% {
+    background-position: 11% 100%;
+  }
+  100% {
+    background-position: 90% 0%;
+  }
+}
 .news-list {
   margin-bottom: 50px;
 }

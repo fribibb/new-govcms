@@ -329,12 +329,9 @@ body.front {
 
 
 
-
-
-
-
-// used on "Why use govCMS?" and support homepage
-.icons-grid {
+// bgs
+.icons-grid,
+.alternating {
   padding: 25px 0;
   &.bg-primary {
     color: #fff;
@@ -351,6 +348,13 @@ body.front {
       }
     }
   }
+}
+
+
+
+// used on "Why use govCMS?" and support homepage
+.icons-grid {
+  padding: 25px 0;
   h2 {
     margin-bottom: 2em;
   }
