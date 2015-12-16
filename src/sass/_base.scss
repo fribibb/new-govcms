@@ -423,7 +423,7 @@ body.front {
 // Split section
 .split {
   background: linear-gradient(90deg, #fff 50%, #f5f7f9 50%);
-  border-top: 1px solid $borderGrey;
+  // border-top: 1px solid $borderGrey;
   .container {
     .section-one,
     .section-two {
