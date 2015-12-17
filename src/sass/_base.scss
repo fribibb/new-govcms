@@ -28,14 +28,14 @@ body {
 
 // General Overrides
 a {
-  color: $brighterBlue;
+  color: $secondary;
   transition: 0.3s;
 }
 .text-primary {
-  color: $darkBlue;
+  color: $secondaryDark;
 }
 .bg-primary {
-  background-color: $darkBlue;
+  background-color: $secondaryDark;
   color: #fff;
   h4 {
     color: #fff;
@@ -61,8 +61,8 @@ a {
 .btn-primary {
   transition: 0.3s;
   color: #fff;
-  background-color: $highlightDarker;
-  border-color: darken($highlightDarker, 5%);
+  background-color: $highlightDark;
+  border-color: darken($highlightDark, 5%);
 }
 .btn-primary:hover,
 .btn-primary:focus,
@@ -71,25 +71,24 @@ a {
 .btn-primary.active,
 .open > .dropdown-toggle.btn-primary {
   color: #fff;
-  background-color: darken($highlightDarker, 5%);
-  border-color: darken($highlightDarker, 10%);
+  background-color: darken($highlightDark, 5%);
+  border-color: darken($highlightDark, 10%);
 }
 
 .btn-default {
-  color: $highlightDarker;
-  border-color: $highlightDarker;
+  color: $highlightDark;
+  border-color: $highlightDark;
   &:hover,
   &:focus,
   &.focus,
   &:active,
   &.active {
-    color: darken($highlightDarker, 10%);
-    border-color: darken($highlightDarker, 10%);
+    color: darken($highlightDark, 10%);
+    border-color: darken($highlightDark, 10%);
     background-color: lighten($highlight, 38%);
   }
 }
 .btn-dark {
-  // border-radius: 0;
   color: #fff;
   background-color: rgba(0, 0, 0, 0.4);
   &:hover, &:focus, &:active {
@@ -99,7 +98,6 @@ a {
 }
 
 .btn.btn-light {
-  // border-radius: 0;
   color: #333;
   background-color: rgba(#fff, 0.8);
   &:hover,
@@ -109,11 +107,11 @@ a {
     background-color: #fff;
   }
   &.btn-primary {
-    color: $darkBlue;
+    color: $secondaryDark;
     background-color: #fff;
     &:hover, &:focus, &:active {
       color: #fff;
-      background-color: $highlightDarker;
+      background-color: $highlightDark;
     }
   }
 }
@@ -121,8 +119,8 @@ a {
   &:hover,
   &:focus,
   &:active {
-    color: $highlightDarker;
-    background-color: rgba($brighterBlue, 0.03);
+    color: $highlightDark;
+    background-color: rgba($secondary, 0.03);
   }
 }
 
@@ -134,7 +132,7 @@ form {
     margin-top: 2em;
     legend {
       margin-bottom: 15px;
-      color: $darkBlue;
+      color: $secondaryDark;
       .mandatory {
         font-size: 0.65em;
       }
@@ -142,7 +140,7 @@ form {
   }
   label {
     margin-top: 1em;
-    color: $brighterBlue;
+    color: $secondary;
     font-weight: 400;
     width: 100%;
   }
@@ -150,11 +148,11 @@ form {
     margin-top: 0;
   }
   small {
-    color: $lightGreyText;
+    color: $textGreyLight;
   }
 }
 .mandatory {
-  color: $highlightDarker;
+  color: $highlightDark;
   float: right;
 }
 
@@ -194,7 +192,7 @@ hr.small {
 
 // Call to Action
 .call-to-action {
-  @include background-gradient( darken($brighterBlue,10%), lighten($brighterBlue,10%) );
+  @include background-gradient( darken($secondary,10%), lighten($secondary,10%) );
   padding: 50px 0;
   .btn {
     margin: 10px;
@@ -214,9 +212,9 @@ hr.small {
     &:active,
     &:focus {
       background-color: transparent;
-      color: $brighterBlue;
+      color: $secondary;
       font-weight: bold;
-      border-bottom: 1px solid $darkBlue;
+      border-bottom: 1px solid $secondaryDark;
     }
   }
   & > a {
@@ -226,7 +224,7 @@ hr.small {
     &:hover {
       text-decoration: none;
       background-color: transparent;
-      border-bottom: 1px solid $highlightDarker;
+      border-bottom: 1px solid $highlightDark;
     }
   }
 }
@@ -243,13 +241,13 @@ header {
 
 // Header section on all pages
 #top-and-first-wrapper {
-  @include background-gradient( darken($highlight, 5%), lighten($brighterBlue, 10%)); // this passes AA for large text everywhere on homepage
+  @include background-gradient( darken($highlight, 5%), lighten($secondary, 10%)); // this passes AA for large text everywhere on homepage
   p,
   a:not(.btn) {
     color: #fff;
-    text-shadow: 1px 1px 55px rgba($brighterBlue, 0.2);
+    text-shadow: 1px 1px 55px rgba($secondary, 0.2);
     & .coa-titles {
-      color: $darkBlue;
+      color: $secondaryDark;
     }
   }
 
@@ -258,7 +256,7 @@ header {
     background: transparent;
     h1,
     h2 {
-      color: $darkBlue;
+      color: $secondaryDark;
       font-size: 380%;
       font-weight: 300;
       padding: 0 5%;
@@ -269,12 +267,12 @@ header {
     }
     .lead {
       color: #fff;
-      text-shadow: 1px 1px 35px rgba($darkBlue, 0.25);
+      text-shadow: 1px 1px 35px rgba($secondaryDark, 0.25);
       margin-top: -5px;
     }
     small {
       color: #fff;
-      text-shadow: 1px 1px 35px rgba($darkBlue, 0.25);
+      text-shadow: 1px 1px 35px rgba($secondaryDark, 0.25);
       font-size: 90%;
       margin-top: -2px;
       margin-bottom: 1.1em;
@@ -303,7 +301,7 @@ header {
   margin: 25px 0;
   h1,
   h2 {
-    color: $brighterBlue;
+    color: $secondary;
     margin-bottom: 1.5em;
   }
   .btn-lg {
@@ -335,7 +333,7 @@ body.front {
   padding: 25px 0;
   &.bg-primary {
     color: #fff;
-    @include background-gradient($highlightDarker, lighten($brighterBlue,5%));
+    @include background-gradient($highlightDark, lighten($secondary,5%));
     a:not(.btn) {
       &:hover,
       &:active,
@@ -396,18 +394,18 @@ body.front {
     &:active,
     &:focus {
       text-decoration: none;
-      color: $highlightDarker;
+      color: $highlightDark;
       h4 {
         text-decoration: underline;
       }
       [class^="icon-"],
       [class*=" icon-"] {
-        color: $highlightDarker;
+        color: $highlightDark;
       }
     }
     [class^="icon-"],
     [class*=" icon-"] {
-      color: $brighterBlue;
+      color: $secondary;
     }
   }
   .btn {
@@ -423,18 +421,16 @@ body.front {
 // Split section
 .split {
   background: linear-gradient(90deg, #fff 50%, #f5f7f9 50%);
-  // border-top: 1px solid $borderGrey;
   .container {
     .section-one,
     .section-two {
       padding: 50px 0;
       h2 {
-        color: $brighterBlue;
+        color: $secondary;
       }
     }
   }
   .section-one {
-    // border-right: 1px solid #e9eaec;
     .btn {
       margin: 1.75em 0 1em 0;
     }
@@ -446,7 +442,7 @@ body.front {
     label {
       margin-top: 0.5em;
       font-weight: 300;
-      color: $darkBlue;
+      color: $secondaryDark;
     }
     .btn {
       margin-top: 1em;
@@ -514,10 +510,10 @@ body.front {
         display: block;
       }
       .cite-name {
-        color: $highlightDarker;
+        color: $highlightDark;
       }
       .cite-pos {
-        color: $lightGreyText;
+        color: $textGreyLight;
       }
     }
   }
@@ -534,14 +530,14 @@ footer {
   ul.social {
     margin-bottom: 0;
     a {
-      color: $brighterBlue;
+      color: $secondary;
       opacity: 0.9;
       &:hover,
       &:active,
       &:focus {
         opacity: 1;
         text-decoration: none;
-        color: $highlightDarker;
+        color: $highlightDark;
       }
     }
   }
@@ -571,7 +567,7 @@ footer {
     a {
       background-color: transparent;
       &:hover {
-        background-color: $highlightDarker;
+        background-color: $highlightDark;
       }
     }
   }

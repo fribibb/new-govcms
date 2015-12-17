@@ -1,14 +1,16 @@
 
 $highlight:         #71C39E;
-$highlightDarker:   #54A283;
+$highlightDark:     #54A283;  // accessible on white bg
 
-$darkBlue:          #37424A;
-$brighterBlue:      #2C5D7E;
 
-$lightGrey:         #F5F5F5;
-$darkGrey:          #333;
+$secondary:         #2C5D7E;
+$secondaryDark:     #37424A;
+
+
+$greyLight:         #F5F5F5;
+$greyDark:          #333;
 $borderGrey:        #D2D2D4;
 
 
-$greyText:          #555;
-$lightGreyText:     #777;
+$textGrey:          #555;
+$textGreyLight:     #777;     // lightest accessible grey on white bg

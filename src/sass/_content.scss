@@ -2,25 +2,25 @@
 
 .pricingTable {
   margin-bottom: 25px;
-  color: $darkBlue;
+  color: $secondaryDark;
   h2 {
     margin-bottom: 30px;
   }
   .panel {
-    border-color: rgba($darkBlue, .3);
+    border-color: rgba($secondaryDark, .3);
     .heading-style {  // 'heading'
-      color: $darkBlue;
+      color: $secondaryDark;
       font-size: 150%;
       font-weight: 300;
     }
     .optional {  // '(optional)'
-      color: $highlightDarker;
+      color: $highlightDark;
       font-weight: 300;
     }
   }
   .panel-heading {
-    background-color: $darkBlue;
-    border-color: rgba($darkBlue, .3);
+    background-color: $secondaryDark;
+    border-color: rgba($secondaryDark, .3);
     font-weight: 300;
     font-size: 80%;
     color: rgba(#fff, 0.8);
@@ -39,7 +39,7 @@
       font-weight: 300;
     }
     &.cost {
-      color: $highlightDarker;
+      color: $highlightDark;
     }
   }
   .list-group-item {
@@ -70,7 +70,7 @@
   }
   .lead {
     font-size: 2em;
-    color: $highlightDarker;
+    color: $highlightDark;
   }
 }
 
@@ -81,7 +81,6 @@
     position: absolute;
     top: -0.8em;
     left: calc(50% - 0.38em);
-    // border-radius: 50%;
     background-color: white;
     color: $highlight;
     font-size: 3em;
@@ -111,15 +110,15 @@ small {
       text-decoration: none;
       .post-title {
         text-decoration: underline;
-        color: $highlightDarker
+        color: $highlightDark
       }
     }
     .post-subtitle {
-      color: $darkGrey;
+      color: $greyDark;
     }
   }
   .post-meta {
-    color: $lightGreyText;
+    color: $textGreyLight;
   }
 }
 
@@ -149,7 +148,7 @@ small {
       font-weight: 300;
       padding-right: 3px;
       line-height: 0.9em;
-      color: $highlightDarker;
+      color: $highlightDark;
     }
   }
 }
@@ -165,7 +164,7 @@ small {
     margin: 5.5em 0;
   }
   &.bg-primary .icon-huge {
-    color: $highlightDarker !important;
+    color: $highlightDark !important;
     background: #fff;
     border-radius: 50%;
     padding: 0.12em;
@@ -181,7 +180,7 @@ small {
   &.text-content .icon-hugest {
     color: #fff !important;
     background: $highlight;
-    @include background-gradient( adjust-hue( lighten($brighterBlue,15%), -10% ), adjust-hue( $highlight, 10% ) );
+    @include background-gradient( adjust-hue( lighten($secondary,15%), -10% ), adjust-hue( $highlight, 10% ) );
     border-radius: 50%;
     display: inline-block;
     font-size: 23em;
@@ -209,7 +208,7 @@ small {
     &:hover,
     &:active,
     &:focus {
-      background-color: $highlightDarker;
+      background-color: $highlightDark;
     }
   }
   i {
@@ -220,7 +219,7 @@ small {
     }
   }
   .btn-email {
-    background-color: $brighterBlue;
+    background-color: $secondary;
   }
   .btn-github {
     background-color: #444444;
