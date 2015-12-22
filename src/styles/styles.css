@@ -926,6 +926,10 @@ a.coa-link {
   opacity: 0.8;
 }
 
+.homepage .split.testimonial {
+  border-top: 1px solid #D2D2D4;
+}
+
 #clients {
   margin: 3em 0 2em 0;
 }
