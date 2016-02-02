@@ -1076,6 +1076,7 @@ small a {
 }
 .text-content h3 {
   margin: 1.5em 0 1em 0;
+  font-size: 28px;
 }
 .text-content a {
   text-decoration: underline;
@@ -1096,23 +1097,24 @@ small a {
 }
 
 .alternating h3 {
-  margin-top: 1.4em;
+  margin-top: 0.5em;
 }
 .alternating p {
   font-size: 125%;
 }
 .alternating .row {
-  margin: 5.5em 0;
+  margin: 5.7em 0;
 }
 .alternating.bg-primary .icon-huge {
   color: #54A283 !important;
   background: #fff;
   border-radius: 50%;
   padding: 0.12em;
-  font-size: 10em;
+  font-size: 9em;
   display: inline-block;
-  width: 1.65em;
-  height: 1.65em;
+  width: 1.5em;
+  height: 1.5em;
+  line-height: 1.3em;
 }
 .alternating.bg-primary .icon-huge.icon-stats-up:before {
   top: -10px;
@@ -1133,10 +1135,10 @@ small a {
   -o-background-size: cover;
   border-radius: 50%;
   display: inline-block;
-  font-size: 23em;
-  width: 1.3em;
-  height: 1.3em;
-  line-height: 1.3em;
+  font-size: 21em;
+  width: 1.1em;
+  height: 1.1em;
+  line-height: 1.1em;
 }
 @-webkit-keyframes bg {
   0% {

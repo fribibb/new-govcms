@@ -131,6 +131,7 @@ small {
   }
   h3 {
     margin: 1.5em 0 1em 0;
+    font-size: 28px;
   }
   a {
     text-decoration: underline;
@@ -155,23 +156,24 @@ small {
 
 .alternating {
   h3 {
-    margin-top: 1.4em;
+    margin-top: 0.5em;
   }
   p {
     font-size: 125%;
   }
   .row {
-    margin: 5.5em 0;
+    margin: 5.7em 0;
   }
   &.bg-primary .icon-huge {
     color: $highlightDark !important;
     background: #fff;
     border-radius: 50%;
     padding: 0.12em;
-    font-size: 10em;
+    font-size: 9em;
     display: inline-block;
-    width: 1.65em;
-    height: 1.65em;
+    width: 1.5em;
+    height: 1.5em;
+    line-height: 1.3em;
     &.icon-stats-up:before {
       top: -10px;
       position: relative;
@@ -183,10 +185,10 @@ small {
     @include background-gradient( adjust-hue( lighten($secondary,15%), -10% ), adjust-hue( $highlight, 10% ) );
     border-radius: 50%;
     display: inline-block;
-    font-size: 23em;
-    width: 1.3em;
-    height: 1.3em;
-    line-height: 1.3em;
+    font-size: 21em;
+    width: 1.1em;
+    height: 1.1em;
+    line-height: 1.1em;
   }
 }
 
