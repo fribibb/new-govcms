@@ -411,6 +411,13 @@ body.front {
   .btn {
     margin: 0.3em 0 1em 0;
   }
+  &.light {
+    background: #fff;
+    color: $textGrey;
+    h3, h4, p, span {
+      color: $secondary !important;
+    }
+  }
 }
 
 
