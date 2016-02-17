@@ -1,11 +1,11 @@
 // Styles for cards of all-sites page
-// blatently copied from timhurely.net and mildly modded..
+// - blatantly stolen from timhurely.net SCSS (by Tim), then mildly modded..
 .sortableList {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   .card {
-    flex: 0 0 48%;
+    flex: 0 0 31%;
     border-radius: $radius;
     background: #fff;
     border: 1px solid $borderGrey;
@@ -69,9 +69,10 @@
     i {
       position: absolute;
       right: 10px;
-      bottom: -5px;
+      bottom: 7px;
       color: $secondary;
       opacity: 0.1;
+      font-size: 1.2em;
     }
   }
   a.card {
@@ -88,7 +89,6 @@
         color: $secondary;
       }
       i {
-        // color: $highlight;
         opacity: 0.6;
       }
     }
@@ -105,7 +105,7 @@
       flex: 0 0 31%;
       &:hover {
         .soon {
-          border: 1px solid $highlight;  // 100% blue on hover, not semitransparent grey
+          border: 1px solid $highlight;
         }
       }
     }
