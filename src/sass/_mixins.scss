@@ -34,3 +34,9 @@
 @mixin body-font() {
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
+
+@mixin blurBG() {
+  $blurAmount: 10px;
+  -webkit-backdrop-filter: blur($blurAmount);
+  backdrop-filter: blur($blurAmount);
+}

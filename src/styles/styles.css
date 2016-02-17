@@ -407,6 +407,25 @@ header .nav-pills {
   margin-top: 35px;
   font-size: 115%;
 }
+header .btn.btn-light {
+  background: transparent;
+  border-color: #fff;
+  color: #fff;
+  padding: 8px 15px;
+  margin: 2px auto;
+  border-radius: 4px;
+  font-size: 96%;
+}
+header .btn.btn-light:focus, header .btn.btn-light:active, header .btn.btn-light:hover {
+  background-color: rgba(255, 255, 255, 0.95);
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  border-color: #54A283;
+  color: #54A283;
+}
+header .btn.btn-light.active {
+  border-color: #37424A;
+  box-shadow: none;
+}
 
 #top-and-first-wrapper {
   background-color: #5fbb92;

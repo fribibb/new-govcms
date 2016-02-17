@@ -235,6 +235,27 @@ header {
     margin-top: 35px;
     font-size: 115%;
   }
+  .btn.btn-light {
+    background: transparent;
+    border-color: #fff;
+    color: #fff;
+    padding: 8px 15px;
+    margin: 2px auto;
+    border-radius: $radius;
+    font-size: 96%;
+    &:focus,
+    &:active,
+    &:hover {
+      background-color: rgba(#fff, 0.95);
+      @include body-font();
+      border-color: $highlightDark;
+      color: $highlightDark;
+    }
+    &.active {
+      border-color: $secondaryDark;
+      box-shadow: none;
+    }
+  }
 }
 
 
