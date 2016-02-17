@@ -13,6 +13,21 @@ body.support.front {
         width: 80%;
         width: calc( 100% - 3em);
       }
+      button {
+        transition: color 0.2s, background-colour 0.2s, border-colour 0.2s;
+        &:hover {
+          i {
+            color: $highlightDark;
+          }
+        }
+        &:active,
+        &:focus {
+          background-color: $secondary;
+          i {
+            color: #fff;
+          }
+        }
+      }
     }
   }
   // #support-cats {

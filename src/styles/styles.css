@@ -1082,6 +1082,18 @@ body.support.front .about .navbar-form .form-control {
   width: 80%;
   width: calc( 100% - 3em);
 }
+body.support.front .about .navbar-form button {
+  transition: color 0.2s, background-colour 0.2s, border-colour 0.2s;
+}
+body.support.front .about .navbar-form button:hover i {
+  color: #54A283;
+}
+body.support.front .about .navbar-form button:active, body.support.front .about .navbar-form button:focus {
+  background-color: #2C5D7E;
+}
+body.support.front .about .navbar-form button:active i, body.support.front .about .navbar-form button:focus i {
+  color: #fff;
+}
 
 .pricingTable {
   margin-bottom: 25px;
