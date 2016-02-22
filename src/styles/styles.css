@@ -1371,6 +1371,12 @@ small a {
   margin: 1.5em 0 1em;
 }
 
+@media (min-width: 994px) {
+  .vertical-center {
+    display: flex;
+    align-items: center;
+  }
+}
 @media (max-width: 993px) {
   #top-and-first-wrapper .logos {
     margin: 2em auto 0;
@@ -1389,10 +1395,13 @@ small a {
     float: left !important;
   }
 
-  .split {
+  .split .container {
     background: #fff;
   }
-  .split .section-two {
+  .split .container .section-one {
+    padding-bottom: 1em;
+  }
+  .split .container .section-two {
     text-align: left;
     padding-top: 0;
   }
@@ -1401,8 +1410,12 @@ small a {
     margin: 0;
     width: 100%;
   }
+  .split.testimonial .container .section-one,
+  .split.testimonial .container .section-two {
+    padding: 10px 20px;
+  }
   .split.testimonial .container .section-one {
-    margin: 1em;
+    margin: 1em 1em 0 1em;
   }
   .split.testimonial .container .section-one:after {
     content: none;
@@ -1414,20 +1427,51 @@ small a {
     transform: none !important;
     margin: 0 10%;
   }
-  .split.testimonial .container .section-one,
-  .split.testimonial .container .section-two {
-    padding: 10px 20px;
+
+  #clients img {
+    margin-bottom: 0;
   }
 
-  .call-to-action h2 {
-    text-align: center;
-  }
   .call-to-action .text-right .text-right {
     text-align: center;
   }
+
+  .alternating,
+  .alternating .row {
+    margin: 0 auto;
+    padding: 10px 0;
+  }
+  .alternating img,
+  .alternating i.icon-huge, .alternating.alternating.bg-primary i.icon-huge {
+    display: none !important;
+  }
+  .alternating .text-center img {
+    display: inline-block !important;
+    height: auto !important;
+    margin-bottom: 20px;
+  }
 }
 @media (max-width: 767px) {
+  .nav-pills li {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
   .split:not(.testimonial) {
     margin: 1em;
+  }
+
+  .call-to-action .btn {
+    margin-right: 0;
+    margin-top: 23px;
+    padding: 10px;
+  }
+
+  .split.testimonial blockquote {
+    margin: 1em;
+  }
+
+  footer .small-links li {
+    margin-bottom: 20px;
   }
 }

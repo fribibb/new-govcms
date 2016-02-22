@@ -6,6 +6,15 @@
 }
 
 
+@media (min-width: 994px) {
+  // Only using this on 'desktop' sizes..
+  // as for old browsers? Well.. #aintnobodygottimefordat right now
+  .vertical-center {
+    display: flex;
+    align-items: center;
+  }
+}
+
 @media (max-width: 993px) {
   #top-and-first-wrapper {
     .logos {
@@ -25,8 +34,11 @@
      float: left !important;
     }
   }
-  .split {
+  .split .container {
     background: #fff;
+    .section-one {
+      padding-bottom: 1em;
+    }
     .section-two {
       text-align: left;
       padding-top: 0;
@@ -36,8 +48,12 @@
     .container {
       margin: 0;
       width: 100%;
+      .section-one,
+      .section-two {
+        padding: 10px 20px;
+      }
       .section-one {
-        margin: 1em;
+        margin: 1em 1em 0 1em;
         &:after {
           content: none;
         }
@@ -49,18 +65,36 @@
           margin: 0 10%;
         }
       }
-      .section-one,
-      .section-two {
-        padding: 10px 20px;
-      }
+    }
+  }
+  #clients {
+    img {
+      margin-bottom: 0;
     }
   }
   .call-to-action {
     h2 {
-      text-align: center;
+      // text-align: center;
     }
     .text-right .text-right {
       text-align: center;;
+    }
+  }
+  .alternating {
+    &,
+    .row {
+      margin: 0 auto;
+      padding: 10px 0;
+    }
+    img,
+    i.icon-huge,
+    &.alternating.bg-primary i.icon-huge {
+      display: none !important;
+    }
+    .text-center img {
+      display: inline-block !important;
+      height: auto !important;
+      margin-bottom: 20px;
     }
   }
 }
@@ -69,7 +103,22 @@
 
 
 @media (max-width:767px) {
+  .nav-pills li {
+    width: 100%;
+    margin-bottom: 15px;
+  }
   .split:not(.testimonial) {
     margin: 1em;
+  }
+  .call-to-action .btn {
+    margin-right: 0;
+    margin-top: 23px;
+    padding: 10px;
+  }
+  .split.testimonial blockquote {
+    margin: 1em;
+  }
+  footer .small-links li {
+    margin-bottom: 20px;
   }
 }
