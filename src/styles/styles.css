@@ -1370,3 +1370,64 @@ small a {
   font-size: 24px;
   margin: 1.5em 0 1em;
 }
+
+@media (max-width: 993px) {
+  #top-and-first-wrapper .logos {
+    margin: 2em auto 0;
+    width: 22em;
+    float: none;
+  }
+  #top-and-first-wrapper .nav-pills {
+    float: none !important;
+    margin: 2em auto 0;
+    width: 77%;
+  }
+  #top-and-first-wrapper small.pull-right {
+    width: 100%;
+  }
+  #top-and-first-wrapper .btn-lg {
+    float: left !important;
+  }
+
+  .split {
+    background: #fff;
+  }
+  .split .section-two {
+    text-align: left;
+    padding-top: 0;
+  }
+
+  .split.testimonial .container {
+    margin: 0;
+    width: 100%;
+  }
+  .split.testimonial .container .section-one {
+    margin: 1em;
+  }
+  .split.testimonial .container .section-one:after {
+    content: none;
+  }
+  .split.testimonial .container .section-two {
+    margin: 0;
+  }
+  .split.testimonial .container .section-two img {
+    transform: none !important;
+    margin: 0 10%;
+  }
+  .split.testimonial .container .section-one,
+  .split.testimonial .container .section-two {
+    padding: 10px 20px;
+  }
+
+  .call-to-action h2 {
+    text-align: center;
+  }
+  .call-to-action .text-right .text-right {
+    text-align: center;
+  }
+}
+@media (max-width: 767px) {
+  .split:not(.testimonial) {
+    margin: 1em;
+  }
+}
