@@ -247,8 +247,8 @@ a {
 }
 
 .btn-default {
-  color: #54A283;
-  border-color: #54A283;
+  color: #407a63;
+  border-color: #407a63;
 }
 .btn-default:hover, .btn-default:focus, .btn-default.focus, .btn-default:active, .btn-default.active {
   color: #438068;
@@ -311,7 +311,7 @@ form small {
 }
 
 .mandatory {
-  color: #54A283;
+  color: #407a63;
   float: right;
 }
 
@@ -327,58 +327,19 @@ hr.small {
 .logos img {
   background: radial-gradient(rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0) 50%);
 }
-.logos .coa-titles-stacked {
-  text-shadow: 1px 1px 30px rgba(255, 255, 255, 0.4);
-}
 .logos .logo {
   margin-left: 30px;
 }
 
 .call-to-action {
   background-color: #1f4158;
-  background: linear-gradient(25deg, #1f4158, #3979a4);
+  background: linear-gradient(11deg, #1f4158, #2C5D7E, #3979a4);
   background-size: 400% 400%;
-  -webkit-animation: bg 30s ease infinite;
-  -moz-animation: bg 30s ease infinite;
-  animation: bg 30s ease infinite;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
   -o-background-size: cover;
   padding: 50px 0;
-}
-@-webkit-keyframes bg {
-  0% {
-    background-position: 90% 0%;
-  }
-  50% {
-    background-position: 11% 100%;
-  }
-  100% {
-    background-position: 90% 0%;
-  }
-}
-@-moz-keyframes bg {
-  0% {
-    background-position: 90% 0%;
-  }
-  50% {
-    background-position: 11% 100%;
-  }
-  100% {
-    background-position: 90% 0%;
-  }
-}
-@keyframes bg {
-  0% {
-    background-position: 90% 0%;
-  }
-  50% {
-    background-position: 11% 100%;
-  }
-  100% {
-    background-position: 90% 0%;
-  }
 }
 .call-to-action .btn {
   margin: 10px;
@@ -419,8 +380,8 @@ header .btn.btn-light {
 header .btn.btn-light:focus, header .btn.btn-light:active, header .btn.btn-light:hover {
   background-color: rgba(255, 255, 255, 0.95);
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  border-color: #54A283;
-  color: #54A283;
+  border-color: #407a63;
+  color: #407a63;
 }
 header .btn.btn-light.active {
   border-color: #37424A;
@@ -428,58 +389,27 @@ header .btn.btn-light.active {
 }
 
 #top-and-first-wrapper {
-  background-color: #5fbb92;
-  background: linear-gradient(25deg, #5fbb92, #3979a4);
+  background-color: #6ad5ac;
+  background: linear-gradient(11deg, #6ad5ac, #51bfbb, #2b5a7a);
   background-size: 400% 400%;
-  -webkit-animation: bg 30s ease infinite;
-  -moz-animation: bg 30s ease infinite;
-  animation: bg 30s ease infinite;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
   -o-background-size: cover;
 }
-@-webkit-keyframes bg {
-  0% {
-    background-position: 90% 0%;
-  }
-  50% {
-    background-position: 11% 100%;
-  }
-  100% {
-    background-position: 90% 0%;
-  }
-}
-@-moz-keyframes bg {
-  0% {
-    background-position: 90% 0%;
-  }
-  50% {
-    background-position: 11% 100%;
-  }
-  100% {
-    background-position: 90% 0%;
-  }
-}
-@keyframes bg {
-  0% {
-    background-position: 90% 0%;
-  }
-  50% {
-    background-position: 11% 100%;
-  }
-  100% {
-    background-position: 90% 0%;
-  }
-}
 #top-and-first-wrapper p,
 #top-and-first-wrapper a:not(.btn) {
-  color: #fff;
-  text-shadow: 1px 1px 55px rgba(44, 93, 126, 0.2);
+  color: #37424A;
 }
 #top-and-first-wrapper p .coa-titles,
 #top-and-first-wrapper a:not(.btn) .coa-titles {
   color: #37424A;
+}
+#top-and-first-wrapper .nav a {
+  color: #fff;
+}
+#top-and-first-wrapper .pager a {
+  border-color: #37424A;
 }
 #top-and-first-wrapper #about {
   background: transparent;
@@ -490,19 +420,16 @@ header .btn.btn-light.active {
   font-size: 380%;
   font-weight: 300;
   padding: 0 5%;
-  text-shadow: 1px 1px 45px rgba(255, 255, 255, 0.5);
 }
 #top-and-first-wrapper #about .btn {
   float: right;
 }
 #top-and-first-wrapper #about .lead {
-  color: #fff;
-  text-shadow: 1px 1px 35px rgba(55, 66, 74, 0.25);
+  color: #37424A;
   margin-top: -5px;
 }
 #top-and-first-wrapper #about small {
-  color: #fff;
-  text-shadow: 1px 1px 35px rgba(55, 66, 74, 0.25);
+  color: #37424A;
   font-size: 90%;
   margin-top: -2px;
   margin-bottom: 1.1em;
@@ -550,49 +477,13 @@ body.front #about small {
 .icons-grid.bg-primary,
 .alternating.bg-primary {
   color: #fff;
-  background-color: #54A283;
-  background: linear-gradient(25deg, #54A283, #336b91);
+  background-color: #63af98;
+  background: linear-gradient(11deg, #63af98, #3a7184, #2C5D7E);
   background-size: 400% 400%;
-  -webkit-animation: bg 30s ease infinite;
-  -moz-animation: bg 30s ease infinite;
-  animation: bg 30s ease infinite;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
   -o-background-size: cover;
-}
-@-webkit-keyframes bg {
-  0% {
-    background-position: 90% 0%;
-  }
-  50% {
-    background-position: 11% 100%;
-  }
-  100% {
-    background-position: 90% 0%;
-  }
-}
-@-moz-keyframes bg {
-  0% {
-    background-position: 90% 0%;
-  }
-  50% {
-    background-position: 11% 100%;
-  }
-  100% {
-    background-position: 90% 0%;
-  }
-}
-@keyframes bg {
-  0% {
-    background-position: 90% 0%;
-  }
-  50% {
-    background-position: 11% 100%;
-  }
-  100% {
-    background-position: 90% 0%;
-  }
 }
 .icons-grid.bg-primary a:not(.btn):hover, .icons-grid.bg-primary a:not(.btn):active, .icons-grid.bg-primary a:not(.btn):focus,
 .alternating.bg-primary a:not(.btn):hover,
@@ -768,7 +659,7 @@ body.front #about small {
   display: block;
 }
 .split.testimonial cite .cite-name {
-  color: #54A283;
+  color: #407a63;
 }
 .split.testimonial cite .cite-pos {
   color: #777;
@@ -940,7 +831,6 @@ footer .small-links li:last-of-type {
 }
 
 .coa-titles {
-  color: #333;
   border-color: #333;
 }
 .coa-titles span {
@@ -1130,7 +1020,7 @@ body.support.front .about .navbar-form button:active i, body.support.front .abou
   font-weight: 300;
 }
 .pricingTable .panel .optional {
-  color: #54A283;
+  color: #407a63;
   font-weight: 300;
 }
 .pricingTable .panel-heading {
@@ -1277,11 +1167,8 @@ small a {
   color: #fff !important;
   background: #71C39E;
   background-color: #409bb7;
-  background: linear-gradient(25deg, #409bb7, #71c3ac);
+  background: linear-gradient(11deg, #409bb7, #2C5D7E, #71C39E);
   background-size: 400% 400%;
-  -webkit-animation: bg 30s ease infinite;
-  -moz-animation: bg 30s ease infinite;
-  animation: bg 30s ease infinite;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
@@ -1293,39 +1180,7 @@ small a {
   height: 1.1em;
   line-height: 1.1em;
 }
-@-webkit-keyframes bg {
-  0% {
-    background-position: 90% 0%;
-  }
-  50% {
-    background-position: 11% 100%;
-  }
-  100% {
-    background-position: 90% 0%;
-  }
-}
-@-moz-keyframes bg {
-  0% {
-    background-position: 90% 0%;
-  }
-  50% {
-    background-position: 11% 100%;
-  }
-  100% {
-    background-position: 90% 0%;
-  }
-}
-@keyframes bg {
-  0% {
-    background-position: 90% 0%;
-  }
-  50% {
-    background-position: 11% 100%;
-  }
-  100% {
-    background-position: 90% 0%;
-  }
-}
+
 .news-list {
   margin-bottom: 50px;
 }
@@ -1426,6 +1281,7 @@ small a {
   .split.testimonial .container .section-two img {
     transform: none !important;
     margin: 0 10%;
+    max-height: 250px;
   }
 
   #clients img {
@@ -1463,7 +1319,6 @@ small a {
 
   .call-to-action .btn {
     margin-right: 0;
-    margin-top: 23px;
     padding: 10px;
   }
 

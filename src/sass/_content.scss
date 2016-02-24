@@ -14,7 +14,7 @@
       font-weight: 300;
     }
     .optional {  // '(optional)'
-      color: $highlightDark;
+      color: $highlightDarker;
       font-weight: 300;
     }
   }
@@ -182,7 +182,7 @@ small {
   &.text-content .icon-hugest {
     color: #fff !important;
     background: $highlight;
-    @include background-gradient( adjust-hue( lighten($secondary,15%), -10% ), adjust-hue( $highlight, 10% ) );
+    @include background-gradient( adjust-hue( lighten($secondary,15%), -10% ), $secondary, $highlight );
     border-radius: 50%;
     display: inline-block;
     font-size: 21em;

@@ -77,8 +77,8 @@ a {
 }
 
 .btn-default {
-  color: $highlightDark;
-  border-color: $highlightDark;
+  color: $highlightDarker;
+  border-color: $highlightDarker;
   &:hover,
   &:focus,
   &.focus,
@@ -153,7 +153,7 @@ form {
   }
 }
 .mandatory {
-  color: $highlightDark;
+  color: $highlightDarker;
   float: right;
 }
 
@@ -177,9 +177,6 @@ hr.small {
   img {
     background: radial-gradient( rgba(#fff,0.1), transparent 50% );
   }
-  .coa-titles-stacked {
-    text-shadow: 1px 1px 30px rgba(#fff, 0.4);
-  }
   .logo {
     margin-left: 30px;
   }
@@ -193,7 +190,7 @@ hr.small {
 
 // Call to Action
 .call-to-action {
-  @include background-gradient( darken($secondary,10%), lighten($secondary,10%) );
+  @include background-gradient( darken($secondary,10%), $secondary, lighten($secondary,10%) );
   padding: 50px 0;
   .btn {
     margin: 10px;
@@ -249,8 +246,8 @@ header {
     &:hover {
       background-color: rgba(#fff, 0.95);
       @include body-font();
-      border-color: $highlightDark;
-      color: $highlightDark;
+      border-color: $highlightDarker;
+      color: $highlightDarker;
     }
     &.active {
       border-color: $secondaryDark;
@@ -263,13 +260,22 @@ header {
 
 // Header section on all pages
 #top-and-first-wrapper {
-  @include background-gradient( darken($highlight, 5%), lighten($secondary, 10%)); // this passes AA for large text everywhere on homepage
+  @include background-gradient( $highlightBright, $aqua, darken($secondary,1%)); // this passes AA for large text everywhere on homepage
   p,
   a:not(.btn) {
-    color: #fff;
-    text-shadow: 1px 1px 55px rgba($secondary, 0.2);
+    color: $secondaryDark;
     & .coa-titles {
       color: $secondaryDark;
+    }
+  }
+  .nav {
+    a {
+      color: #fff;
+    }
+  }
+  .pager {
+    a {
+      border-color: $secondaryDark;
     }
   }
 
@@ -282,19 +288,16 @@ header {
       font-size: 380%;
       font-weight: 300;
       padding: 0 5%;
-      text-shadow: 1px 1px 45px rgba(#fff, 0.5);
     }
     .btn {
       float: right;
     }
     .lead {
-      color: #fff;
-      text-shadow: 1px 1px 35px rgba($secondaryDark, 0.25);
+      color: $secondaryDark;
       margin-top: -5px;
     }
     small {
-      color: #fff;
-      text-shadow: 1px 1px 35px rgba($secondaryDark, 0.25);
+      color: $secondaryDark;
       font-size: 90%;
       margin-top: -2px;
       margin-bottom: 1.1em;
@@ -355,7 +358,7 @@ body.front {
   padding: 25px 0;
   &.bg-primary {
     color: #fff;
-    @include background-gradient($highlightDark, lighten($secondary,5%));
+    @include background-gradient(mix($highlight,$secondary,80%), mix($highlight,$secondary,20%), $secondary);
     a:not(.btn) {
       &:hover,
       &:active,
@@ -539,7 +542,7 @@ body.front {
         display: block;
       }
       .cite-name {
-        color: $highlightDark;
+        color: $highlightDarker;
       }
       .cite-pos {
         color: $textGreyLight;

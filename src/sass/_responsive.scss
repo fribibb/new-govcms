@@ -63,6 +63,7 @@
         img {
           transform: none !important;
           margin: 0 10%;
+          max-height: 250px;
         }
       }
     }
@@ -73,9 +74,6 @@
     }
   }
   .call-to-action {
-    h2 {
-      // text-align: center;
-    }
     .text-right .text-right {
       text-align: center;;
     }
@@ -112,7 +110,6 @@
   }
   .call-to-action .btn {
     margin-right: 0;
-    margin-top: 23px;
     padding: 10px;
   }
   .split.testimonial blockquote {
