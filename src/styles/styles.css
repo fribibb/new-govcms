@@ -231,7 +231,7 @@ a {
 .btn-primary {
   transition: 0.3s;
   color: #fff;
-  background-color: #54A283;
+  background-color: #407a63;
   border-color: #4b9175;
 }
 
@@ -242,7 +242,7 @@ a {
 .btn-primary.active,
 .open > .dropdown-toggle.btn-primary {
   color: #fff;
-  background-color: #4b9175;
+  background-color: #376955;
   border-color: #438068;
 }
 
@@ -251,7 +251,7 @@ a {
   border-color: #407a63;
 }
 .btn-default:hover, .btn-default:focus, .btn-default.focus, .btn-default:active, .btn-default.active {
-  color: #438068;
+  color: #2e5948;
   border-color: #438068;
   background-color: #f9fdfb;
 }
@@ -283,7 +283,7 @@ a {
 }
 
 .light-bg .btn.btn-light:hover, .light-bg .btn.btn-light:focus, .light-bg .btn.btn-light:active {
-  color: #54A283;
+  color: #407a63;
   background-color: rgba(44, 93, 126, 0.03);
 }
 
@@ -405,7 +405,7 @@ header .btn.btn-light.active {
 #top-and-first-wrapper a:not(.btn) .coa-titles {
   color: #37424A;
 }
-#top-and-first-wrapper .nav a {
+#top-and-first-wrapper .nav a:not(.btn-light) {
   color: #fff;
 }
 #top-and-first-wrapper .pager a {

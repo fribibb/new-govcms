@@ -62,7 +62,7 @@ a {
 .btn-primary {
   transition: 0.3s;
   color: #fff;
-  background-color: $highlightDark;
+  background-color: $highlightDarker;
   border-color: darken($highlightDark, 5%);
 }
 .btn-primary:hover,
@@ -72,7 +72,7 @@ a {
 .btn-primary.active,
 .open > .dropdown-toggle.btn-primary {
   color: #fff;
-  background-color: darken($highlightDark, 5%);
+  background-color: darken($highlightDarker, 5%);
   border-color: darken($highlightDark, 10%);
 }
 
@@ -84,7 +84,7 @@ a {
   &.focus,
   &:active,
   &.active {
-    color: darken($highlightDark, 10%);
+    color: darken($highlightDarker, 10%);
     border-color: darken($highlightDark, 10%);
     background-color: lighten($highlight, 38%);
   }
@@ -120,7 +120,7 @@ a {
   &:hover,
   &:focus,
   &:active {
-    color: $highlightDark;
+    color: $highlightDarker;
     background-color: rgba($secondary, 0.03);
   }
 }
@@ -269,7 +269,7 @@ header {
     }
   }
   .nav {
-    a {
+    a:not(.btn-light) {
       color: #fff;
     }
   }
