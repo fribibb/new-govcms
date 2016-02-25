@@ -61,9 +61,9 @@ a {
 // Custom Button Styles
 .btn-primary {
   transition: 0.3s;
-  color: #fff;
-  background-color: $highlightDarker;
-  border-color: darken($highlightDark, 5%);
+  color: $secondaryDark;
+  background-color: darken($highlightBright, 10%);
+  border-color: darken($highlight, 8%);
 }
 .btn-primary:hover,
 .btn-primary:focus,
@@ -72,7 +72,7 @@ a {
 .btn-primary.active,
 .open > .dropdown-toggle.btn-primary {
   color: #fff;
-  background-color: darken($highlightDarker, 5%);
+  background-color: darken($highlightDarker, 2%);
   border-color: darken($highlightDark, 10%);
 }
 
@@ -85,8 +85,8 @@ a {
   &:active,
   &.active {
     color: darken($highlightDarker, 10%);
-    border-color: darken($highlightDark, 10%);
     background-color: lighten($highlight, 38%);
+    border-color: $highlightBright;
   }
 }
 .btn-dark {
@@ -98,9 +98,7 @@ a {
   }
 }
 
-.btn.btn-light {
-  color: #333;
-  background-color: rgba(#fff, 0.8);
+.btn-light {
   &:hover,
   &:focus,
   &:active {
@@ -116,12 +114,47 @@ a {
     }
   }
 }
-.light-bg .btn.btn-light {
+.light-bg .btn-light {
   &:hover,
   &:focus,
   &:active {
     color: $highlightDarker;
-    background-color: rgba($secondary, 0.03);
+    background-color: rgba($secondary, 0.1);
+  }
+}
+.bg-primary {
+  .btn-light {
+    color: #fff;
+    background-color: transparent;
+    border-color: #fff;
+    &:hover,
+    &:focus,
+    &:active {
+      color: #fff;
+      border-color: $highlightBright;
+      background-color: rgba(0, 0, 0, 0.1);
+    }
+  }
+}
+#top-and-first-wrapper {
+  .btn-primary.btn-light {
+    color: $secondaryDark;
+    background-color: transparent;
+    border-color: $secondaryDark;
+    &:hover,
+    &:focus,
+    &:active {
+      color: #fff;
+      border-color: #fff;
+      background-color: rgba($highlightDarker, 0.4);
+    }
+  }
+  .btn-default.btn-light {
+    &:hover,
+    &:focus,
+    &:active {
+      border-color: $highlightBright;
+    }
   }
 }
 

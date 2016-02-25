@@ -230,9 +230,9 @@ a {
 
 .btn-primary {
   transition: 0.3s;
-  color: #fff;
-  background-color: #407a63;
-  border-color: #4b9175;
+  color: #37424A;
+  background-color: #42ca96;
+  border-color: #54b78a;
 }
 
 .btn-primary:hover,
@@ -242,7 +242,7 @@ a {
 .btn-primary.active,
 .open > .dropdown-toggle.btn-primary {
   color: #fff;
-  background-color: #376955;
+  background-color: #3c735e;
   border-color: #438068;
 }
 
@@ -252,8 +252,8 @@ a {
 }
 .btn-default:hover, .btn-default:focus, .btn-default.focus, .btn-default:active, .btn-default.active {
   color: #2e5948;
-  border-color: #438068;
   background-color: #f9fdfb;
+  border-color: #6ad5ac;
 }
 
 .btn-dark {
@@ -265,26 +265,47 @@ a {
   background-color: rgba(0, 0, 0, 0.7);
 }
 
-.btn.btn-light {
-  color: #333;
-  background-color: rgba(255, 255, 255, 0.8);
-}
-.btn.btn-light:hover, .btn.btn-light:focus, .btn.btn-light:active {
+.btn-light:hover, .btn-light:focus, .btn-light:active {
   color: #333;
   background-color: #fff;
 }
-.btn.btn-light.btn-primary {
+.btn-light.btn-primary {
   color: #37424A;
   background-color: #fff;
 }
-.btn.btn-light.btn-primary:hover, .btn.btn-light.btn-primary:focus, .btn.btn-light.btn-primary:active {
+.btn-light.btn-primary:hover, .btn-light.btn-primary:focus, .btn-light.btn-primary:active {
   color: #fff;
   background-color: #54A283;
 }
 
-.light-bg .btn.btn-light:hover, .light-bg .btn.btn-light:focus, .light-bg .btn.btn-light:active {
+.light-bg .btn-light:hover, .light-bg .btn-light:focus, .light-bg .btn-light:active {
   color: #407a63;
-  background-color: rgba(44, 93, 126, 0.03);
+  background-color: rgba(44, 93, 126, 0.1);
+}
+
+.bg-primary .btn-light {
+  color: #fff;
+  background-color: transparent;
+  border-color: #fff;
+}
+.bg-primary .btn-light:hover, .bg-primary .btn-light:focus, .bg-primary .btn-light:active {
+  color: #fff;
+  border-color: #6ad5ac;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+#top-and-first-wrapper .btn-primary.btn-light {
+  color: #37424A;
+  background-color: transparent;
+  border-color: #37424A;
+}
+#top-and-first-wrapper .btn-primary.btn-light:hover, #top-and-first-wrapper .btn-primary.btn-light:focus, #top-and-first-wrapper .btn-primary.btn-light:active {
+  color: #fff;
+  border-color: #fff;
+  background-color: rgba(64, 122, 99, 0.4);
+}
+#top-and-first-wrapper .btn-default.btn-light:hover, #top-and-first-wrapper .btn-default.btn-light:focus, #top-and-first-wrapper .btn-default.btn-light:active {
+  border-color: #6ad5ac;
 }
 
 form fieldset {
