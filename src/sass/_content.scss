@@ -13,7 +13,7 @@
       font-size: 150%;
       font-weight: 300;
     }
-    .optional {  // '(optional)'
+    .optional {  // '(optional)' labels on form elements
       color: $highlightDarker;
       font-weight: 300;
     }
@@ -119,6 +119,13 @@ small {
   }
   .post-meta {
     color: $textGreyLight;
+    a {
+      &:hover,
+      &:active,
+      &:focus {
+        text-decoration: underline;
+      }
+    }
   }
 }
 

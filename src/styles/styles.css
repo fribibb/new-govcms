@@ -182,6 +182,10 @@
   content: '\e039';
 }
 
+.icon-timer:before {
+  content: '\e03a';
+}
+
 html {
   width: 100%;
   height: 100%;
@@ -1000,28 +1004,37 @@ a.coa-link {
   margin-bottom: 20px;
 }
 
-body.support.front .about .navbar-form {
+body.support.front .about .navbar-form,
+body.search-results .about .navbar-form {
   margin-bottom: 25px;
 }
-body.support.front .about .navbar-form .input-group {
+body.support.front .about .navbar-form .input-group,
+body.search-results .about .navbar-form .input-group {
   width: 100%;
 }
-body.support.front .about .navbar-form .form-control {
+body.support.front .about .navbar-form .form-control,
+body.search-results .about .navbar-form .form-control {
   font-size: 200%;
   padding: 1.11em 0.5em;
   width: 80%;
   width: calc( 100% - 3em);
 }
-body.support.front .about .navbar-form button {
+body.support.front .about .navbar-form button,
+body.search-results .about .navbar-form button {
   transition: color 0.2s, background-colour 0.2s, border-colour 0.2s;
 }
-body.support.front .about .navbar-form button:hover i {
+body.support.front .about .navbar-form button:hover i,
+body.search-results .about .navbar-form button:hover i {
   color: #54A283;
 }
-body.support.front .about .navbar-form button:active, body.support.front .about .navbar-form button:focus {
+body.support.front .about .navbar-form button:active, body.support.front .about .navbar-form button:focus,
+body.search-results .about .navbar-form button:active,
+body.search-results .about .navbar-form button:focus {
   background-color: #2C5D7E;
 }
-body.support.front .about .navbar-form button:active i, body.support.front .about .navbar-form button:focus i {
+body.support.front .about .navbar-form button:active i, body.support.front .about .navbar-form button:focus i,
+body.search-results .about .navbar-form button:active i,
+body.search-results .about .navbar-form button:focus i {
   color: #fff;
 }
 
@@ -1130,6 +1143,9 @@ small a {
 }
 .post-preview .post-meta {
   color: #777;
+}
+.post-preview .post-meta a:hover, .post-preview .post-meta a:active, .post-preview .post-meta a:focus {
+  text-decoration: underline;
 }
 
 .text-content {
