@@ -168,7 +168,7 @@ small {
   p {
     font-size: 125%;
   }
-  .row {
+  .row:not(.vertical-center) {
     margin: 5.7em 0;
   }
   &.bg-primary .icon-huge {

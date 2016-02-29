@@ -639,7 +639,7 @@ body.front #about small {
   float: right;
   position: absolute;
   display: inherit;
-  right: -60px;
+  right: -59px;
   top: 33%;
   top: calc(50% - 51px);
   z-index: 1;
@@ -1182,7 +1182,7 @@ small a {
 .alternating p {
   font-size: 125%;
 }
-.alternating .row {
+.alternating .row:not(.vertical-center) {
   margin: 5.7em 0;
 }
 .alternating.bg-primary .icon-huge {
