@@ -46,6 +46,29 @@
     padding: 35px 15px;
   }
 }
+.panel-dashed {
+  border-style: dashed;
+  border-width: 2px;
+  .panel-heading {
+    border-style: none;
+    background: #f5f5f5;
+    h3 strong {
+      color: $highlightDarker;
+    }
+    .lead {
+      strong {
+        opacity: 0.85;
+      }
+    }
+  }
+  // only on desktops
+  // .panel-body {
+  //   min-height: 31em;
+  // }
+  .vertical-center > div {
+    width: 100%;
+  }
+}
 
 .fade-in {
   opacity: 1;
@@ -90,6 +113,9 @@
     z-index: 2;
     width: 1em;
   }
+}
+div > .plus-separator::after {
+  padding-left: 0.21em;
 }
 
 

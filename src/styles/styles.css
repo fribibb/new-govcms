@@ -1083,6 +1083,24 @@ body.search-results .about .navbar-form button:focus i {
   padding: 35px 15px;
 }
 
+.panel-dashed {
+  border-style: dashed;
+  border-width: 2px;
+}
+.panel-dashed .panel-heading {
+  border-style: none;
+  background: #f5f5f5;
+}
+.panel-dashed .panel-heading h3 strong {
+  color: #407a63;
+}
+.panel-dashed .panel-heading .lead strong {
+  opacity: 0.85;
+}
+.panel-dashed .vertical-center > div {
+  width: 100%;
+}
+
 .fade-in {
   opacity: 1;
   transition: opacity 0.2s ease-in;
@@ -1125,6 +1143,10 @@ body.search-results .about .navbar-form button:focus i {
   content: "+";
   z-index: 2;
   width: 1em;
+}
+
+div > .plus-separator::after {
+  padding-left: 0.21em;
 }
 
 small a {
@@ -1267,6 +1289,10 @@ small a {
   .vertical-center {
     display: flex;
     align-items: center;
+  }
+
+  .panel-dashed .panel-body {
+    min-height: 31em;
   }
 }
 @media (max-width: 993px) {
