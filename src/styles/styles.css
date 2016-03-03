@@ -1371,6 +1371,23 @@ small a {
   }
 }
 @media (max-width: 767px) {
+  body.support.front #top-and-first-wrapper .navbar-form .btn-lg,
+  body.search-results #top-and-first-wrapper .navbar-form .btn-lg {
+    width: 100%;
+    font-size: 110%;
+    padding: 30px 10px;
+  }
+  body.support.front #top-and-first-wrapper .navbar-form .btn-lg,
+  body.search-results #top-and-first-wrapper .navbar-form .btn-lg {
+    width: 100%;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 4px;
+  }
+  body.support.front #top-and-first-wrapper .navbar-form .btn-lg i,
+  body.search-results #top-and-first-wrapper .navbar-form .btn-lg i {
+    font-size: 250%;
+  }
+
   .nav-pills li {
     width: 100%;
     margin-bottom: 15px;
@@ -1391,5 +1408,11 @@ small a {
 
   footer .small-links li {
     margin-bottom: 20px;
+  }
+}
+@media all and (-ms-high-contrast: none) {
+  .split .testimonial .section-two img {
+    transform: rotate(0);
+    margin-left: 60px;
   }
 }

@@ -106,6 +106,28 @@
 
 
 @media (max-width:767px) {
+  body.support.front,
+  body.search-results {
+    #top-and-first-wrapper {
+      // jumbo search box
+      .navbar-form {
+        .btn-lg {
+          width: 100%;
+          font-size: 110%;
+          padding: 30px 10px;
+        }
+        .btn-lg {
+          width: 100%;
+          border-top-right-radius: 0;
+          border-bottom-left-radius: $radius;
+          i {
+            font-size: 250%;
+          }
+        }
+      }
+    }
+  }
+
   .nav-pills li {
     width: 100%;
     margin-bottom: 15px;
