@@ -2,9 +2,9 @@
 @media all and (-ms-high-contrast:none) {
   // *::-ms-backdrop {     // IE11 only
 
-  .split .testimonial .section-two {
+  .split.testimonial .section-two {
     img {
-      transform: rotate(0);
+      transform: translateY(0);
       margin-left: 60px;
     }
   }

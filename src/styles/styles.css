@@ -1371,11 +1371,13 @@ small a {
   }
 }
 @media (max-width: 767px) {
-  body.support.front #top-and-first-wrapper .navbar-form .btn-lg,
-  body.search-results #top-and-first-wrapper .navbar-form .btn-lg {
+  body.support.front #top-and-first-wrapper .navbar-form .input-lg,
+  body.search-results #top-and-first-wrapper .navbar-form .input-lg {
     width: 100%;
     font-size: 110%;
     padding: 30px 10px;
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
   }
   body.support.front #top-and-first-wrapper .navbar-form .btn-lg,
   body.search-results #top-and-first-wrapper .navbar-form .btn-lg {
@@ -1411,8 +1413,8 @@ small a {
   }
 }
 @media all and (-ms-high-contrast: none) {
-  .split .testimonial .section-two img {
-    transform: rotate(0);
+  .split.testimonial .section-two img {
+    transform: translateY(0);
     margin-left: 60px;
   }
 }

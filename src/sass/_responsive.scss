@@ -111,10 +111,12 @@
     #top-and-first-wrapper {
       // jumbo search box
       .navbar-form {
-        .btn-lg {
+        .input-lg {
           width: 100%;
           font-size: 110%;
           padding: 30px 10px;
+          border-top-right-radius: $radius;
+          border-top-left-radius: $radius;
         }
         .btn-lg {
           width: 100%;
