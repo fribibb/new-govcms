@@ -1374,8 +1374,8 @@ small a {
   body.support.front #top-and-first-wrapper .navbar-form .input-lg,
   body.search-results #top-and-first-wrapper .navbar-form .input-lg {
     width: 100%;
-    font-size: 110%;
-    padding: 30px 10px;
+    font-size: 128%;
+    padding: 20px 10px;
     border-top-right-radius: 4px;
     border-top-left-radius: 4px;
   }
@@ -1414,7 +1414,6 @@ small a {
 }
 @media all and (-ms-high-contrast: none) {
   .split.testimonial .section-two img {
-    transform: translateY(0);
     margin-left: 60px;
   }
 }
