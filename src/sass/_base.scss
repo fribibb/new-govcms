@@ -43,6 +43,8 @@ a {
   }
   hr.small {
     border-color: $highlight;
+    height: 0;          // needed in drupal version
+    border-bottom: 0;   // needed in drupal version
   }
   [class^="icon-"], [class*=" icon-"] {
     &.text-primary {
@@ -402,6 +404,9 @@ body.front {
           color: #fff;
         }
       }
+    }
+    a {
+      color: #fff;
     }
   }
 }

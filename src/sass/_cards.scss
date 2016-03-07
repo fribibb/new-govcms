@@ -5,11 +5,11 @@
   flex-wrap: wrap;
   justify-content: center;
   .card {
-    flex: 0 0 31%;
+    flex: 0 0 23%;
     border-radius: $radius;
     background: #fff;
     border: 1px solid $borderGrey;
-    min-height: 28em;
+    // min-height: 28em;
     margin: 0 1% 4ex;
     text-align: left;
     text-decoration: none;
@@ -30,6 +30,7 @@
       margin: 10px 20px;
       color: black;
       transition: color 0.2s;
+      margin-bottom: 0.8em;
     }
     p {
       font-size: 16px;
@@ -68,8 +69,8 @@
     }
     i {
       position: absolute;
-      right: 10px;
-      bottom: 7px;
+      right: 7px;
+      bottom: 0;
       color: $secondary;
       opacity: 0.1;
       font-size: 1.2em;

@@ -1,9 +1,19 @@
+// NOTES:
 // https://markgoodyear.com/2014/01/getting-started-with-gulp/
 // http://www.sitepoint.com/introduction-gulp-js/
 // http://ilikekillnerds.com/2014/11/10-highly-useful-gulp-js-plugins-for-a-super-ninja-front-end-workflow/
 
-// INSTALL:
-// [sudo] npm install --save-dev gulp gulp-jshint gulp-imagemin gulp-notify gulp-autoprefixer gulp-minify-css gulp-compass gulp-uncss gulp-concat gulp-minify-css gulp-uglify gulp-css-condense gulp-iconfont
+// *************************
+// SETUP STEPS:
+//
+// # brew install node
+// # npm install -g gulp gulp-jshint gulp-imagemin gulp-notify gulp-autoprefixer gulp-minify-css gulp-compass gulp-uncss gulp-concat gulp-minify-css gulp-uglify gulp-css-condense gulp-iconfont casperjs phantomjs-prebuilt jshint
+// # cd [this dir]
+// # npm link gulp gulp-jshint gulp-imagemin gulp-notify gulp-autoprefixer gulp-minify-css gulp-compass gulp-uncss gulp-concat gulp-minify-css gulp-uglify gulp-css-condense gulp-iconfont casperjs phantomjs-prebuilt jshint
+//
+// Then just run 'gulp' to watch directory for changes :)
+// *************************
+
 
 // include gulp
 var gulp = require('gulp');
@@ -22,6 +32,8 @@ var cssc = require('gulp-css-condense');
 
 // TODO add https://github.com/johanbrook/gulp-fontcustom
 //          https://docs.npmjs.com/files/package.json
+// Using OS X Iconical for now though,
+// check the DESIGN folder
 
 
 

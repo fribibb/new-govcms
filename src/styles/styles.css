@@ -227,6 +227,8 @@ a {
 }
 .bg-primary hr.small {
   border-color: #71C39E;
+  height: 0;
+  border-bottom: 0;
 }
 .bg-primary [class^="icon-"].text-primary, .bg-primary [class*=" icon-"].text-primary {
   color: #fff;
@@ -528,6 +530,10 @@ body.front #about small {
 .alternating.bg-primary a:not(.btn):focus [class*=" icon-"] {
   color: #fff;
 }
+.icons-grid.bg-primary a,
+.alternating.bg-primary a {
+  color: #fff;
+}
 
 .icons-grid {
   padding: 25px 0;
@@ -734,11 +740,10 @@ footer .small-links li:last-of-type {
   justify-content: center;
 }
 .sortableList .card {
-  flex: 0 0 31%;
+  flex: 0 0 23%;
   border-radius: 4px;
   background: #fff;
   border: 1px solid #D2D2D4;
-  min-height: 28em;
   margin: 0 1% 4ex;
   text-align: left;
   text-decoration: none;
@@ -760,6 +765,7 @@ footer .small-links li:last-of-type {
   margin: 10px 20px;
   color: black;
   transition: color 0.2s;
+  margin-bottom: 0.8em;
 }
 .sortableList .card p {
   font-size: 16px;
@@ -798,8 +804,8 @@ footer .small-links li:last-of-type {
 }
 .sortableList .card i {
   position: absolute;
-  right: 10px;
-  bottom: 7px;
+  right: 7px;
+  bottom: 0;
   color: #2C5D7E;
   opacity: 0.1;
   font-size: 1.2em;
@@ -1414,6 +1420,7 @@ small a {
 }
 @media all and (-ms-high-contrast: none) {
   .split.testimonial .section-two img {
+    transform: translateY(-25%);
     margin-left: 60px;
   }
 }
