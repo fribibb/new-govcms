@@ -58,6 +58,9 @@
 .icon-question:before { content: '\e038'; }
 .icon-github-orig:before { content: '\e039'; }
 .icon-timer:before { content: '\e03a'; }
+.icon-document-doc:before { content: '\e03b'; }
+.icon-document-ppt:before { content: '\e03d'; }
+.icon-document-pdf:before { content: '\e03e'; }
 
 
 
