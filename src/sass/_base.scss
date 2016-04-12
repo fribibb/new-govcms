@@ -494,21 +494,22 @@ body.front {
   .container {
     .section-one,
     .section-two {
-      padding: 50px 0;
       h2 {
         color: $secondary;
+      }
+      p > a {
+        text-decoration: underline;
       }
     }
   }
   .section-one {
+    // padding: 50px 80px 50px 0; not on mobile thanks
     .btn {
       margin: 1.75em 0 1em 0;
     }
-    p > a {
-      text-decoration: underline;
-    }
   }
   .section-two {
+    // padding: 50px 0 50px 80px; not on mobile thanks
     label {
       margin-top: 0.5em;
       font-weight: 300;

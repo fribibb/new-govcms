@@ -186,6 +186,18 @@
   content: '\e03a';
 }
 
+.icon-document-doc:before {
+  content: '\e03b';
+}
+
+.icon-document-ppt:before {
+  content: '\e03d';
+}
+
+.icon-document-pdf:before {
+  content: '\e03e';
+}
+
 html {
   width: 100%;
   height: 100%;
@@ -609,19 +621,16 @@ body.front #about small {
 .split {
   background: linear-gradient(90deg, #fff 50%, #f5f7f9 50%);
 }
-.split .container .section-one,
-.split .container .section-two {
-  padding: 50px 0;
-}
 .split .container .section-one h2,
 .split .container .section-two h2 {
   color: #2C5D7E;
 }
+.split .container .section-one p > a,
+.split .container .section-two p > a {
+  text-decoration: underline;
+}
 .split .section-one .btn {
   margin: 1.75em 0 1em 0;
-}
-.split .section-one p > a {
-  text-decoration: underline;
 }
 .split .section-two label {
   margin-top: 0.5em;
@@ -1300,6 +1309,16 @@ small a {
   .panel-dashed .panel-body {
     min-height: 31em;
   }
+
+  .split.distro .container {
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.8) 50%, rgba(245, 247, 249, 0.8) 50%), url(../img/distro-split.svg) 50% 50% no-repeat;
+  }
+  .split .section-one {
+    padding: 50px 80px 50px 0;
+  }
+  .split .section-two {
+    padding: 50px 0 50px 80px;
+  }
 }
 @media (max-width: 993px) {
   #top-and-first-wrapper .logos {
@@ -1329,28 +1348,31 @@ small a {
     text-align: left;
     padding-top: 0;
   }
-
-  .split.testimonial .container {
+  .split .container.testimonial .container {
     margin: 0;
     width: 100%;
   }
-  .split.testimonial .container .section-one,
-  .split.testimonial .container .section-two {
+  .split .container.testimonial .container .section-one,
+  .split .container.testimonial .container .section-two {
     padding: 10px 20px;
   }
-  .split.testimonial .container .section-one {
+  .split .container.testimonial .container .section-one {
     margin: 1em 1em 0 1em;
   }
-  .split.testimonial .container .section-one:after {
+  .split .container.testimonial .container .section-one:after {
     content: none;
   }
-  .split.testimonial .container .section-two {
+  .split .container.testimonial .container .section-two {
     margin: 0;
   }
-  .split.testimonial .container .section-two img {
+  .split .container.testimonial .container .section-two img {
     transform: none !important;
     margin: 0 10%;
     max-height: 250px;
+  }
+
+  .split.distro .container {
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.9) 50%, rgba(255, 255, 255, 0.9) 50%), url(../img/distro-split.svg) 50% 55% no-repeat;
   }
 
   #clients img {
