@@ -27,3 +27,6 @@ Temporary Items
 
 # Sass Cache folder
 .sass-cache
+
+# symlinked node_modules folder
+node_modules
