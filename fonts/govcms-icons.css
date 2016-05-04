@@ -61,6 +61,8 @@
 .icon-document-doc:before { content: '\e03b'; }
 .icon-document-ppt:before { content: '\e03d'; }
 .icon-document-pdf:before { content: '\e03e'; }
+.icon-chat-speech-bubbles:before { content: '\e03f'; }
+.icon-code:before { content: '\e040'; }
 
 
 
