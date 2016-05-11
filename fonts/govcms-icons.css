@@ -62,7 +62,8 @@
 .icon-document-ppt:before { content: '\e03d'; }
 .icon-document-pdf:before { content: '\e03e'; }
 .icon-chat-speech-bubbles:before { content: '\e03f'; }
-.icon-code:before { content: '\e040'; }
+.icon-briefcase:before { content: '\e040'; }
+.icon-open-sign:before { content: '\e041'; }
 
 
 
