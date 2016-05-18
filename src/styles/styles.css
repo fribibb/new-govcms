@@ -1334,6 +1334,9 @@ small a {
 .dashboard .grid-item .int strong {
   font-size: 250%;
 }
+.dashboard .grid-item .int small {
+  display: block;
+}
 
 @media (min-width: 994px) {
   .vertical-center {
