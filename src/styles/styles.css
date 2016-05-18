@@ -10,10 +10,6 @@
   font-style: normal;
 }
 
-.icon-check:before {
-  content: '\e001';
-}
-
 .icon-close:before {
   content: '\e003';
 }
@@ -102,10 +98,6 @@
   content: '\e022';
 }
 
-.icon-stats-up:before {
-  content: '\e024';
-}
-
 .icon-headset:before {
   content: '\e025';
 }
@@ -158,10 +150,6 @@
   content: '\e033';
 }
 
-.icon-stats-up:before {
-  content: '\e034';
-}
-
 .icon-users:before {
   content: '\e035';
 }
@@ -210,24 +198,24 @@
   content: '\e042';
 }
 
-.icon-shop:before {
-  content: '\e043';
-}
-
 .icon-acquia-outline:before {
   content: '\e044';
-}
-
-.icon-spanner:before {
-  content: '\e046';
 }
 
 .icon-eye:before {
   content: '\e047';
 }
 
-.icon-open-sign:before {
+.icon-check:before {
   content: '\e048';
+}
+
+.icon-stats-up:before {
+  content: '\e04b';
+}
+
+.icon-shop:before {
+  content: '\e04c';
 }
 
 html {
@@ -1331,8 +1319,42 @@ small a {
   margin: 1.5em 0 1em;
 }
 
+.dashboard {
+  padding: 15px 0 50px;
+}
+.dashboard.bg-primary {
+  background-color: #63af98;
+  background: linear-gradient(11deg, #63af98, #3a7184, #2C5D7E);
+  background-size: 400% 400%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+.dashboard.bg-primary .grid-item .int strong {
+  color: #fff;
+}
+.dashboard h2 small {
+  font-size: 60%;
+}
+.dashboard .grid-item {
+  margin-top: 2.5em;
+  margin-bottom: 0.5em;
+}
+.dashboard .grid-item [class*=" icon-"],
+.dashboard .grid-item [class^=icon-] {
+  font-size: 100px;
+}
+.dashboard .grid-item h3 {
+  font-weight: 200;
+}
+.dashboard .grid-item .int {
+  font-weight: 300;
+}
 .dashboard .grid-item .int strong {
-  font-size: 250%;
+  color: #54A283;
+  font-size: 300%;
+  font-weight: 400;
 }
 .dashboard .grid-item small {
   display: block;

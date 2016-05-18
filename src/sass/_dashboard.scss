@@ -1,8 +1,37 @@
 .dashboard {
+  padding: 15px 0 50px;
+  &.bg-primary {
+    @include background-gradient(mix($highlight,$secondary,80%), mix($highlight,$secondary,20%), $secondary);
+    .grid-item {
+      .int {
+        strong {
+          color: #fff;
+        }
+      }
+    }
+  }
+  h2 {
+    small {
+      font-size: 60%;   // apply globally in Drupal theme
+    }
+  }
   .grid-item {
+    margin-top: 2.5em;
+    margin-bottom: 0.5em;
+    [class*=" icon-"],
+    [class^=icon-] {
+      font-size: 100px;
+    }
+    h3 {
+      font-weight: 200;
+    }
     .int {
+      // color: $textGreyLight;
+      font-weight: 300;
       strong {
-        font-size: 250%;
+        color: $highlightDark;
+        font-size: 300%;
+        font-weight: 400;
       }
     }
     small {
