@@ -1334,7 +1334,7 @@ small a {
 .dashboard .grid-item .int strong {
   font-size: 250%;
 }
-.dashboard .grid-item .int small {
+.dashboard .grid-item small {
   display: block;
 }
 
