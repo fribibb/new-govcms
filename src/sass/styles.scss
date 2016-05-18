@@ -20,6 +20,7 @@
 @import "homepage";
 @import "support";
 @import "content";
+@import "dashboard";
 
 // Media Queries
 @import "responsive";
@@ -27,5 +28,5 @@
 // Print
 @import "print";
 
-// and last but definitely least, IE 
+// and last but definitely least, IE
 @import "ie";
