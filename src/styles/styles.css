@@ -206,28 +206,28 @@
   content: '\e040';
 }
 
-.icon-open-sign:before {
-  content: '\e041';
-}
-
 .icon-coas:before {
   content: '\e042';
 }
 
 .icon-shop:before {
+  content: '\e043';
+}
+
+.icon-acquia-outline:before {
   content: '\e044';
 }
 
 .icon-spanner:before {
-  content: '\e045';
-}
-
-.icon-acquia-outline:before {
   content: '\e046';
 }
 
-.icon-drupal-outline:before {
+.icon-eye:before {
   content: '\e047';
+}
+
+.icon-open-sign:before {
+  content: '\e048';
 }
 
 html {
@@ -1332,7 +1332,7 @@ small a {
 }
 
 .dashboard .grid-item .int strong {
-  font-size: 200%;
+  font-size: 250%;
 }
 
 @media (min-width: 994px) {

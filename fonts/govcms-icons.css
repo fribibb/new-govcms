@@ -63,12 +63,12 @@
 .icon-document-pdf:before { content: '\e03e'; }
 .icon-chat-speech-bubbles:before { content: '\e03f'; }
 .icon-briefcase:before { content: '\e040'; }
-.icon-open-sign:before { content: '\e041'; }
 .icon-coas:before { content: '\e042'; }
-.icon-shop:before { content: '\e044'; }
-.icon-spanner:before { content: '\e045'; }
-.icon-acquia-outline:before { content: '\e046'; }
-.icon-drupal-outline:before { content: '\e047'; }
+.icon-shop:before { content: '\e043'; }
+.icon-acquia-outline:before { content: '\e044'; }
+.icon-spanner:before { content: '\e046'; }
+.icon-eye:before { content: '\e047'; }
+.icon-open-sign:before { content: '\e048'; }
 
 
 
