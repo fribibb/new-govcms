@@ -1319,6 +1319,10 @@ small a {
   margin: 1.5em 0 1em;
 }
 
+.page-dashboard #about {
+  margin-bottom: 0;
+}
+
 .dashboard {
   padding: 15px 0 50px;
 }
@@ -1334,21 +1338,40 @@ small a {
 .dashboard.bg-primary .grid-item .int strong {
   color: #fff;
 }
-.dashboard h2 small {
-  font-size: 60%;
+.dashboard.light .grid-item .int {
+  background: -webkit-linear-gradient(25deg, #2C5D7E, #54A283) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent;
+  color: #54A283;
+  display: block;
+}
+.dashboard.light .grid-item [class*=" icon-"],
+.dashboard.light .grid-item [class^=icon-] {
+  font-size: 100px;
+}
+.dashboard.light .grid-item [class*=" icon-"]:before,
+.dashboard.light .grid-item [class^=icon-]:before {
+  background: -webkit-linear-gradient(25deg, #2C5D7E, #54A283) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent;
+  color: #54A283;
+  padding: 5px;
 }
 .dashboard .grid-item {
-  margin-top: 2.5em;
-  margin-bottom: 0.5em;
+  margin-top: 3em;
+  margin-bottom: 2em;
 }
 .dashboard .grid-item [class*=" icon-"],
 .dashboard .grid-item [class^=icon-] {
   font-size: 100px;
 }
+.dashboard .grid-item h2,
 .dashboard .grid-item h3 {
   font-weight: 200;
+  margin-top: 0;
 }
 .dashboard .grid-item .int {
+  margin-bottom: 8px;
   font-weight: 300;
 }
 .dashboard .grid-item .int strong {
@@ -1357,6 +1380,7 @@ small a {
   font-weight: 400;
 }
 .dashboard .grid-item small {
+  font-size: 1em;
   display: block;
 }
 
