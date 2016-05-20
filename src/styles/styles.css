@@ -1358,8 +1358,8 @@ small a {
   padding: 5px;
 }
 .dashboard .grid-item {
-  margin-top: 3em;
-  margin-bottom: 2em;
+  margin-top: 4em;
+  margin-bottom: 2.5em;
 }
 .dashboard .grid-item [class*=" icon-"],
 .dashboard .grid-item [class^=icon-] {
@@ -1372,7 +1372,6 @@ small a {
 }
 .dashboard .grid-item .int {
   margin-bottom: 8px;
-  font-weight: 300;
 }
 .dashboard .grid-item .int strong {
   color: #54A283;

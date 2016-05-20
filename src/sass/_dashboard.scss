@@ -1,4 +1,4 @@
-.page-dashboard {
+body.page-dashboard {
   #about {
     margin-bottom: 0;
   }
@@ -19,33 +19,30 @@
   &.light {
     .grid-item {
       .int {
+        // the below is a Sass function in the Drupal theme's Sass:
         background: -webkit-linear-gradient(25deg,#2C5D7E,#54A283)!important;
         -webkit-background-clip: text!important;
         -webkit-text-fill-color: transparent;
-        color: $highlightDark;
+        color: $highlightDarker;
         display: block;
       }
       [class*=" icon-"],
       [class^=icon-] {
         font-size: 100px;
         &:before {
+          padding: 5px;
+          // the below is a Sass function in the Drupal theme's Sass:
           background: -webkit-linear-gradient(25deg,#2C5D7E,#54A283)!important;
           -webkit-background-clip: text!important;
           -webkit-text-fill-color: transparent;
-          color: $highlightDark;
-          padding: 5px;
+          color: $highlightDarker;
         }
       }
     }
   }
-  // h2 {
-  //   small {
-  //     font-size: 60%;   // apply globally in Drupal theme
-  //   }
-  // }
   .grid-item {
-    margin-top: 3em;
-    margin-bottom: 2em;
+    margin-top: 4em;
+    margin-bottom: 2.5em;
     [class*=" icon-"],
     [class^=icon-] {
       font-size: 100px;
@@ -56,12 +53,10 @@
       margin-top: 0;
     }
     .int {
-      // color: $textGreyLight;
       margin-bottom: 8px;
-      font-weight: 300;
       strong {
         color: $highlightDark;
-        font-size: 300%;
+        font-size: 350%;
         font-weight: 400;
       }
     }
