@@ -1319,12 +1319,12 @@ small a {
   margin: 1.5em 0 1em;
 }
 
-.page-dashboard #about {
+body.page-dashboard #about {
   margin-bottom: 0;
 }
 
 .dashboard {
-  padding: 15px 0 50px;
+  padding: 0;
 }
 .dashboard.bg-primary {
   background-color: #63af98;
@@ -1342,7 +1342,7 @@ small a {
   background: -webkit-linear-gradient(25deg, #2C5D7E, #54A283) !important;
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent;
-  color: #54A283;
+  color: #407a63;
   display: block;
 }
 .dashboard.light .grid-item [class*=" icon-"],
@@ -1351,15 +1351,14 @@ small a {
 }
 .dashboard.light .grid-item [class*=" icon-"]:before,
 .dashboard.light .grid-item [class^=icon-]:before {
+  padding: 5px;
   background: -webkit-linear-gradient(25deg, #2C5D7E, #54A283) !important;
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent;
-  color: #54A283;
-  padding: 5px;
+  color: #407a63;
 }
 .dashboard .grid-item {
-  margin-top: 4em;
-  margin-bottom: 2.5em;
+  margin: 3em 0 5em;
 }
 .dashboard .grid-item [class*=" icon-"],
 .dashboard .grid-item [class^=icon-] {
@@ -1372,10 +1371,11 @@ small a {
 }
 .dashboard .grid-item .int {
   margin-bottom: 8px;
+  font-size: 150%;
 }
 .dashboard .grid-item .int strong {
   color: #54A283;
-  font-size: 300%;
+  font-size: 330%;
   font-weight: 400;
 }
 .dashboard .grid-item small {
