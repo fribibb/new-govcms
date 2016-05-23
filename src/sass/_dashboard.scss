@@ -6,6 +6,7 @@ body.page-dashboard {
 
 .dashboard {
   padding: 0;
+  margin-bottom: 1.5em;
   &.bg-primary {
     @include background-gradient(mix($highlight,$secondary,80%), mix($highlight,$secondary,20%), $secondary);
     .grid-item {
@@ -41,7 +42,7 @@ body.page-dashboard {
     }
   }
   .grid-item {
-    margin: 3em 0 5em;
+    margin: 3em 0 3.5em;
     [class*=" icon-"],
     [class^=icon-] {
       font-size: 100px;
@@ -49,10 +50,10 @@ body.page-dashboard {
     h2,
     h3 {
       font-weight: 200;
-      margin-top: 0;
+      margin: 0;
     }
     .int {
-      margin-bottom: 8px;
+      // margin-bottom: 8px;
       font-size: 150%;
       strong {
         color: $highlightDark;

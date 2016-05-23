@@ -218,6 +218,10 @@
   content: '\e04c';
 }
 
+.icon-download:before {
+  content: '\e04d';
+}
+
 html {
   width: 100%;
   height: 100%;
@@ -1325,6 +1329,7 @@ body.page-dashboard #about {
 
 .dashboard {
   padding: 0;
+  margin-bottom: 1.5em;
 }
 .dashboard.bg-primary {
   background-color: #63af98;
@@ -1358,7 +1363,7 @@ body.page-dashboard #about {
   color: #407a63;
 }
 .dashboard .grid-item {
-  margin: 3em 0 5em;
+  margin: 3em 0 3.5em;
 }
 .dashboard .grid-item [class*=" icon-"],
 .dashboard .grid-item [class^=icon-] {
@@ -1367,10 +1372,9 @@ body.page-dashboard #about {
 .dashboard .grid-item h2,
 .dashboard .grid-item h3 {
   font-weight: 200;
-  margin-top: 0;
+  margin: 0;
 }
 .dashboard .grid-item .int {
-  margin-bottom: 8px;
   font-size: 150%;
 }
 .dashboard .grid-item .int strong {
