@@ -14,10 +14,6 @@
   content: '\e003';
 }
 
-.icon-help:before {
-  content: '\e004';
-}
-
 .icon-home:before {
   content: '\e005';
 }
@@ -150,10 +146,6 @@
   content: '\e033';
 }
 
-.icon-users:before {
-  content: '\e035';
-}
-
 .icon-cog:before {
   content: '\e036';
 }
@@ -220,6 +212,14 @@
 
 .icon-download:before {
   content: '\e04d';
+}
+
+.icon-help:before {
+  content: '\e04e';
+}
+
+.icon-users:before {
+  content: '\e04f';
 }
 
 html {
@@ -1381,6 +1381,32 @@ body.page-dashboard #about {
   color: #54A283;
   font-size: 330%;
   font-weight: 400;
+}
+.dashboard .grid-item .int.fraction sub,
+.dashboard .grid-item .int.fraction sup {
+  position: initial;
+  font-size: 70%;
+  line-height: 0;
+}
+.dashboard .grid-item .int.fraction sup {
+  vertical-align: super;
+}
+.dashboard .grid-item .int.fraction sub {
+  vertical-align: sub;
+}
+.dashboard .grid-item .int.fraction .slash {
+  font-size: 330%;
+  font-weight: 200;
+  font-style: normal;
+  background: rgba(255, 255, 255, 0.6) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent;
+}
+.dashboard .grid-item .int.fraction sub,
+.dashboard .grid-item .int.fraction .slash,
+.dashboard .grid-item .int.fraction sup {
+  margin-left: -5px;
+  margin-right: -5px;
 }
 .dashboard .grid-item small {
   font-size: 1em;

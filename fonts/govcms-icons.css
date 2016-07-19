@@ -15,7 +15,6 @@
 
 
 .icon-close:before { content: '\e003'; }
-.icon-help:before { content: '\e004'; }
 .icon-home:before { content: '\e005'; }
 .icon-key:before { content: '\e006'; }
 .icon-laptop-phone:before { content: '\e007'; }
@@ -49,7 +48,6 @@
 .icon-linkedin:before { content: '\e030'; }
 .icon-mail-alt:before { content: '\e031'; }
 .icon-magic-wand:before { content: '\e033'; }
-.icon-users:before { content: '\e035'; }
 .icon-cog:before { content: '\e036'; }
 .icon-info:before { content: '\e037'; }
 .icon-question:before { content: '\e038'; }
@@ -67,6 +65,8 @@
 .icon-stats-up:before { content: '\e04b'; }
 .icon-shop:before { content: '\e04c'; }
 .icon-download:before { content: '\e04d'; }
+.icon-help:before { content: '\e04e'; }
+.icon-users:before { content: '\e04f'; }
 
 
 

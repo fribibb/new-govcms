@@ -21,7 +21,7 @@ body.page-dashboard {
     .grid-item {
       .int {
         // the below is a Sass function in the Drupal theme's Sass:
-        background: -webkit-linear-gradient(25deg,#2C5D7E,#54A283)!important;
+        background: -webkit-linear-gradient(25deg,$secondary,$highlightDark)!important;
         -webkit-background-clip: text!important;
         -webkit-text-fill-color: transparent;
         color: $highlightDarker;
@@ -33,7 +33,7 @@ body.page-dashboard {
         &:before {
           padding: 5px;
           // the below is a Sass function in the Drupal theme's Sass:
-          background: -webkit-linear-gradient(25deg,#2C5D7E,#54A283)!important;
+          background: -webkit-linear-gradient(25deg,$secondary,$highlightDark)!important;
           -webkit-background-clip: text!important;
           -webkit-text-fill-color: transparent;
           color: $highlightDarker;
@@ -53,12 +53,39 @@ body.page-dashboard {
       margin: 0;
     }
     .int {
-      // margin-bottom: 8px;
       font-size: 150%;
       strong {
         color: $highlightDark;
         font-size: 330%;
         font-weight: 400;
+      }
+      &.fraction {
+        sub,
+        sup {
+          position: initial;
+          font-size: 70%;
+          line-height: 0;
+        }
+        sup {
+          vertical-align: super;
+        }
+        sub {
+          vertical-align: sub;
+        }
+        .slash {
+          font-size: 330%;
+          font-weight: 200;
+          font-style: normal;
+          background: rgba(#fff, 0.6) !important; // this is layed over the other filter
+          -webkit-background-clip: text!important;
+          -webkit-text-fill-color: transparent;
+        }
+        sub,
+        .slash,
+        sup {
+          margin-left: -5px;
+          margin-right: -5px;
+        }
       }
     }
     small {
