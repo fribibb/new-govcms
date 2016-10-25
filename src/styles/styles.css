@@ -1559,3 +1559,68 @@ body.page-dashboard #about {
     margin-left: 60px;
   }
 }
+body.changes #services {
+  padding: 0;
+}
+body.changes #top-and-first-wrapper,
+body.changes .alternating.bg-primary,
+body.changes .icons-grid.bg-primary {
+  background: linear-gradient(11deg, #24d4dc, #4a6f9d);
+}
+body.changes #clients .highlight, body.changes #clients h2 {
+  color: #fff;
+}
+body.changes .call-to-action {
+  background: linear-gradient(11deg, #2C5D7E, #3979a4);
+}
+body.changes.homepage .lead {
+  font-size: 30px;
+  padding-top: 0.8em;
+}
+body.changes #clients.icons-grid {
+  margin-bottom: 0 !important;
+}
+body.changes #clients.icons-grid .row img {
+  opacity: .9;
+  filter: invert(100%);
+}
+body.changes #knowledge-base .container {
+  margin-bottom: 50px;
+}
+body.changes #knowledge-base .label.status {
+  background-color: #6ad5ac;
+  color: #555;
+  font-weight: 600;
+}
+body.changes #knowledge-base a.media {
+  display: block;
+  padding-bottom: 10px;
+  border-radius: 4px;
+}
+body.changes #knowledge-base a.media:hover, body.changes #knowledge-base a.media:active, body.changes #knowledge-base a.media:focus {
+  text-decoration: none;
+  background-color: #F5F5F5;
+}
+body.changes #knowledge-base a.media:hover .title, body.changes #knowledge-base a.media:active .title, body.changes #knowledge-base a.media:focus .title {
+  text-decoration: underline;
+}
+body.changes #knowledge-base a.media .title {
+  margin-top: 15px;
+}
+body.changes #knowledge-base a.media .summary {
+  display: block;
+  margin-top: 5px;
+  color: #555;
+}
+body.changes .bg-primary .btn-light,
+body.changes header .btn.btn-light {
+  color: #fff;
+  border-color: #fff;
+}
+body.changes #services .row .row,
+body.changes .text-primary {
+  color: #777;
+}
+body.changes #services h2 {
+  color: #2C5D7E;
+}
