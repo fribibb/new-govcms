@@ -1624,3 +1624,10 @@ body.changes .text-primary {
 body.changes #services h2 {
   color: #2C5D7E;
 }
+body.changes .navbar-form .input-group-addon {
+  padding-bottom: 2.9em;
+}
+body.changes .navbar-form .icon-search {
+  position: relative;
+  top: -0.2em;
+}

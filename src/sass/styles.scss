@@ -166,4 +166,13 @@ body.changes {
   #services h2 {
     color: #2C5D7E;
   }
+  .navbar-form {
+    .input-group-addon {
+      padding-bottom: 2.9em;
+    }
+    .icon-search {
+      position: relative;
+      top: -0.2em;
+    }
+  }
 }
