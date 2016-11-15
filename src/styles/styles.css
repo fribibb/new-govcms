@@ -1612,6 +1612,9 @@ body.changes #knowledge-base a.media .summary {
   margin-top: 5px;
   color: #555;
 }
+body.changes #knowledge-base .no-results:not(:empty) {
+  margin-top: 3em;
+}
 body.changes .bg-primary .btn-light,
 body.changes header .btn.btn-light {
   color: #fff;
