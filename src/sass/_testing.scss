@@ -89,7 +89,8 @@ body.changes {
         color: $textGrey;
       }
     }
-    .no-results:not(:empty) {
+    .no-results:not(:empty),
+    .search-for {
       margin-top: 3em;
     }
   }

@@ -47,8 +47,8 @@ $(document).ready(function() {
       });
 
       // We'll need these shortly
-      $( "#about h2" ).after( '<p class="lead search-for">&nbsp;</p>' );
-      $( '.col-md-12 .col-md-4:nth-of-type(3)' ).after( '<div class="col-md-12 text-center"><p class="lead no-results"></p>' );
+      $( "#about .navbar-form" ).before( '<p class="lead search-for" aria-live="polite">&nbsp;</p>' );
+      $( '.col-md-12 .col-md-4:nth-of-type(3)' ).after( '<div class="col-md-12 text-center"><p class="lead no-results" aria-live="polite"></p>' );
 
       // 'index' the content
       $('.media').each(function(){
