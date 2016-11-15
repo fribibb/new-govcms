@@ -40,6 +40,12 @@ $(document).ready(function() {
 
   // 'search'/filter only on the knowledge-base page (for now at least)
     if( $(location).attr('pathname').indexOf("knowledge-base") != -1 ) {
+      // The submit has no purpose here, its client side and realtime
+      // ....its basically there for looks
+      $('.navbar-form').submit (function() {
+        return false;
+      });
+
       // We'll need these shortly
       $( "#about h2" ).after( '<p class="lead search-for">&nbsp;</p>' );
       $( '.col-md-12 .col-md-4:nth-of-type(3)' ).after( '<div class="col-md-12 text-center"><p class="lead no-results"></p>' );
