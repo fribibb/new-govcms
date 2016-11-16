@@ -210,10 +210,6 @@
   content: '\e04c';
 }
 
-.icon-download:before {
-  content: '\e04d';
-}
-
 .icon-help:before {
   content: '\e04e';
 }
@@ -224,6 +220,26 @@
 
 .icon-document-link:before {
   content: '\e050';
+}
+
+.icon-open-sign:before {
+  content: '\e051';
+}
+
+.icon-reload:before {
+  content: '\e052';
+}
+
+.icon-download:before {
+  content: '\e054';
+}
+
+.icon-upload:before {
+  content: '\e055';
+}
+
+.icon-edit:before {
+  content: '\e056';
 }
 
 html {
@@ -1557,12 +1573,15 @@ body.page-dashboard #about {
     margin-bottom: 20px;
   }
 }
-/*!
+/*
  * animate.css -http://daneden.me/animate
  * Version - 3.5.1
  * Licensed under the MIT license - http://opensource.org/licenses/MIT
  *
  * Copyright (c) 2016 Daniel Eden
+ *
+ *********** Uncomment below as needed
+ *
  */
 .animated {
   -webkit-animation-duration: 1s;
