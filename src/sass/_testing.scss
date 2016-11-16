@@ -63,6 +63,8 @@ body.changes {
       // background-color: #52CD91;
       color: $textGrey;
       font-weight: 600;
+      // color: $secondary;
+      // background-color: #24d4dc;
     }
     a.media {
       display: block;
@@ -76,12 +78,12 @@ body.changes {
         .title {
           text-decoration: underline;
         }
+        i {
+          color: $secondary;
+        }
       }
       .title {
         margin-top: 15px;
-      }
-      .status {
-
       }
       .summary {
         display: block;
@@ -98,20 +100,30 @@ body.changes {
     color: #fff;
     border-color: #fff;
   }
-  // .btn-primary {
-  //   color: #fff;
-  //   background-color: #52CD91;
-  // }
-  // .btn-default {
-  //   color: #00C853;
-  //   border-color: #00C853;
-  // }
-  // footer ul.social a {
-  //   color: #039BE5;
-  //   &:active, &:focus, &:hover {
-  //     color: #52CD91;
-  //   }
-  // }
+// START - only for new colour scheme
+  .btn-primary {
+    color: $secondary;
+    border-color: $secondary;
+    background-color: #24d4dc;
+    &:active,
+    &:focus,
+    &:hover {
+      color: #24d4dc;
+      border-color: #24d4dc;
+      background-color: $secondary;
+    }
+  }
+  .btn-default {
+    color: $secondary;
+    border-color: $secondary;
+  }
+  footer ul.social a {
+    // color: $secondary;
+    &:active, &:focus, &:hover {
+      color: #24d4dc;
+    }
+  }
+// END - only for new colour scheme
   #services .row .row,
   .text-primary {
     color: $textGreyLight;

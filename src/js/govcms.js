@@ -37,22 +37,25 @@ $(document).ready(function() {
     });
 
 
+  // For animating things via JS
+    $.fn.extend({
+      animateCss: function (animationName) {
+        var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+        this.addClass('animated ' + animationName).one(animationEnd, function() {
+            $(this).removeClass('animated ' + animationName);
+        });
+      }
+    });
+
 
   // 'search'/filter only on the knowledge-base page (for now at least)
     if( $(location).attr('pathname').indexOf("knowledge-base") != -1 ) {
-
-      // We'll need these shortly
-      $('.search-for').addClass('shake animated');
-      $('#about .navbar-form').before('<p class="lead search-for" aria-live="polite">&nbsp;</p>');
-      $('.col-md-12 .col-md-4:nth-of-type(3)').after('<div class="col-md-12 text-center"><p class="lead no-results" aria-live="polite"></p>');
-
       // The submit has no purpose here, its client side and realtime
-      // ....its basically there for looks
+      // ....it's basically there for looks
       $('.navbar-form').submit (function() {
-        $('.search-for').addClass('shake animate');
         return false;
       });
-      // Point out that it's working
+      // ..but if a user doesn't realise it's realtime and insist on clicking it, point out that it's working
       $('.navbar-form button').click (function() {
         $('.search-for').animateCss('pulse');
       });
@@ -66,7 +69,6 @@ $(document).ready(function() {
       $('#s').on('keyup', function(){
         var searchTermOrig = $(this).val();
         var searchTerm = searchTermOrig.toLowerCase();
-
         // Show / hide the results
         $('.media').each(function(){
           if ($(this).filter('[data-search-term *= ' + searchTerm + ']').length > 0 || searchTerm.length < 1) {
@@ -90,22 +92,12 @@ $(document).ready(function() {
 
         // If no results, display message to user
         if ( resultsVisble == 0 ) {
-          $('p.no-results').text('No matches found.');
+          $('.no-results').text('No matches found.');
         } else {
-          $('p.no-results').text('');
+          $('.no-results').text('');
         }
       });
     } // End knowledge-base only JS
-
-    // Used for animating via JS
-    $.fn.extend({
-      animateCss: function (animationName) {
-        var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
-        this.addClass('animated ' + animationName).one(animationEnd, function() {
-            $(this).removeClass('animated ' + animationName);
-        });
-      }
-    });
 
 }); // end $(document).ready
 

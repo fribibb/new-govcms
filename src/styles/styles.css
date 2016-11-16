@@ -1907,6 +1907,9 @@ body.changes #knowledge-base a.media:hover, body.changes #knowledge-base a.media
 body.changes #knowledge-base a.media:hover .title, body.changes #knowledge-base a.media:active .title, body.changes #knowledge-base a.media:focus .title {
   text-decoration: underline;
 }
+body.changes #knowledge-base a.media:hover i, body.changes #knowledge-base a.media:active i, body.changes #knowledge-base a.media:focus i {
+  color: #2C5D7E;
+}
 body.changes #knowledge-base a.media .title {
   margin-top: 15px;
 }
@@ -1922,6 +1925,23 @@ body.changes .bg-primary .btn-light,
 body.changes header .btn.btn-light {
   color: #fff;
   border-color: #fff;
+}
+body.changes .btn-primary {
+  color: #2C5D7E;
+  border-color: #2C5D7E;
+  background-color: #24d4dc;
+}
+body.changes .btn-primary:active, body.changes .btn-primary:focus, body.changes .btn-primary:hover {
+  color: #24d4dc;
+  border-color: #24d4dc;
+  background-color: #2C5D7E;
+}
+body.changes .btn-default {
+  color: #2C5D7E;
+  border-color: #2C5D7E;
+}
+body.changes footer ul.social a:active, body.changes footer ul.social a:focus, body.changes footer ul.social a:hover {
+  color: #24d4dc;
 }
 body.changes #services .row .row,
 body.changes .text-primary {
