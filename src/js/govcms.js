@@ -40,15 +40,22 @@ $(document).ready(function() {
 
   // 'search'/filter only on the knowledge-base page (for now at least)
     if( $(location).attr('pathname').indexOf("knowledge-base") != -1 ) {
+
+      // We'll need these shortly
+      $('.search-for').addClass('shake animated');
+      $('#about .navbar-form').before('<p class="lead search-for" aria-live="polite">&nbsp;</p>');
+      $('.col-md-12 .col-md-4:nth-of-type(3)').after('<div class="col-md-12 text-center"><p class="lead no-results" aria-live="polite"></p>');
+
       // The submit has no purpose here, its client side and realtime
       // ....its basically there for looks
       $('.navbar-form').submit (function() {
+        $('.search-for').addClass('shake animate');
         return false;
       });
-
-      // We'll need these shortly
-      $( "#about .navbar-form" ).before( '<p class="lead search-for" aria-live="polite">&nbsp;</p>' );
-      $( '.col-md-12 .col-md-4:nth-of-type(3)' ).after( '<div class="col-md-12 text-center"><p class="lead no-results" aria-live="polite"></p>' );
+      // Point out that it's working
+      $('.navbar-form button').click (function() {
+        $('.search-for').animateCss('pulse');
+      });
 
       // 'index' the content
       $('.media').each(function(){
@@ -64,7 +71,9 @@ $(document).ready(function() {
         $('.media').each(function(){
           if ($(this).filter('[data-search-term *= ' + searchTerm + ']').length > 0 || searchTerm.length < 1) {
             $(this).show();
+            // $('.search-for').animateCss('fadeItDown');
           } else {
+            // $('.search-for').animateCss('fadeOutDown');
             $(this).hide();
           }
         });
@@ -72,59 +81,70 @@ $(document).ready(function() {
 
         // Let the user know it's working
         if ( $('#about .search-for').html() == "&nbsp;" ) {
-          $( "#about .search-for" ).html( 'Showing matches for &quot;<span class="search-for-string">' + searchTermOrig + '</span>&quot;' );
+          $('#about .search-for').html( 'Showing matches for &quot;<span class="search-for-string">' + searchTermOrig + '</span>&quot;' );
         } else if ( searchTermOrig.length == 0 ) {
-          $( "#about .search-for" ).html( '&nbsp;' );
+          $('#about .search-for').html('&nbsp;');
         } else {
-          $( "#about .search-for-string" ).text( searchTermOrig );
+          $('#about .search-for-string').text(searchTermOrig);
         }
 
         // If no results, display message to user
         if ( resultsVisble == 0 ) {
-          $( 'p.no-results').text('No matches found.' );
+          $('p.no-results').text('No matches found.');
         } else {
-          $( 'p.no-results').text('' );
+          $('p.no-results').text('');
         }
       });
-    } // End knowledge-base only js
+    } // End knowledge-base only JS
 
-});
+    // Used for animating via JS
+    $.fn.extend({
+      animateCss: function (animationName) {
+        var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+        this.addClass('animated ' + animationName).one(animationEnd, function() {
+            $(this).removeClass('animated ' + animationName);
+        });
+      }
+    });
+
+}); // end $(document).ready
+
 
 
 // not used anymore
-function priceCalc() {
-  // Setup vars
-  pageViews = $('#page-views').val();
-  siteCount = $('#number-of-sites').val();
-
-  // Calculate it:
-  totalAnnualCost = 199; // for now.....
-  totalSetupCost = 88;  // for now.....
-
-  // Display it
-  $('#calcForm').addClass('fade-out');
-  $('#calcResults #totalAnnualCost').text(totalAnnualCost);
-  $('#calcResults #totalSetupCost').text(totalSetupCost);
-  $('#calcResults #calcHeading').text('Your estimated total costs are');
-  $('#calcResults').removeClass('sr-only');
-  $('#calcResults').removeClass('fade-out');
-  $('#calcResults').addClass('fade-in');
-
-  // Stop form submission
-  return false;
-  e.preventDefault();
-}
-
-function priceReCalc() {
-  // Display it
-  $('#calcForm').removeClass('fade-out');
-  $('#calcResults').removeClass('fade-in');
-  $('#calcResults').addClass('fade-out');
-  $('#calcResults #calcHeading').text('Calculate your costs');
-  $('#calcForm').addClass('fade-in');
-  $('#calcResults').addClass('sr-only');
-
-  // Stop anchor link loading
-  return false;
-  e.preventDefault();
-}
+// function priceCalc() {
+//   // Setup vars
+//   pageViews = $('#page-views').val();
+//   siteCount = $('#number-of-sites').val();
+//
+//   // Calculate it:
+//   totalAnnualCost = 199; // for now.....
+//   totalSetupCost = 88;  // for now.....
+//
+//   // Display it
+//   $('#calcForm').addClass('fade-out');
+//   $('#calcResults #totalAnnualCost').text(totalAnnualCost);
+//   $('#calcResults #totalSetupCost').text(totalSetupCost);
+//   $('#calcResults #calcHeading').text('Your estimated total costs are');
+//   $('#calcResults').removeClass('sr-only');
+//   $('#calcResults').removeClass('fade-out');
+//   $('#calcResults').addClass('fade-in');
+//
+//   // Stop form submission
+//   return false;
+//   e.preventDefault();
+// }
+//
+// function priceReCalc() {
+//   // Display it
+//   $('#calcForm').removeClass('fade-out');
+//   $('#calcResults').removeClass('fade-in');
+//   $('#calcResults').addClass('fade-out');
+//   $('#calcResults #calcHeading').text('Calculate your costs');
+//   $('#calcForm').addClass('fade-in');
+//   $('#calcResults').addClass('sr-only');
+//
+//   // Stop anchor link loading
+//   return false;
+//   e.preventDefault();
+// }

@@ -89,8 +89,7 @@ body.changes {
         color: $textGrey;
       }
     }
-    .no-results:not(:empty),
-    .search-for {
+    .no-results:not(:empty){
       margin-top: 3em;
     }
   }
@@ -128,5 +127,10 @@ body.changes {
       position: relative;
       top: -0.2em;
     }
+  }
+  .search-for {
+    margin-top: 3em !important;
+    font-weight: 400;
+    // animation-duration: 0.5s;
   }
 }
