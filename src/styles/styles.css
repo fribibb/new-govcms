@@ -1889,7 +1889,8 @@ body.changes .alternating.bg-primary,
 body.changes .icons-grid.bg-primary {
   background: linear-gradient(11deg, #24d4dc, #4a6f9d);
 }
-body.changes #clients .highlight, body.changes #clients h2 {
+body.changes #clients .highlight,
+body.changes #clients h2 {
   color: #fff;
 }
 body.changes .call-to-action {
@@ -1944,6 +1945,14 @@ body.changes .bg-primary .btn-light,
 body.changes header .btn.btn-light {
   color: #fff;
   border-color: #fff;
+}
+body.changes .bg-primary .btn-light:hover, body.changes .bg-primary .btn-light:active, body.changes .bg-primary .btn-light:focus,
+body.changes header .btn.btn-light:hover,
+body.changes header .btn.btn-light:active,
+body.changes header .btn.btn-light:focus {
+  color: #24d4dc;
+  border-color: #24d4dc;
+  background-color: #2C5D7E;
 }
 body.changes .btn-primary {
   color: #2C5D7E;
