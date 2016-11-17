@@ -1,10 +1,16 @@
 // TEMP MOCKUP STYLES
+
+// vars
 $brighterBlue:      #2C5D7E;
+$brighterBlueFaded: #3979a4;
+$bubbleGum:         #24d4dc;
+
+
 body.changes {
-  .logos .coa-stacked,
-  .logos img {
-    // background: radial-gradient(rgba(0,0,0,.1),rgba(0,0,0,0) 50%);
-  }
+  //.logos .coa-stacked,
+  //.logos img {
+  //  background: radial-gradient(rgba(0,0,0,.1),rgba(0,0,0,0) 50%);
+  //}
   #services {
     padding: 0;
   }
@@ -13,33 +19,16 @@ body.changes {
   .icons-grid.bg-primary {
     // One of these:
     // background: linear-gradient(11deg,#5FD7C9, #5EBBC7, #337bab);  // nice version of the existing colours (roughly)
-    background: linear-gradient(11deg, #24d4dc, #4a6f9d);          // different colour scheme, but nice
-
-    // None of these:
-    // background: linear-gradient(11deg, #66a1e4, #22b8bf);          // w3
-    // background: linear-gradient(11deg,#53c598,#337bab);            // a bit shit
-    // background: linear-gradient(11deg,#52CD91,#33A6FA);            // a little bit shit
-    // background: linear-gradient(11deg, #00E676,#0091EA);           // too bright
-    // background: linear-gradient(11deg, #B3FFAB,#12FFF7);           // bit much!
-    // background: linear-gradient(11deg, #EAECC6, #2BC0E4);          // beachy
+    background: linear-gradient(11deg, $bubbleGum, #4a6f9d);          // different colour scheme, but nice assuming we update the logo to drop the green
   }
-  #clients .highlight, #clients h2 {
+  #clients .highlight,
+  #clients h2 {
     color: #fff;
   }
   .call-to-action {
-    background: linear-gradient(11deg,$brighterBlue,#3979a4);
-    // background: linear-gradient(11deg,#3979a4, #33A6FA);
+    background: linear-gradient(11deg,$brighterBlue,$brighterBlueFaded);
   }
-  #top-and-first-wrapper {
-    // @include background-gradient($highlight, $brighterBlue, lighten($brighterBlue, 15%));
-    a,
-    .coa-titles {
-      // color: #fff !important;
-    }
-    .coa-coa .crest {
-      // background-image: url(../img/crest-white.svg);
-    }
-  }
+  // for large homepage header with big centered logo
   &.homepage {
     .lead {
       font-size: 30px;
@@ -49,9 +38,8 @@ body.changes {
   #clients.icons-grid {
     margin-bottom: 0 !important;
     .row img {
-      // lazy temp way to invert the svgs to white (like they are on prod)
       opacity: .9;
-      filter: invert(100%);
+      filter: invert(100%); // lazy temp way to invert the svgs to white (like they are on prod)
     }
   }
   #knowledge-base {
@@ -60,11 +48,10 @@ body.changes {
     }
     .label.status {
       background-color: $highlightBright;
-      // background-color: #52CD91;
       color: $textGrey;
       font-weight: 600;
       // color: $secondary;
-      // background-color: #24d4dc;
+      // background-color: $bubbleGum;
     }
     a.media {
       display: block;
@@ -99,17 +86,24 @@ body.changes {
   header .btn.btn-light {
     color: #fff;
     border-color: #fff;
+    &:hover,
+    &:active,
+    &:focus {
+      color: $bubbleGum;
+      border-color: $bubbleGum;
+      background-color: $secondary;
+    }
   }
-// START - only for new colour scheme
+  // START - only for new colour scheme
   .btn-primary {
     color: $secondary;
     border-color: $secondary;
-    background-color: #24d4dc;
+    background-color: $bubbleGum;
     &:active,
     &:focus,
     &:hover {
-      color: #24d4dc;
-      border-color: #24d4dc;
+      color: $bubbleGum;
+      border-color: $bubbleGum;
       background-color: $secondary;
     }
   }
@@ -118,12 +112,12 @@ body.changes {
     border-color: $secondary;
   }
   footer ul.social a {
-    // color: $secondary;
     &:active, &:focus, &:hover {
-      color: #24d4dc;
+      color: $bubbleGum;
     }
   }
-// END - only for new colour scheme
+  // END - only for new colour scheme
+
   #services .row .row,
   .text-primary {
     color: $textGreyLight;
@@ -143,6 +137,5 @@ body.changes {
   .search-for {
     margin-top: 3em !important;
     font-weight: 400;
-    // animation-duration: 0.5s;
   }
 }
