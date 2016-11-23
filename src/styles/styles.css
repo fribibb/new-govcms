@@ -178,10 +178,6 @@
   content: '\e03e';
 }
 
-.icon-chat-speech-bubbles:before {
-  content: '\e03f';
-}
-
 .icon-briefcase:before {
   content: '\e040';
 }
@@ -240,6 +236,10 @@
 
 .icon-edit:before {
   content: '\e056';
+}
+
+.icon-chat-speech-bubbles:before {
+  content: '\e057';
 }
 
 html {
