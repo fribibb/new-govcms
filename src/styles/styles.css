@@ -222,10 +222,6 @@
   content: '\e051';
 }
 
-.icon-reload:before {
-  content: '\e052';
-}
-
 .icon-download:before {
   content: '\e054';
 }
@@ -238,8 +234,24 @@
   content: '\e056';
 }
 
-.icon-chat-speech-bubbles:before {
+.icon-speech-bubble:before {
   content: '\e057';
+}
+
+.icon-nodes:before {
+  content: '\e05a';
+}
+
+.icon-enlarge:before {
+  content: '\e05b';
+}
+
+.icon-grid:before {
+  content: '\e05c';
+}
+
+.icon-reload:before {
+  content: '\e05d';
 }
 
 html {
