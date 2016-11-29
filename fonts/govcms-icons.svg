@@ -465,13 +465,6 @@
  horiz-adv-x="1000" 
  />
  
-<glyph 
- glyph-name="check-square" 
- unicode="&#xe061;"
- d="M203.1 334.4L390.6 146.9 765.6 521.9M15.6 834.4H984.4V-134.4H15.6V834.4Z"
- horiz-adv-x="1000" 
- />
- 
 
 </font>
 </defs>
