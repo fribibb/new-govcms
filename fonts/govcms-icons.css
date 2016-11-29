@@ -75,6 +75,10 @@
 .icon-enlarge:before { content: '\e05b'; }
 .icon-grid:before { content: '\e05c'; }
 .icon-reload:before { content: '\e05d'; }
+.icon-community-bubble:before { content: '\e05e'; }
+.icon-calendar:before { content: '\e05f'; }
+.icon-check-circle:before { content: '\e060'; }
+.icon-check-square:before { content: '\e061'; }
 
 
 
