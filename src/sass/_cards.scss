@@ -9,11 +9,10 @@
     border-radius: $radius;
     background: #fff;
     border: 1px solid $borderGrey;
-    // min-height: 28em;
     margin: 0 1% 4ex;
     text-align: left;
     text-decoration: none;
-    transition: color 0.2s, background-colour 0.2s, border-colour 0.2s;
+    transition: all 0.2s;
     position: relative;
     vertical-align: top;
     img,
@@ -43,31 +42,8 @@
     &.disabled {
       cursor: not-allowed;
     }
-    .fake-link {
-      line-height: 22px;
-      display: block;
-      height: 17px;
-      border-bottom: 1px solid transparent;
-      transition: all 0.2s;
-      position: absolute;
-      bottom: -10px;
-      left: 0;
-      opacity: 1;
-      font-weight: 300;
-      &:not(.soon) {
-        text-decoration: underline;
-        color: $highlightDark;
-      }
-      &.soon {
-        color: $textGreyLight;
-        border: 1px solid rgba($borderGrey,0.8);
-        padding: 10px 9px 13px 9px;
-        border-radius: $radius;
-        line-height: 0.1em;
-        bottom: 0;
-      }
-    }
     i {
+      transition: 0.4s all;
       position: absolute;
       right: 7px;
       bottom: 0;
@@ -78,37 +54,31 @@
   }
   a.card {
     &:hover,
-    &:active,
     &:focus {
+      @include card(2);
       background-color: lighten($secondary, 68%);
       border-color: $highlight;
-      .fake-link {
-        color: #333;
-      }
       h2,
       h3 {
         color: $secondary;
       }
       i {
-        opacity: 0.6;
+        opacity: 0.65;
       }
     }
     &:active,
     &:focus {
+      @include card(3);
+      // box-shadow: 0 6px 12px rgba($highlightDark, 0.23), 0 10px 40px rgba($highlightDark, 0.19);
       outline: none;
-      box-shadow: 0 0 0 2px $highlight;
     }
   }
 }
-#portfolio {
-  .sortableList {
-    .card {
-      flex: 0 0 31%;
-      &:hover {
-        .soon {
-          border: 1px solid $highlight;
-        }
-      }
+
+#clients {
+  .card {
+    img {
+      opacity: 1; // to force override
     }
   }
 }

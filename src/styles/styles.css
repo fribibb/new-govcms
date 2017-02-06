@@ -1,3 +1,27 @@
+/**
+ * Computes a top-shadow for a card effect.
+ *
+ * @param {Number} $depth - depth level
+ *
+ * @return {List}
+ */
+/**
+ * Computes a bottom-shadow for a card effect.
+ *
+ * @param {Number} $depth - depth level
+ *
+ * @return {List}
+ */
+/**
+ * Gives a card depth effect.
+ *
+ * @param {Number} $depth - depth level (between 1 and 5)
+ *
+ * @link http://www.google.com/design/spec/layout/layout-principles.html#layout-principles-dimensionality Google Design
+ *
+ * @requires {function} top-shadow
+ * @requires {function} bottom-shadow
+ */
 @font-face {
   font-family: 'GovCMS Icons';
   src: url("../fonts/govcms-icons.eot?#iefix") format("embedded-opentype"), url("../fonts/govcms-icons.woff") format("woff"), url("../fonts/govcms-icons.ttf") format("truetype"), url("../fonts/govcms-icons.svg#govcms-icons") format("svg");
@@ -828,7 +852,7 @@ footer .small-links li:last-of-type {
   margin: 0 1% 4ex;
   text-align: left;
   text-decoration: none;
-  transition: color 0.2s, background-colour 0.2s, border-colour 0.2s;
+  transition: all 0.2s;
   position: relative;
   vertical-align: top;
 }
@@ -859,31 +883,8 @@ footer .small-links li:last-of-type {
 .sortableList .card.disabled {
   cursor: not-allowed;
 }
-.sortableList .card .fake-link {
-  line-height: 22px;
-  display: block;
-  height: 17px;
-  border-bottom: 1px solid transparent;
-  transition: all 0.2s;
-  position: absolute;
-  bottom: -10px;
-  left: 0;
-  opacity: 1;
-  font-weight: 300;
-}
-.sortableList .card .fake-link:not(.soon) {
-  text-decoration: underline;
-  color: #54A283;
-}
-.sortableList .card .fake-link.soon {
-  color: #777;
-  border: 1px solid rgba(210, 210, 212, 0.8);
-  padding: 10px 9px 13px 9px;
-  border-radius: 4px;
-  line-height: 0.1em;
-  bottom: 0;
-}
 .sortableList .card i {
+  transition: 0.4s all;
   position: absolute;
   right: 7px;
   bottom: 0;
@@ -891,32 +892,26 @@ footer .small-links li:last-of-type {
   opacity: 0.1;
   font-size: 1.2em;
 }
-.sortableList a.card:hover, .sortableList a.card:active, .sortableList a.card:focus {
+.sortableList a.card:hover, .sortableList a.card:focus {
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.23), 0 3px 12px rgba(0, 0, 0, 0.16);
   background-color: white;
   border-color: #71C39E;
 }
-.sortableList a.card:hover .fake-link, .sortableList a.card:active .fake-link, .sortableList a.card:focus .fake-link {
-  color: #333;
-}
 .sortableList a.card:hover h2,
-.sortableList a.card:hover h3, .sortableList a.card:active h2,
-.sortableList a.card:active h3, .sortableList a.card:focus h2,
+.sortableList a.card:hover h3, .sortableList a.card:focus h2,
 .sortableList a.card:focus h3 {
   color: #2C5D7E;
 }
-.sortableList a.card:hover i, .sortableList a.card:active i, .sortableList a.card:focus i {
-  opacity: 0.6;
+.sortableList a.card:hover i, .sortableList a.card:focus i {
+  opacity: 0.65;
 }
 .sortableList a.card:active, .sortableList a.card:focus {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.23), 0 10px 40px rgba(0, 0, 0, 0.19);
   outline: none;
-  box-shadow: 0 0 0 2px #71C39E;
 }
 
-#portfolio .sortableList .card {
-  flex: 0 0 31%;
-}
-#portfolio .sortableList .card:hover .soon {
-  border: 1px solid #71C39E;
+#clients .card img {
+  opacity: 1;
 }
 
 .coa-stacked {
