@@ -1436,7 +1436,7 @@ body.page-dashboard #about {
   line-height: 1;
   border-radius: 100%;
   position: relative;
-  top: -0.07em;
+  top: -.09em;
   padding: 1px;
   border: 1px solid transparent;
 }
@@ -1469,7 +1469,7 @@ body.page-dashboard #about {
 .dashboard .grid-item h2 .more-info [class^=icon-],
 .dashboard .grid-item h3 .more-info [class*=" icon-"],
 .dashboard .grid-item h3 .more-info [class^=icon-] {
-  font-size: 0.65em;
+  font-size: 0.6em;
 }
 
 .popover {
@@ -1478,7 +1478,7 @@ body.page-dashboard #about {
 
 .popover-title {
   background-color: #F5F5F5;
-  color: #54A283;
+  color: #407a63;
   font-weight: 500;
 }
 
