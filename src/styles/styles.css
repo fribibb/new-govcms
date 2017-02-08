@@ -1393,12 +1393,10 @@ body.page-dashboard #about {
   color: #407a63;
   display: block;
 }
-.dashboard.light .grid-item [class*=" icon-"],
-.dashboard.light .grid-item [class^=icon-] {
+.dashboard.light .grid-item > [class*=" icon-"], .dashboard.light .grid-item > [class^=icon-] {
   font-size: 100px;
 }
-.dashboard.light .grid-item [class*=" icon-"]:before,
-.dashboard.light .grid-item [class^=icon-]:before {
+.dashboard.light .grid-item > [class*=" icon-"]:before, .dashboard.light .grid-item > [class^=icon-]:before {
   padding: 5px;
   background: -webkit-linear-gradient(25deg, #2C5D7E, #54A283) !important;
   -webkit-background-clip: text !important;
@@ -1408,12 +1406,10 @@ body.page-dashboard #about {
 .dashboard .grid-item {
   margin: 3em 0 3.5em;
 }
-.dashboard .grid-item [class*=" icon-"],
-.dashboard .grid-item [class^=icon-] {
+.dashboard .grid-item > [class*=" icon-"], .dashboard .grid-item > [class^=icon-] {
   font-size: 100px;
 }
-.dashboard .grid-item h2,
-.dashboard .grid-item h3 {
+.dashboard .grid-item > h2, .dashboard .grid-item > h3 {
   font-weight: 200;
   margin: 0;
 }
@@ -1425,35 +1421,65 @@ body.page-dashboard #about {
   font-size: 330%;
   font-weight: 400;
 }
-.dashboard .grid-item .int.fraction sub,
-.dashboard .grid-item .int.fraction sup {
-  position: initial;
-  font-size: 70%;
-  line-height: 0;
-}
-.dashboard .grid-item .int.fraction sup {
-  vertical-align: super;
-}
-.dashboard .grid-item .int.fraction sub {
-  vertical-align: sub;
-}
-.dashboard .grid-item .int.fraction .slash {
-  font-size: 330%;
-  font-weight: 200;
-  font-style: normal;
-  background: rgba(255, 255, 255, 0.6) !important;
-  -webkit-background-clip: text !important;
-  -webkit-text-fill-color: transparent;
-}
-.dashboard .grid-item .int.fraction sub,
-.dashboard .grid-item .int.fraction .slash,
-.dashboard .grid-item .int.fraction sup {
-  margin-left: -5px;
-  margin-right: -5px;
-}
 .dashboard .grid-item small {
   font-size: 1em;
   display: block;
+}
+.dashboard .grid-item .more-info {
+  outline: none;
+}
+.dashboard .grid-item .more-info [class*=" icon-"],
+.dashboard .grid-item .more-info [class^=icon-] {
+  transition: all 0.2s;
+  font-size: 1.4em;
+  color: #54A283;
+  line-height: 1;
+  border-radius: 100%;
+  position: relative;
+  top: -0.07em;
+  padding: 1px;
+  border: 1px solid transparent;
+}
+.dashboard .grid-item .more-info:hover, .dashboard .grid-item .more-info:active, .dashboard .grid-item .more-info:focus {
+  text-decoration: none;
+  color: #fff;
+}
+.dashboard .grid-item .more-info:hover [class*=" icon-"],
+.dashboard .grid-item .more-info:hover [class^=icon-], .dashboard .grid-item .more-info:active [class*=" icon-"],
+.dashboard .grid-item .more-info:active [class^=icon-], .dashboard .grid-item .more-info:focus [class*=" icon-"],
+.dashboard .grid-item .more-info:focus [class^=icon-] {
+  color: #407a63;
+}
+.dashboard .grid-item .more-info:hover:active, .dashboard .grid-item .more-info:hover:focus, .dashboard .grid-item .more-info:active:active, .dashboard .grid-item .more-info:active:focus, .dashboard .grid-item .more-info:focus:active, .dashboard .grid-item .more-info:focus:focus {
+  text-decoration: none;
+  color: #fff;
+}
+.dashboard .grid-item .more-info:hover:active [class*=" icon-"],
+.dashboard .grid-item .more-info:hover:active [class^=icon-], .dashboard .grid-item .more-info:hover:focus [class*=" icon-"],
+.dashboard .grid-item .more-info:hover:focus [class^=icon-], .dashboard .grid-item .more-info:active:active [class*=" icon-"],
+.dashboard .grid-item .more-info:active:active [class^=icon-], .dashboard .grid-item .more-info:active:focus [class*=" icon-"],
+.dashboard .grid-item .more-info:active:focus [class^=icon-], .dashboard .grid-item .more-info:focus:active [class*=" icon-"],
+.dashboard .grid-item .more-info:focus:active [class^=icon-], .dashboard .grid-item .more-info:focus:focus [class*=" icon-"],
+.dashboard .grid-item .more-info:focus:focus [class^=icon-] {
+  background-color: #54A283;
+  background: linear-gradient(25deg, #2C5D7E, #54A283);
+  color: #fff;
+}
+.dashboard .grid-item h2 .more-info [class*=" icon-"],
+.dashboard .grid-item h2 .more-info [class^=icon-],
+.dashboard .grid-item h3 .more-info [class*=" icon-"],
+.dashboard .grid-item h3 .more-info [class^=icon-] {
+  font-size: 0.65em;
+}
+
+.popover {
+  border-radius: 4px;
+}
+
+.popover-title {
+  background-color: #F5F5F5;
+  color: #54A283;
+  font-weight: 500;
 }
 
 @media (min-width: 994px) {
@@ -1594,6 +1620,11 @@ body.page-dashboard #about {
 
   footer .small-links li {
     margin-bottom: 20px;
+  }
+}
+@media (min-width: 400px) {
+  .popover-title {
+    min-width: 200px;
   }
 }
 /*

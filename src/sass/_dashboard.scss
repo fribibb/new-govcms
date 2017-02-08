@@ -27,8 +27,8 @@ body.page-dashboard {
         color: $highlightDarker;
         display: block;
       }
-      [class*=" icon-"],
-      [class^=icon-] {
+      & > [class*=" icon-"],
+      & > [class^=icon-] {
         font-size: 100px;
         &:before {
           padding: 5px;
@@ -43,12 +43,12 @@ body.page-dashboard {
   }
   .grid-item {
     margin: 3em 0 3.5em;
-    [class*=" icon-"],
-    [class^=icon-] {
+    & > [class*=" icon-"],
+    & > [class^=icon-] {
       font-size: 100px;
     }
-    h2,
-    h3 {
+    & > h2,
+    & > h3 {
       font-weight: 200;
       margin: 0;
     }
@@ -59,38 +59,96 @@ body.page-dashboard {
         font-size: 330%;
         font-weight: 400;
       }
-      &.fraction {
-        sub,
-        sup {
-          position: initial;
-          font-size: 70%;
-          line-height: 0;
-        }
-        sup {
-          vertical-align: super;
-        }
-        sub {
-          vertical-align: sub;
-        }
-        .slash {
-          font-size: 330%;
-          font-weight: 200;
-          font-style: normal;
-          background: rgba(#fff, 0.6) !important; // this is layed over the other filter
-          -webkit-background-clip: text!important;
-          -webkit-text-fill-color: transparent;
-        }
-        sub,
-        .slash,
-        sup {
-          margin-left: -5px;
-          margin-right: -5px;
-        }
-      }
+      // &.fraction {
+      //   sub,
+      //   sup {
+      //     position: initial;
+      //     font-size: 70%;
+      //     line-height: 0;
+      //   }
+      //   sup {
+      //     vertical-align: super;
+      //   }
+      //   sub {
+      //     vertical-align: sub;
+      //   }
+      //   .slash {
+      //     font-size: 330%;
+      //     font-weight: 200;
+      //     font-style: normal;
+      //     background: rgba(#fff, 0.6) !important; // this is layed over the other filter
+      //     -webkit-background-clip: text!important;
+      //     -webkit-text-fill-color: transparent;
+      //   }
+      //   sub,
+      //   .slash,
+      //   sup {
+      //     margin-left: -5px;
+      //     margin-right: -5px;
+      //   }
+      // }
     }
     small {
       font-size: 1em;
       display: block;
+      // margin-bottom: 1em;
+    }
+    .more-info {
+      outline: none;
+      [class*=" icon-"],
+      [class^=icon-] {
+        transition: all 0.2s;
+        font-size: 1.4em;
+        color: $highlightDark;
+        line-height: 1;
+        border-radius: 100%;
+        position: relative;
+        top: -0.07em;
+        padding: 1px;
+        border: 1px solid transparent;
+      }
+      &:hover,
+      &:active,
+      &:focus {
+        text-decoration: none;
+        color: #fff;
+        [class*=" icon-"],
+        [class^=icon-] {
+          color: $highlightDarker;
+        }
+        &:active,
+        &:focus {
+          text-decoration: none;
+          color: #fff;
+          [class*=" icon-"],
+          [class^=icon-] {
+            // border: 1px solid $highlightBright;
+            // text-shadow: 0 0 3px $highlightBright;
+            background-color: $highlightDark;
+            background: linear-gradient(25deg,$secondary,$highlightDark);
+            color: #fff;
+          }
+        }
+      }
+    }
+    h2,
+    h3 {
+      .more-info {
+        [class*=" icon-"],
+        [class^=icon-] {
+          font-size: 0.65em;
+        }
+      }
     }
   }
+}
+
+
+.popover {
+  border-radius: $radius;
+}
+.popover-title {
+  background-color: $greyLight;
+  color: $highlightDark;
+  font-weight: 500;
 }
