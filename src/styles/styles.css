@@ -1433,12 +1433,10 @@ body.page-dashboard #about {
   transition: all 0.2s;
   font-size: 1.4em;
   color: #54A283;
-  line-height: 1;
   border-radius: 100%;
   position: relative;
   top: -.09em;
   padding: 1px;
-  border: 1px solid transparent;
 }
 .dashboard .grid-item .more-info:hover, .dashboard .grid-item .more-info:active, .dashboard .grid-item .more-info:focus {
   text-decoration: none;

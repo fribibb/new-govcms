@@ -71,12 +71,12 @@ body.page-dashboard {
         transition: all 0.2s;
         font-size: 1.4em;
         color: $highlightDark;
-        line-height: 1;
+        // line-height: 1;
         border-radius: 100%;
         position: relative;
         top: -.09em;
         padding: 1px;
-        border: 1px solid transparent;
+        // border: 1px solid transparent;
       }
       &:hover,
       &:active,
