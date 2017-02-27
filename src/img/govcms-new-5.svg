@@ -3,27 +3,30 @@
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 200 200" style="enable-background:new 0 0 200 200;" xml:space="preserve">
 <style type="text/css">
-	.st0{fill:#666666;}
-	.st1{font-family:'BelleroseLight';}
-	.st2{font-size:71.7316px;}
-	.st3{letter-spacing:-1;}
-	.st4{fill:#003333;}
-	.st5{fill:none;stroke:#666666;stroke-width:4;stroke-miterlimit:10;}
-	.st6{fill:#FFFFFF;}
-	.st7{font-size:38.2482px;}
-	.st8{font-size:105.2025px;}
-	.st9{letter-spacing:-1.9;}
+	.st0{enable-background:new    ;}
+	.st1{fill:#666666;}
+	.st2{font-family:'BelleroseLight';}
+	.st3{font-size:67.5984px;}
+	.st4{letter-spacing:-1;}
+	.st5{letter-spacing:-2;}
+	.st6{fill:#003333;}
+	.st7{fill:none;stroke:#666666;stroke-width:4;stroke-miterlimit:10;}
+	.st8{fill:#FFFFFF;}
+	.st9{font-size:38.2482px;}
+	.st10{font-size:107.5697px;}
 </style>
-<text transform="matrix(1 0 0 1 8.0701 61.5381)" class="st0 st1 st2 st3">gov</text>
-<text transform="matrix(1 0 0 1 96.8701 61.5381)" class="st4 st1 st2 st3">cms</text>
-<rect x="3.3" y="18.1" class="st5" width="192.5" height="69.5"/>
-<rect x="193.2" y="68.6" class="st6" width="5.6" height="17"/>
-<text transform="matrix(6.123234e-17 -1 1 6.123234e-17 31.1055 174.7969)" class="st0 st1 st7">gov</text>
-<path class="st5" d="M3.3,113.5h172.5c11,0,20,9,20,20V183H23.3c-11,0-20-9-20-20C3.3,163,3.3,113.5,3.3,113.5z"/>
-<rect x="193.2" y="164" class="st6" width="5.6" height="17"/>
-<text transform="matrix(1.0506 0 0 1 40.3398 171.7295)" class="st4 st1 st8 st9">cms</text>
-<rect x="191.7" y="170.5" transform="matrix(0.5802 -0.8145 0.8145 0.5802 -64.1493 233.5338)" class="st6" width="5.6" height="17"/>
-<rect x="192.8" y="76.1" transform="matrix(0.5802 -0.8145 0.8145 0.5802 13.1848 194.8206)" class="st6" width="5.6" height="17"/>
-<rect x="190.3" y="64.9" transform="matrix(0.7352 -0.6778 0.6778 0.7352 6.7372 152.6618)" class="st6" width="17" height="5.6"/>
-<rect x="188.1" y="162.4" transform="matrix(0.7352 -0.6778 0.6778 0.7352 -59.933 176.9862)" class="st6" width="17" height="5.6"/>
+<g>
+	<text transform="matrix(1 0 0 1 9.0703 61.6587)" class="st0"><tspan x="0" y="0" class="st1 st2 st3 st4">g</tspan><tspan x="32.9" y="0" class="st1 st2 st3 st5">ov</tspan></text>
+	<text transform="matrix(1 0 0 1 95.6489 61.6587)" class="st6 st2 st3">cms</text>
+</g>
+<rect x="3.3" y="18.1" class="st7" width="192.5" height="69.5"/>
+<rect x="193.2" y="68.6" class="st8" width="5.6" height="17"/>
+<text transform="matrix(6.123234e-17 -1 1 6.123234e-17 30.1055 174.7969)" class="st1 st2 st9">gov</text>
+<path class="st7" d="M3.3,113.5h172.5c11,0,20,9,20,20V183H23.3c-11,0-20-9-20-20C3.3,163,3.3,113.5,3.3,113.5z"/>
+<rect x="193.2" y="164" class="st8" width="5.6" height="17"/>
+<text transform="matrix(1.0506 0 0 1 37 171.0342)" class="st6 st2 st10 st4">cms</text>
+<rect x="191.7" y="170.5" transform="matrix(0.5802 -0.8145 0.8145 0.5802 -64.1123 233.5788)" class="st8" width="5.6" height="17"/>
+<rect x="192.8" y="76.1" transform="matrix(0.5802 -0.8145 0.8145 0.5802 13.2312 194.8217)" class="st8" width="5.6" height="17"/>
+<rect x="190.3" y="64.9" transform="matrix(0.7352 -0.6778 0.6778 0.7352 6.7562 152.671)" class="st8" width="17" height="5.6"/>
+<rect x="188.1" y="162.4" transform="matrix(0.7352 -0.6778 0.6778 0.7352 -59.9112 176.9933)" class="st8" width="17" height="5.6"/>
 </svg>
