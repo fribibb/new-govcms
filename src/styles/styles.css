@@ -1469,6 +1469,33 @@ body.page-dashboard #about {
 .dashboard .grid-item h3 .more-info [class^=icon-] {
   font-size: 0.6em;
 }
+.dashboard .grid-item .status {
+  display: block;
+  margin-bottom: 1em;
+}
+.dashboard .grid-item .status-name {
+  margin-top: 1em;
+}
+.dashboard .grid-item.operational .status {
+  background: -webkit-linear-gradient(25deg, #2C5D7E, #54A283) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent;
+  color: #407a63;
+}
+.dashboard .grid-item.warning .status,
+.dashboard .grid-item.warning .int, .dashboard .grid-item.warning > [class*=" icon-"]:before, .dashboard .grid-item.warning > [class^=icon-]:before {
+  background: -webkit-linear-gradient(25deg, #eb9950, #bf6516) !important;
+  color: #e67e22;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent;
+}
+.dashboard .grid-item.danger .status,
+.dashboard .grid-item.danger .int, .dashboard .grid-item.danger > [class*=" icon-"]:before, .dashboard .grid-item.danger > [class^=icon-]:before {
+  background: -webkit-linear-gradient(25deg, #d65548, #962d22) !important;
+  color: #c0392b;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent;
+}
 
 .popover {
   border-radius: 4px;

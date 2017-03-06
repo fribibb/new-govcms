@@ -7,9 +7,9 @@
 // SETUP STEPS:
 //
 // # brew install node
-// # npm install -g gulp gulp-jshint gulp-imagemin gulp-notify gulp-autoprefixer gulp-minify-css gulp-compass gulp-uncss gulp-concat gulp-minify-css gulp-uglify gulp-css-condense gulp-iconfont casperjs phantomjs-prebuilt jshint
+// # npm install -g gulp gulp-jshint gulp-imagemin gulp-notify gulp-autoprefixer gulp-minify-css gulp-compass gulp-uncss gulp-concat gulp-minify-css gulp-uglify gulp-css-condense gulp-iconfont jshint
 // # cd [this dir]
-// # npm link gulp gulp-jshint gulp-imagemin gulp-notify gulp-autoprefixer gulp-minify-css gulp-compass gulp-uncss gulp-concat gulp-minify-css gulp-uglify gulp-css-condense gulp-iconfont casperjs phantomjs-prebuilt jshint
+// # npm link gulp gulp-jshint gulp-imagemin gulp-notify gulp-autoprefixer gulp-minify-css gulp-compass gulp-uncss gulp-concat gulp-minify-css gulp-uglify gulp-css-condense gulp-iconfont jshint
 //
 // Then just run 'gulp' to watch directory for changes :)
 // *************************

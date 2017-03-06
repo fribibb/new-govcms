@@ -107,6 +107,43 @@ body.page-dashboard {
         }
       }
     }
+    .status {
+      display: block;
+      margin-bottom: 1em;
+    }
+    .status-name {
+      margin-top: 1em;
+    }
+    &.operational {
+      .status {
+        background: -webkit-linear-gradient( 25deg,$secondary,$highlightDark)!important;
+        -webkit-background-clip: text!important;
+        -webkit-text-fill-color: transparent;
+        color: $highlightDarker;
+      }
+    }
+    &.warning {
+      .status,
+      .int,
+      & > [class*=" icon-"]:before ,
+      & > [class^=icon-]:before  {
+        background: -webkit-linear-gradient( 25deg,lighten($warning, 10%), darken($warning, 10%) )!important;
+        color: $warning;
+        -webkit-background-clip: text!important;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+    &.danger {
+      .status,
+      .int,
+      & > [class*=" icon-"]:before ,
+      & > [class^=icon-]:before  {
+        background: -webkit-linear-gradient( 25deg,lighten($danger, 10%), darken($danger, 10%) )!important;
+        color: $danger;
+        -webkit-background-clip: text!important;
+        -webkit-text-fill-color: transparent;
+      }
+    }
   }
 }
 
