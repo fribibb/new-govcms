@@ -169,7 +169,7 @@ form {
     legend {
       margin-bottom: 15px;
       color: $secondaryDark;
-      .mandatory {
+      .required {
         font-size: 0.65em;
       }
     }
@@ -187,7 +187,7 @@ form {
     color: $textGreyLight;
   }
 }
-.mandatory {
+.required {
   color: $highlightDarker;
   float: right;
 }
