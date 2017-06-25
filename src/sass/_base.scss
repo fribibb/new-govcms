@@ -52,6 +52,11 @@ a {
     }
   }
 }
+abbr[data-original-title],
+abbr[title] {
+  text-decoration: none;    // stop Chrome overriding
+  // border-bottom: none;   // alternate for when many browsers support "text-decoration: underline dotted;"
+}
 
 
 

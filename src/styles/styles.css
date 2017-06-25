@@ -342,6 +342,11 @@ a {
   color: #fff;
 }
 
+abbr[data-original-title],
+abbr[title] {
+  text-decoration: none;
+}
+
 .btn-primary {
   transition: 0.3s;
   color: #37424A;
