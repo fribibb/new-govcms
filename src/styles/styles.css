@@ -343,7 +343,8 @@ a {
 }
 
 abbr[data-original-title],
-abbr[title] {
+abbr[title],
+abbr {
   text-decoration: none;
 }
 
@@ -860,6 +861,8 @@ footer .small-links li:last-of-type {
   transition: all 0.2s;
   position: relative;
   vertical-align: top;
+  overflow-wrap: break-word;
+  min-width: 18em;
 }
 .sortableList .card img,
 .sortableList .card svg {
