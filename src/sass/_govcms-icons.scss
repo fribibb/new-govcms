@@ -1,82 +1,404 @@
 @font-face {
-    font-family: 'GovCMS Icons';
-    src: url('../fonts/govcms-icons.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/govcms-icons.woff') format('woff'),
-         url('../fonts/govcms-icons.ttf') format('truetype'),
-         url('../fonts/govcms-icons.svg#govcms-icons') format('svg');
-    font-weight: normal;
-    font-style: normal;
+	font-family: "govcms-icons";
+	src: url('../../fonts/govcms-icons.eot');
+	src: url('../../fonts/govcms-icons.eot?#iefix') format('eot'),
+		url('../../fonts/govcms-icons.woff2') format('woff2'),
+		url('../../fonts/govcms-icons.woff') format('woff'),
+		url('../../fonts/govcms-icons.ttf') format('truetype'),
+		url('../../fonts/govcms-icons.svg#govcms-icons') format('svg');
 }
 
-[class^="icon-"], [class*=" icon-"] {
-    font-family: "GovCMS Icons";
-    font-size: 50px;
-    font-style: normal;
+@mixin icon-styles {
+	font-family: "govcms-icons";
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	// speak: none; // only necessary if not using the private unicode range (firstGlyph option)
+	text-decoration: none;
+	text-transform: none;
 }
 
+%icon {
+	@include icon-styles;
+}
 
-.icon-close:before { content: '\e003'; }
-.icon-home:before { content: '\e005'; }
-.icon-key:before { content: '\e006'; }
-.icon-laptop-phone:before { content: '\e007'; }
-.icon-lock:before { content: '\e008'; }
-.icon-mail:before { content: '\e00a'; }
-.icon-money:before { content: '\e00c'; }
-.icon-phone:before { content: '\e00e'; }
-.icon-piggy:before { content: '\e00f'; }
-.icon-search:before { content: '\e012'; }
-.icon-twitter:before { content: '\e013'; }
-.icon-rss-square:before { content: '\e014'; }
-.icon-youtube-play:before { content: '\e015'; }
-.icon-external-link:before { content: '\e016'; }
-.icon-bullhorn:before { content: '\e018'; }
-.icon-graduation-hat:before { content: '\e019'; }
-.icon-light-bulb:before { content: '\e01b'; }
-.icon-github-outline:before { content: '\e01d'; }
-.icon-archive:before { content: '\e01f'; }
-.icon-dashboard:before { content: '\e021'; }
-.icon-harddrive:before { content: '\e022'; }
-.icon-headset:before { content: '\e025'; }
-.icon-shield:before { content: '\e026'; }
-.icon-alert:before { content: '\e027'; }
-.icon-bug:before { content: '\e028'; }
-.icon-package:before { content: '\e029'; }
-.icon-brush:before { content: '\e02a'; }
-.icon-acquia:before { content: '\e02c'; }
-.icon-drupal:before { content: '\e02d'; }
-.icon-aws:before { content: '\e02e'; }
-.icon-facebook:before { content: '\e02f'; }
-.icon-linkedin:before { content: '\e030'; }
-.icon-mail-alt:before { content: '\e031'; }
-.icon-magic-wand:before { content: '\e033'; }
-.icon-cog:before { content: '\e036'; }
-.icon-info:before { content: '\e037'; }
-.icon-question:before { content: '\e038'; }
-.icon-github-orig:before { content: '\e039'; }
-.icon-timer:before { content: '\e03a'; }
-.icon-document-doc:before { content: '\e03b'; }
-.icon-document-ppt:before { content: '\e03d'; }
-.icon-document-pdf:before { content: '\e03e'; }
-.icon-briefcase:before { content: '\e040'; }
-.icon-coas:before { content: '\e042'; }
-.icon-acquia-outline:before { content: '\e044'; }
-.icon-eye:before { content: '\e047'; }
-.icon-check:before { content: '\e048'; }
-.icon-stats-up:before { content: '\e04b'; }
-.icon-shop:before { content: '\e04c'; }
-.icon-help:before { content: '\e04e'; }
-.icon-users:before { content: '\e04f'; }
-.icon-document-link:before { content: '\e050'; }
-.icon-open-sign:before { content: '\e051'; }
-.icon-download:before { content: '\e054'; }
-.icon-upload:before { content: '\e055'; }
-.icon-edit:before { content: '\e056'; }
-.icon-speech-bubble:before { content: '\e057'; }
-.icon-nodes:before { content: '\e05a'; }
-.icon-enlarge:before { content: '\e05b'; }
-.icon-grid:before { content: '\e05c'; }
-.icon-reload:before { content: '\e05d'; }
-.icon-community-bubble:before { content: '\e05e'; }
-.icon-calendar:before { content: '\e05f'; }
-.icon-check-circle:before { content: '\e060'; }
-.icon-check-square:before { content: '\e061'; }
+@function icon-char($filename) {
+	$char: "";
+
+	@if $filename == acquia {
+		$char: "\E001";
+	}
+	@if $filename == alert {
+		$char: "\E002";
+	}
+	@if $filename == archive {
+		$char: "\E003";
+	}
+	@if $filename == aws {
+		$char: "\E004";
+	}
+	@if $filename == briefcase {
+		$char: "\E005";
+	}
+	@if $filename == brush {
+		$char: "\E006";
+	}
+	@if $filename == bubble {
+		$char: "\E007";
+	}
+	@if $filename == bug {
+		$char: "\E008";
+	}
+	@if $filename == bullhorn {
+		$char: "\E009";
+	}
+	@if $filename == calendar {
+		$char: "\E00A";
+	}
+	@if $filename == chat-speech-bubbles {
+		$char: "\E00B";
+	}
+	@if $filename == check {
+		$char: "\E00C";
+	}
+	@if $filename == close {
+		$char: "\E00D";
+	}
+	@if $filename == code {
+		$char: "\E00E";
+	}
+	@if $filename == cog {
+		$char: "\E00F";
+	}
+	@if $filename == community-bubble {
+		$char: "\E010";
+	}
+	@if $filename == dashboard {
+		$char: "\E011";
+	}
+	@if $filename == document-doc {
+		$char: "\E012";
+	}
+	@if $filename == document-link {
+		$char: "\E013";
+	}
+	@if $filename == document-pdf {
+		$char: "\E014";
+	}
+	@if $filename == document-ppt {
+		$char: "\E015";
+	}
+	@if $filename == document {
+		$char: "\E016";
+	}
+	@if $filename == download {
+		$char: "\E017";
+	}
+	@if $filename == drupal {
+		$char: "\E018";
+	}
+	@if $filename == edit {
+		$char: "\E019";
+	}
+	@if $filename == enlarge {
+		$char: "\E01A";
+	}
+	@if $filename == external-link {
+		$char: "\E01B";
+	}
+	@if $filename == facebook {
+		$char: "\E01C";
+	}
+	@if $filename == github {
+		$char: "\E01D";
+	}
+	@if $filename == graduation-hat {
+		$char: "\E01E";
+	}
+	@if $filename == grid {
+		$char: "\E01F";
+	}
+	@if $filename == harddrive {
+		$char: "\E020";
+	}
+	@if $filename == headset {
+		$char: "\E021";
+	}
+	@if $filename == help {
+		$char: "\E022";
+	}
+	@if $filename == home {
+		$char: "\E023";
+	}
+	@if $filename == info {
+		$char: "\E024";
+	}
+	@if $filename == laptop-phone {
+		$char: "\E025";
+	}
+	@if $filename == light-bulb {
+		$char: "\E026";
+	}
+	@if $filename == linkedin {
+		$char: "\E027";
+	}
+	@if $filename == lock {
+		$char: "\E028";
+	}
+	@if $filename == magic-wand {
+		$char: "\E029";
+	}
+	@if $filename == mail {
+		$char: "\E02A";
+	}
+	@if $filename == mobile {
+		$char: "\E02B";
+	}
+	@if $filename == money {
+		$char: "\E02C";
+	}
+	@if $filename == nodes {
+		$char: "\E02D";
+	}
+	@if $filename == open-sign {
+		$char: "\E02E";
+	}
+	@if $filename == package {
+		$char: "\E02F";
+	}
+	@if $filename == phone {
+		$char: "\E030";
+	}
+	@if $filename == piggy {
+		$char: "\E031";
+	}
+	@if $filename == question {
+		$char: "\E032";
+	}
+	@if $filename == reload {
+		$char: "\E033";
+	}
+	@if $filename == rss-square {
+		$char: "\E034";
+	}
+	@if $filename == search {
+		$char: "\E035";
+	}
+	@if $filename == shield {
+		$char: "\E036";
+	}
+	@if $filename == stats-up {
+		$char: "\E037";
+	}
+	@if $filename == timer {
+		$char: "\E038";
+	}
+	@if $filename == twitter {
+		$char: "\E039";
+	}
+	@if $filename == upload {
+		$char: "\E03A";
+	}
+	@if $filename == users {
+		$char: "\E03B";
+	}
+	@if $filename == youtube-play {
+		$char: "\E03C";
+	}
+
+	@return $char;
+}
+
+@mixin icon($filename, $insert: before, $extend: true) {
+	&:#{$insert} {
+		@if $extend {
+			@extend %icon;
+		} @else {
+			@include icon-styles;
+		}
+		content: icon-char($filename);
+	}
+}
+
+.icon-acquia {
+	@include icon(acquia);
+}
+.icon-alert {
+	@include icon(alert);
+}
+.icon-archive {
+	@include icon(archive);
+}
+.icon-aws {
+	@include icon(aws);
+}
+.icon-briefcase {
+	@include icon(briefcase);
+}
+.icon-brush {
+	@include icon(brush);
+}
+.icon-bubble {
+	@include icon(bubble);
+}
+.icon-bug {
+	@include icon(bug);
+}
+.icon-bullhorn {
+	@include icon(bullhorn);
+}
+.icon-calendar {
+	@include icon(calendar);
+}
+.icon-chat-speech-bubbles {
+	@include icon(chat-speech-bubbles);
+}
+.icon-check {
+	@include icon(check);
+}
+.icon-close {
+	@include icon(close);
+}
+.icon-code {
+	@include icon(code);
+}
+.icon-cog {
+	@include icon(cog);
+}
+.icon-community-bubble {
+	@include icon(community-bubble);
+}
+.icon-dashboard {
+	@include icon(dashboard);
+}
+.icon-document-doc {
+	@include icon(document-doc);
+}
+.icon-document-link {
+	@include icon(document-link);
+}
+.icon-document-pdf {
+	@include icon(document-pdf);
+}
+.icon-document-ppt {
+	@include icon(document-ppt);
+}
+.icon-document {
+	@include icon(document);
+}
+.icon-download {
+	@include icon(download);
+}
+.icon-drupal {
+	@include icon(drupal);
+}
+.icon-edit {
+	@include icon(edit);
+}
+.icon-enlarge {
+	@include icon(enlarge);
+}
+.icon-external-link {
+	@include icon(external-link);
+}
+.icon-facebook {
+	@include icon(facebook);
+}
+.icon-github {
+	@include icon(github);
+}
+.icon-graduation-hat {
+	@include icon(graduation-hat);
+}
+.icon-grid {
+	@include icon(grid);
+}
+.icon-harddrive {
+	@include icon(harddrive);
+}
+.icon-headset {
+	@include icon(headset);
+}
+.icon-help {
+	@include icon(help);
+}
+.icon-home {
+	@include icon(home);
+}
+.icon-info {
+	@include icon(info);
+}
+.icon-laptop-phone {
+	@include icon(laptop-phone);
+}
+.icon-light-bulb {
+	@include icon(light-bulb);
+}
+.icon-linkedin {
+	@include icon(linkedin);
+}
+.icon-lock {
+	@include icon(lock);
+}
+.icon-magic-wand {
+	@include icon(magic-wand);
+}
+.icon-mail {
+	@include icon(mail);
+}
+.icon-mobile {
+	@include icon(mobile);
+}
+.icon-money {
+	@include icon(money);
+}
+.icon-nodes {
+	@include icon(nodes);
+}
+.icon-open-sign {
+	@include icon(open-sign);
+}
+.icon-package {
+	@include icon(package);
+}
+.icon-phone {
+	@include icon(phone);
+}
+.icon-piggy {
+	@include icon(piggy);
+}
+.icon-question {
+	@include icon(question);
+}
+.icon-reload {
+	@include icon(reload);
+}
+.icon-rss-square {
+	@include icon(rss-square);
+}
+.icon-search {
+	@include icon(search);
+}
+.icon-shield {
+	@include icon(shield);
+}
+.icon-stats-up {
+	@include icon(stats-up);
+}
+.icon-timer {
+	@include icon(timer);
+}
+.icon-twitter {
+	@include icon(twitter);
+}
+.icon-upload {
+	@include icon(upload);
+}
+.icon-users {
+	@include icon(users);
+}
+.icon-youtube-play {
+	@include icon(youtube-play);
+}

@@ -46,7 +46,8 @@ a {
     height: 0;          // needed in drupal version
     border-bottom: 0;   // needed in drupal version
   }
-  [class^="icon-"], [class*=" icon-"] {
+  [class^="icon-"],
+	[class*=" icon-"] {
     &.text-primary {
       color: #fff;
     }
@@ -61,7 +62,11 @@ abbr {
 
 
 
-
+// Font Icons
+[class^="icon-"],
+[class*=" icon-"] {
+	font-size: 50px;
+}
 
 
 
@@ -435,7 +440,9 @@ body.front {
     line-height: 2em;
     vertical-align: middle;
     display: inline-block;
-    min-width: 104px;
+    min-width: 111px;
+		top: 2px;
+    position: relative;
     br {
       border-color: #fff;
       margin: 1em;
