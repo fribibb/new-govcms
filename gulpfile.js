@@ -1,79 +1,127 @@
-// NOTES:
-// https://markgoodyear.com/2014/01/getting-started-with-gulp/
-// http://www.sitepoint.com/introduction-gulp-js/
-// http://ilikekillnerds.com/2014/11/10-highly-useful-gulp-js-plugins-for-a-super-ninja-front-end-workflow/
-
 // *************************
+//
 // SETUP STEPS:
 //
 // # brew install node
 // # cd {here}
 // # npm install
 //
-// Then just run 'gulp' to watch directory for changes :)
+// Run 'gulp' to watch directory for changes for fonts icons, Sass, etc.
+// Or for full site testing run 'gulp test'
 //
-// Or for full testing run 'gulp test'
 // *************************
 
 
 // Include gulp.
-const gulp             = require('gulp');
+const gulp                    = require('gulp');
 
 // Include plug-ins.
-const jshint           = require('gulp-jshint');
-const imagemin         = require('gulp-imagemin');
-const notify           = require('gulp-notify');
-const autoprefix       = require('gulp-autoprefixer');
-const minifyCSS        = require('gulp-minify-css');
-const compass          = require('gulp-compass');
-const uncss            = require('gulp-uncss');
-const concat           = require('gulp-concat');
-const uglify           = require('gulp-uglify');
-const cssc             = require('gulp-css-condense');
-const cssNano          = require('gulp-cssnano');
-const webserver        = require('gulp-webserver');
-const iconfont         = require('gulp-iconfont');
-const iconfontCss      = require('gulp-iconfont-css');
-const iconfontTemplate = require('gulp-iconfont-template');
-const ttf2woff2        = require('gulp-ttf2woff2');
-const pa11y            = require('gulp-pa11y');
-const w3cValidation    = require('gulp-w3c-html-validation');
-const casperJs         = require('gulp-casperjs');
-const realFavicon      = require ('gulp-real-favicon');
-const fs               = require('fs');												// used by check-for-favicon-update
+const jshint                  = require('gulp-jshint');
+const imagemin                = require('gulp-imagemin');
+const notify                  = require('gulp-notify');
+const autoprefix              = require('gulp-autoprefixer');
+const minifyCSS               = require('gulp-minify-css');
+const compass                 = require('gulp-compass');
+const uncss                   = require('gulp-uncss');
+const concat                  = require('gulp-concat');
+const uglify                  = require('gulp-uglify');
+const cssc                    = require('gulp-css-condense');
+const cssNano                 = require('gulp-cssnano');
+const webserver               = require('gulp-webserver');
+const iconfont                = require('gulp-iconfont');
+const iconfontCss             = require('gulp-iconfont-css');
+const iconfontTemplate        = require('gulp-iconfont-template');
+const pa11y                   = require('gulp-pa11y');
+const w3cValidation           = require('gulp-w3c-html-validation');
+const casperJs                = require('gulp-casperjs');
+const realFavicon             = require('gulp-real-favicon');
+const fs                      = require('fs');												// Used by check-for-favicon-update.
+const plumber                 = require('gulp-plumber');							// For error handling.
+const gutil                   = require('gulp-util');					    		// For error handling.
 
-// URL to test locally
-const localSiteURL  = 'http://localhost:8000/';
-// URL to test locally
-const fontName      = 'govcms-icons';
-// List of pages that will be tested by pa11y and w3cValidator
-const pagesToTest   = [
-												"index.html",
-												"all-sites.html",
-												"dashboard-5.html",
-												"404.html",
-												"is.html",
-												"news.html",
-												"news-item.html",
-												"pricing.html",
-												"pricing-1.html",
-												"search-results.html",
-												"signup.html",
-												"signup-done.html",
-												"support.html",
-												"status.html",
-												"training.html",
-												"sub-page.html",
-												"contact-us.html",
-												"contact-us-done.html",
-												"about.html",
-											];
-// Same as above list, but as complete URLs, as needed for UnCSS
-// ..if we want it to use the server and not the file system directly (ie: only .html files would work)
-var pagesToTestFullPath = pagesToTest;
-for (var i = 0; i < pagesToTestFullPath.length; i++) {
-  pagesToTestFullPath[i] = localSiteURL + pagesToTestFullPath[i];
+// Project vars
+// URL to test locally.
+const localSiteURL            = 'http://localhost:8000/';
+// Name of the icon font.
+const fontName                = 'govcms-icons';
+// Favicon related settings.
+const faviconColour           = '#ffffff';
+const faviconBackgroundColour = '#384249';
+// List of pages that will be tested by pa11y and w3cValidator.
+const pagesToTest             = [
+																'index.html',
+																'all-sites.html',
+																'dashboard-5.html',
+																'404.html',
+																'is.html',
+																'news.html',
+																'news-item.html',
+																'pricing.html',
+																'pricing-1.html',
+																'search-results.html',
+																'signup.html',
+																'signup-done.html',
+																'support.html',
+																'status.html',
+																'training.html',
+																'sub-page.html',
+																'contact-us.html',
+																'contact-us-done.html',
+																'about.html',
+															];
+// List of selectors that will be excluded by UnCSS.
+const ignoreSelectors         = [
+																'hover',
+																'active',
+																'focus',
+																'click',
+																'navbar',
+																'top-nav-collapse',
+																'header',
+																/\w\.in/,
+																'.fade',
+																'.collapse',
+																'collapsing',
+																/(#|\.)navbar(\-[a-zA-Z]+)?/,
+																/(#|\.)dropdown(\-[a-zA-Z]+)?/,
+																/(#|\.)(open)/,
+																'.modal',
+																'.modal.fade.in',
+																'.modal-dialog',
+																'.modal-document',
+																'.modal-scrollbar-measure',
+																'.modal-backdrop.fade',
+																'.modal-backdrop.in',
+																'.modal.fade.modal-dialog',
+																'.modal.in.modal-dialog',
+																'.modal-open',
+																'.in',
+																'.modal-backdrop',
+																'.fade',
+																'.fade.in',
+																'.collapse',
+																'.collapse.in',
+																'.collapsing',
+																'.alert-danger',
+																'.open',
+																'/open+/',
+															];
+// Same as above list, but as complete URLs, as needed for UnCSS.
+// ..if we want it to use the server and not the file system directly (ie: only .html files would work).
+var pagesToTestFullPath       = pagesToTest;
+for ( var i = 0; i < pagesToTestFullPath.length; i++ ) {
+  pagesToTestFullPath[i]      = localSiteURL + pagesToTestFullPath[i];
 }
+
+
+// ********************************************************************************************************************************************
+
+
+// Error Handling to stop file watching from dying on an error (ie: Sass compiling).
+var onError = function (err) {
+  gutil.beep();
+  console.log(err);
+};
 
 
 // **********************
@@ -82,6 +130,9 @@ for (var i = 0; i < pagesToTestFullPath.length; i++) {
 // JS minify.
 gulp.task('scripts', function() {
   return gulp.src('./src/js/*.js')
+		.pipe(plumber({
+			errorHandler: onError
+		}))
     .pipe(uglify())
     .pipe(gulp.dest('./js/'));
 });
@@ -90,7 +141,11 @@ gulp.task('scripts', function() {
 // Optimise images.
 gulp.task('images', function() {
   return gulp.src('./src/img/**/*')
-    .pipe(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true }))
+    .pipe(imagemin({
+			optimizationLevel: 3,
+			progressive: true,
+			interlaced: true,
+		}))
     .pipe(gulp.dest('./img'))
 });
 
@@ -98,7 +153,9 @@ gulp.task('images', function() {
 // Optimise favicons.
 gulp.task('favicons', function() {
   return gulp.src('./src/favicon/favicons/**/*')
-    .pipe(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true }))
+    .pipe(imagemin({
+			optimizationLevel: 3
+		}))
     .pipe(gulp.dest('./favicons'))
 });
 
@@ -106,6 +163,9 @@ gulp.task('favicons', function() {
 // Compile the Sass.
 gulp.task('styles', function() {
   gulp.src('./src/sass/*.scss')
+		.pipe(plumber({
+      errorHandler: onError
+    }))
     .pipe(compass({
       sass: './src/sass'
     }))
@@ -114,42 +174,7 @@ gulp.task('styles', function() {
     .pipe(uncss({
       // html: ['index.html'],
       html: pagesToTestFullPath,
-      ignore: [
-								'hover',
-								'active',
-								'focus',
-								'click',
-								'navbar',
-								'top-nav-collapse',
-								'header',
-								/\w\.in/,
-								'.fade',
-								'.collapse',
-								'collapsing',
-								/(#|\.)navbar(\-[a-zA-Z]+)?/,
-								/(#|\.)dropdown(\-[a-zA-Z]+)?/,
-								/(#|\.)(open)/,
-								'.modal',
-								'.modal.fade.in',
-								'.modal-dialog',
-								'.modal-document',
-								'.modal-scrollbar-measure',
-								'.modal-backdrop.fade',
-								'.modal-backdrop.in',
-								'.modal.fade.modal-dialog',
-								'.modal.in.modal-dialog',
-								'.modal-open',
-								'.in',
-								'.modal-backdrop',
-								'.fade',
-								'.fade.in',
-								'.collapse',
-								'.collapse.in',
-								'.collapsing',
-								'.alert-danger',
-								'.open',
-								'/open+/',
-							]
+      ignore: ignoreSelectors,
     }))
     .pipe(autoprefix('last 2 versions'))
     .pipe(minifyCSS())
@@ -163,11 +188,12 @@ gulp.task('webserver', function() {
   gulp.src('./')
     .pipe(webserver({
       livereload: true,
-      // directoryListing: true,	// overwrites index.html
+      // directoryListing: true,	                     // Overwrites index.html.
       open: true,
     }));
 });
-// The same, but don't open it up or livereload - it's just for riunning in the background
+// For tests.
+// Same as above, but doesn't open browser or livereload - it's just for running in the background.
 gulp.task('webserver-bg', function() {
   gulp.src('./')
     .pipe(webserver());
@@ -181,39 +207,36 @@ gulp.task('iconFont', function(){
 		// .pipe(iconfontTemplate({
 		// 	fontName: fontName,
 		// 	// path: 'assets/templates/template.html',
-		// 	targetPath: fontName+'.html',		                // relative to the path used in gulp.dest()
+		// 	targetPath: fontName+'.html',		               // Relative to the path used in gulp.dest()
 		// }))
 		.pipe(iconfontCss({
-      fontName: fontName,
-      path: 'scss',
-      targetPath: '../src/sass/_'+fontName+'.scss',		// relative to the path used in gulp.dest()
-      fontPath: '../../fonts/'
+      fontName:       fontName,
+      path:           'scss',
+      targetPath:     '../src/sass/_'+fontName+'.scss',		 // Relative to the path used in gulp.dest()
+      fontPath:       '../../fonts/'
     }))
 		.pipe(iconfont({
-      fontName:       fontName,                       // required
-      prependUnicode: true,                           // recommended option
-      formats:        ['ttf', 'eot', 'woff'],         // default, 'woff2' and 'svg' are available
-      timestamp:      runTimestamp,                   // recommended to get consistent builds when watching files
-      normalize:      true,                           // The provided icons does not have the same height it could lead to unexpected results. Using the normalize option could solve the problem.
+      fontName:       fontName,                        // Required.
+      prependUnicode: true,                            // Recommended option.
+      formats:        ['ttf', 'eot', 'woff', 'woff2'], // Default, 'woff2' and 'svg' are available.
+      timestamp:      runTimestamp,                    // Recommended to get consistent builds when watching files.
+      normalize:      true,                            // The provided icons does not have the same height it could lead to unexpected results. Using the normalize option could solve the problem.
     }))
     .pipe(gulp.dest('./fonts/'));
 });
-// Once the fonts are updated, create a woff2 version as well.
-gulp.task('ttf2woff2', function(){
-  gulp.src(['fonts/*.ttf'])
-    .pipe(ttf2woff2())
-    .pipe(gulp.dest('fonts/'));
-});
 
 
-// Crawl local site and create sitemap.json file.
-// TODO
+// Crawl local site and create sitemap.json file for other tasks to use.
+// TODO.
+// gulp.task('crawlSite', ['webserver-bg'], _____({
+// 	_____
+// }));
 
 
 gulp.task('pa11y', ['webserver-bg'], pa11y({
 	url:               localSiteURL,
-	failOnError:       true, // fail the build on error
-	// showFailedOnly: true, // show errors only and override reporter reporter: 'console'
+	failOnError:       true,                            // Fail the build on error.
+	// showFailedOnly: true,                            // Show errors only and override reporter reporter: 'console'.
 }));
 
 
@@ -233,71 +256,70 @@ gulp.task('htmlValidation', ['webserver-bg'], function() {
 // Casper JS Tests
 gulp.task('casperJS', ['webserver-bg'], function () {
   gulp.src('./tests/casperjs-tests.js')
-    .pipe(casperJs({command:'test'})); //run casperjs test casperjs-tests.js
+    .pipe(casperJs({
+			command:        'test',    // Run casperjs test casperjs-tests.js.
+		}));
 });
 
 
 // Favicons creation
-var faviconDataFile         = './src/favicon/faviconData.json';
-// File where the favicon markups are stored
-var faviconColour           = '#ffffff';
-var faviconBackgroundColour = '#384249';
+var faviconDataFile = './src/favicon/faviconData.json';
 // Generate the icons. This task takes a few seconds to complete.
 // You should run it at least once to create the icons. Then,
 // you should run it whenever RealFaviconGenerator updates its
 // package (see the check-for-favicon-update task below).
 gulp.task('favicon', function(done) {
 	realFavicon.generateFavicon({
-		masterPicture: './src/favicon/master-favicon.svg',
-		dest: './src/favicon/favicons',
-		iconsPath: '/favicons/',
+		masterPicture:                './src/favicon/master-favicon.svg',
+		dest:                         './src/favicon/favicons',
+		iconsPath:                    '/favicons/',
 		design: {
 			ios: {
-				pictureAspect: 'noChange',
+				pictureAspect:            'noChange',
 				assets: {
-					ios6AndPriorIcons: false,
-					ios7AndLaterIcons: false,
-					precomposedIcons: false,
+					ios6AndPriorIcons:      false,
+					ios7AndLaterIcons:      false,
+					precomposedIcons:       false,
 					declareOnlyDefaultIcon: true
 				}
 			},
 			desktopBrowser: {},
 			windows: {
-				pictureAspect: 'noChange',
-				backgroundColor: faviconBackgroundColour,
-				onConflict: 'override',
+				pictureAspect:            'noChange',
+				backgroundColor:          faviconBackgroundColour,
+				onConflict:               'override',
 				assets: {
-					windows80Ie10Tile: false,
+					windows80Ie10Tile:      false,
 					windows10Ie11EdgeTiles: {
-						small: false,
-						medium: true,
-						big: false,
-						rectangle: false
+						small:                false,
+						medium:               true,
+						big:                  false,
+						rectangle:            false
 					}
 				}
 			},
 			androidChrome: {
-				pictureAspect: 'noChange',
-				themeColor: faviconColour,
+				pictureAspect:            'noChange',
+				themeColor:               faviconColour,
 				manifest: {
-					display: 'standalone',
-					orientation: 'notSet',
-					onConflict: 'override',
-					declared: true
+					display:                'standalone',
+					orientation:            'notSet',
+					onConflict:             'override',
+					declared:               true
 				},
 				assets: {
-					legacyIcon: false,
-					lowResolutionIcons: false
+					legacyIcon:             false,
+					lowResolutionIcons:     false
 				}
 			},
 			safariPinnedTab: {
-				pictureAspect: 'silhouette',
-				themeColor: faviconColour
+				pictureAspect:            'silhouette',
+				themeColor:               faviconColour
 			}
 		},
 		settings: {
-			scalingAlgorithm: 'Mitchell',
-			errorOnImageTooSmall: true
+			scalingAlgorithm:           'Mitchell',
+			errorOnImageTooSmall:       true
 		},
 		markupFile: faviconDataFile
 	}, function() {
@@ -314,7 +336,7 @@ gulp.task('favicon', function(done) {
 // });
 // Check for updates on RealFaviconGenerator
 // (ie: If Apple has just released a new Touch icon along with the latest version of iOS).
-// Run this task from time to time. Ideally, make it part of your CI
+// Run this task from time to time. Ideally, make it part of your CI.
 gulp.task('check-for-favicon-update', function(done) {
 	var currentVersion = JSON.parse(fs.readFileSync(faviconDataFile)).version;
 	realFavicon.checkForUpdates(currentVersion, function(err) {
@@ -326,7 +348,6 @@ gulp.task('check-for-favicon-update', function(done) {
 
 
 // ********************************************************************************************************************************************
-
 
 
 // Default gulp task.
@@ -343,26 +364,22 @@ gulp.task('default', ['images', 'scripts', 'styles'], function() {
   gulp.watch('./src/font-icons/*.svg', function() {
     gulp.start('iconFont');
   });
-  // Watch for font changes so we acn create a woff2 file
-  gulp.watch('./fonts/*.ttf', function() {
-    gulp.start('ttf2woff2');
-  });
   // Watch for Sass changes.
   gulp.watch('./src/sass/*.scss', function() {
     gulp.start('styles');
   });
-  // Watch for Favicon changes.
+  // Watch for master Favicon changes.
   gulp.watch('./src/favicon/master-favicon.svg', function() {
     gulp.start('favicon');
   });
+	// Once the favicons are built, create an optimised copy to use.
   gulp.watch('./src/favicon/favicons/**', function() {
     gulp.start('favicons');
   });
 	// Start the local web server
 	gulp.start('webserver');
 	// Check for updates for the favicon creation
-	// gulp.start('check-for-favicon-update');
-	// TODO: errors atm.
+	// gulp.start('check-for-favicon-update');    // TODO: errors out atm.
 });
 
 
@@ -384,5 +401,5 @@ gulp.task('test', ['webserver-bg'], function() {
 // 	// Start the local web server
 // 	gulp.start('webserver');
 // 	// Crawl the pages
-// 	// TODO - for now manually done.
+// 	gulp.start('crawlSite');    // TODO - for now manually done.
 // });
