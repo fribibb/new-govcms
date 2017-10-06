@@ -10,6 +10,9 @@
 // Or for full site testing run 'gulp test'
 //
 // *************************
+//
+// Packages needed:
+// jshint uncss gulp gulp-jshint gulp-imagemin gulp-compass gulp-concat gulp-uglify gulp-webserver gulp-iconfont gulp-iconfont-css gulp-iconfont-template gulp-pa11y gulp-w3c-html-validation gulp-casperjs gulp-real-favicon fs gulp-plumber gulp-util gulp-postcss postcss-uncss cssnano postcss-import autoprefixer
 
 
 // Include gulp.
@@ -18,15 +21,9 @@ const gulp                    = require('gulp');
 // Include plug-ins.
 const jshint                  = require('gulp-jshint');
 const imagemin                = require('gulp-imagemin');
-const notify                  = require('gulp-notify');
-const autoprefix              = require('gulp-autoprefixer');
-const minifyCSS               = require('gulp-minify-css');
 const compass                 = require('gulp-compass');
-const uncss                   = require('gulp-uncss');
 const concat                  = require('gulp-concat');
 const uglify                  = require('gulp-uglify');
-const cssc                    = require('gulp-css-condense');
-const cssNano                 = require('gulp-cssnano');
 const webserver               = require('gulp-webserver');
 const iconfont                = require('gulp-iconfont');
 const iconfontCss             = require('gulp-iconfont-css');
@@ -38,6 +35,11 @@ const realFavicon             = require('gulp-real-favicon');
 const fs                      = require('fs');												// Used by check-for-favicon-update.
 const plumber                 = require('gulp-plumber');							// For error handling.
 const gutil                   = require('gulp-util');					    		// For error handling.
+const postcss 								= require('gulp-postcss');
+const uncss 									= require('postcss-uncss');
+const cssNano 								= require('cssnano');
+const atImport 								= require('postcss-import');
+const autoprefixer 						= require('autoprefixer');
 
 // Project vars
 // URL to test locally.
@@ -162,23 +164,32 @@ gulp.task('favicons', function() {
 
 // Compile the Sass.
 gulp.task('styles', function() {
+	// Register the PostCSS plugins.
+	var postcssPlugins = [
+		atImport,
+		autoprefixer,
+		cssNano,
+		uncss({
+			// html: ['index.html'],
+			html: pagesToTestFullPath,
+			ignore: ignoreSelectors
+		}),
+	];
+	// The actual task.
   gulp.src('./src/sass/*.scss')
+		// Error handling
 		.pipe(plumber({
       errorHandler: onError
     }))
-    .pipe(compass({
+    // Compile the Sass code.
+		.pipe(compass({
       sass: './src/sass'
     }))
+		// If there's more than one css file outputted, merge them into one.
     .pipe(concat('./styles.css'))
-    .pipe(cssc())
-    .pipe(uncss({
-      // html: ['index.html'],
-      html: pagesToTestFullPath,
-      ignore: ignoreSelectors,
-    }))
-    .pipe(autoprefix('last 2 versions'))
-    .pipe(minifyCSS())
-		.pipe(cssNano())
+		// Optimise the CSS.
+		.pipe(postcss(postcssPlugins))
+		// Output to the css folder.
     .pipe(gulp.dest('./css/'));
 });
 
@@ -188,7 +199,7 @@ gulp.task('webserver', function() {
   gulp.src('./')
     .pipe(webserver({
       livereload: true,
-      // directoryListing: true,	                     // Overwrites index.html.
+      // directoryListing: true,	                     		// Overwrites index.html.
       open: true,
     }));
 });
@@ -207,20 +218,20 @@ gulp.task('iconFont', function(){
 		// .pipe(iconfontTemplate({
 		// 	fontName: fontName,
 		// 	// path: 'assets/templates/template.html',
-		// 	targetPath: fontName+'.html',		               // Relative to the path used in gulp.dest()
+		// 	targetPath: fontName+'.html',		               		// Relative to the path used in gulp.dest()
 		// }))
 		.pipe(iconfontCss({
       fontName:       fontName,
       path:           'scss',
-      targetPath:     '../src/sass/_'+fontName+'.scss',		 // Relative to the path used in gulp.dest()
+      targetPath:     '../src/sass/_'+fontName+'.scss',		// Relative to the path used in gulp.dest()
       fontPath:       '../../fonts/'
     }))
 		.pipe(iconfont({
-      fontName:       fontName,                        // Required.
-      prependUnicode: true,                            // Recommended option.
-      formats:        ['ttf', 'eot', 'woff', 'woff2'], // Default, 'woff2' and 'svg' are available.
-      timestamp:      runTimestamp,                    // Recommended to get consistent builds when watching files.
-      normalize:      true,                            // The provided icons does not have the same height it could lead to unexpected results. Using the normalize option could solve the problem.
+      fontName:       fontName,                        		// Required.
+      prependUnicode: true,                            		// Recommended option.
+      formats:        ['ttf', 'eot', 'woff', 'woff2'], 		// Default, 'woff2' and 'svg' are available.
+      timestamp:      runTimestamp,                    		// Recommended to get consistent builds when watching files.
+      normalize:      true,                            		// The provided icons does not have the same height it could lead to unexpected results. Using the normalize option could solve the problem.
     }))
     .pipe(gulp.dest('./fonts/'));
 });
@@ -257,7 +268,7 @@ gulp.task('htmlValidation', ['webserver-bg'], function() {
 gulp.task('casperJS', ['webserver-bg'], function () {
   gulp.src('./tests/casperjs-tests.js')
     .pipe(casperJs({
-			command:        'test',    // Run casperjs test casperjs-tests.js.
+			command:        'test',    											// Run casperjs test casperjs-tests.js.
 		}));
 });
 
@@ -351,7 +362,7 @@ gulp.task('check-for-favicon-update', function(done) {
 
 
 // Default gulp task.
-gulp.task('default', ['images', 'scripts', 'styles'], function() {
+gulp.task('default', ['webserver', 'images', 'scripts', 'styles'], function() {
   // Watch for img optim changes.
   gulp.watch('./src/img/**', function() {
     gulp.start('images');
@@ -377,9 +388,9 @@ gulp.task('default', ['images', 'scripts', 'styles'], function() {
     gulp.start('favicons');
   });
 	// Start the local web server
-	gulp.start('webserver');
+	// gulp.start('webserver');
 	// Check for updates for the favicon creation
-	// gulp.start('check-for-favicon-update');    // TODO: errors out atm.
+	// gulp.start('check-for-favicon-update');    // TODO: Errors out atm.
 });
 
 
@@ -401,5 +412,5 @@ gulp.task('test', ['webserver-bg'], function() {
 // 	// Start the local web server
 // 	gulp.start('webserver');
 // 	// Crawl the pages
-// 	gulp.start('crawlSite');    // TODO - for now manually done.
+// 	gulp.start('crawlSite');    								// TODO: For now manually done.
 // });

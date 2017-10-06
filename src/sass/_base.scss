@@ -1,5 +1,12 @@
 // * Based off Start Bootstrap - Stylish Portfolio Bootstrap Theme
 
+// UnCSS Test
+// Llama should not appear in the final output (styles.css) due to UnCSS
+// No Llamas were harmed in the compiling of these styles.
+.llama {
+	font-size: 99999%;
+}
+
 
 // Global Styles
 html {
@@ -13,6 +20,15 @@ body {
   @include body-font();
 }
 
+
+// for iPhone X
+// .container {
+// 	// padding: constant(safe-area-inset-top) constant(safe-area-inset-right) constant(safe-area-inset-bottom) constant(safe-area-inset-left);
+// 	padding-left: constant(safe-area-inset-left);
+// 	padding-right: constant(safe-area-inset-right);
+// }
+
+
 .text-vertical-center {
   display: table-cell;
   text-align: center;
@@ -24,7 +40,6 @@ body {
     font-weight: 700;
   }
 }
-
 
 
 // General Overrides
