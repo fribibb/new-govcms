@@ -218,11 +218,12 @@ gulp.task('iconFont', function(){
 		// 	// path: 'assets/templates/template.html',
 		// 	targetPath: fontName+'.html',		               		// Relative to the path used in gulp.dest()
 		// }))
+		// Create the CSS for it
 		.pipe(iconfontCss({
       fontName:       fontName,
       path:           'scss',
       targetPath:     '../src/sass/_'+fontName+'.scss',		// Relative to the path used in gulp.dest()
-      fontPath:       'fonts/'
+      fontPath:       '../../fonts/'											// Directory of font files relative to generated (S)CSS file (optional, defaults to ./).
     }))
 		.pipe(iconfont({
       fontName:       fontName,                        		// Required.
@@ -370,7 +371,7 @@ gulp.task('default', ['webserver', 'images', 'scripts', 'styles'], function() {
     gulp.start('scripts');
   });
   // Watch for font icon changes.
-  gulp.watch('./src/font-icons/*.svg', function() {
+  gulp.watch('./src/font-icons/**', function() {
     gulp.start('iconFont');
   });
   // Watch for Sass changes.
