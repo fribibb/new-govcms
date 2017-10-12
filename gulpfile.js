@@ -12,7 +12,7 @@
 // *************************
 //
 // Packages needed:
-// jshint uncss gulp gulp-jshint gulp-imagemin gulp-compass gulp-concat gulp-uglify gulp-webserver gulp-iconfont gulp-iconfont-css gulp-iconfont-template gulp-pa11y gulp-w3c-html-validation gulp-casperjs gulp-real-favicon fs gulp-plumber gulp-util gulp-postcss postcss-uncss cssnano postcss-import autoprefixer
+// jshint uncss gulp gulp-jshint gulp-imagemin gulp-sass gulp-concat gulp-uglify gulp-webserver gulp-iconfont gulp-iconfont-css gulp-iconfont-template gulp-pa11y gulp-w3c-html-validation gulp-casperjs gulp-real-favicon fs gulp-plumber gulp-util gulp-postcss postcss-uncss cssnano postcss-import autoprefixer
 
 
 // Include gulp.
@@ -21,7 +21,7 @@ const gulp                    = require('gulp');
 // Include plug-ins.
 const jshint                  = require('gulp-jshint');
 const imagemin                = require('gulp-imagemin');
-const compass                 = require('gulp-compass');
+const sass		                = require('gulp-sass');
 const concat                  = require('gulp-concat');
 const uglify                  = require('gulp-uglify');
 const webserver               = require('gulp-webserver');
@@ -182,9 +182,7 @@ gulp.task('styles', function() {
       errorHandler: onError
     }))
     // Compile the Sass code.
-		.pipe(compass({
-      sass: './src/sass'
-    }))
+		.pipe(sass().on('error', sass.logError))
 		// If there's more than one css file outputted, merge them into one.
     .pipe(concat('./styles.css'))
 		// Optimise the CSS.
@@ -224,7 +222,7 @@ gulp.task('iconFont', function(){
       fontName:       fontName,
       path:           'scss',
       targetPath:     '../src/sass/_'+fontName+'.scss',		// Relative to the path used in gulp.dest()
-      fontPath:       '../../fonts/'
+      fontPath:       'fonts/'
     }))
 		.pipe(iconfont({
       fontName:       fontName,                        		// Required.

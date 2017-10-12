@@ -1,39 +1,39 @@
 // Variables
-@import "vars";
+@import 'vars';
 
 // Mix_ins
-@import "mixins";
+@import 'mixins';
 
 // Libraries
-// @import "../../font-awesome/scss/font-awesome.scss";
-// @import "bootstrap";
+// @import '../../font-awesome/scss/font-awesome.scss';
+// @import 'bootstrap';    // if using local version with UnCSS
 
 // Our Custom font icons
-@import "govcms-icons";
+@import 'govcms-icons';
 
 // Common elements
-@import "base";
-@import "cards";
+@import 'base';
+@import 'cards';
 
 // Specifics
-@import "coas";
-@import "homepage";
-@import "support";
-@import "content";
-@import "dashboard";
+@import 'coas';
+@import 'homepage';
+@import 'support';
+@import 'content';
+@import 'dashboard';
 
 // Media Queries
-@import "responsive";
+@import 'responsive';
 
 // CSS animations
-@import "animate";
+@import 'animate';
 
 // Print
-@import "print";
+@import 'print';
 
 // and last but definitely least, IE
-@import "ie";
+@import 'ie';
 
 
 // stuff that isn't quite finalised yet
-@import "testing";
+@import 'testing';
