@@ -223,7 +223,7 @@ gulp.task('iconFont', function(){
       fontName:       fontName,
       path:           'scss',
       targetPath:     '../src/sass/_'+fontName+'.scss',		// Relative to the path used in gulp.dest()
-      fontPath:       '../../fonts/'											// Directory of font files relative to generated (S)CSS file (optional, defaults to ./).
+      fontPath:       '../fonts/'													// Directory of font files relative to generated (S)CSS file (optional, defaults to ./).
     }))
 		.pipe(iconfont({
       fontName:       fontName,                        		// Required.
