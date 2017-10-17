@@ -1,11 +1,11 @@
 @font-face {
 	font-family: "govcms-icons";
-	src: url('../../fonts/govcms-icons.eot');
-	src: url('../../fonts/govcms-icons.eot?#iefix') format('eot'),
-		url('../../fonts/govcms-icons.woff2') format('woff2'),
-		url('../../fonts/govcms-icons.woff') format('woff'),
-		url('../../fonts/govcms-icons.ttf') format('truetype'),
-		url('../../fonts/govcms-icons.svg#govcms-icons') format('svg');
+	src: url('../fonts/govcms-icons.eot');
+	src: url('../fonts/govcms-icons.eot?#iefix') format('eot'),
+		url('../fonts/govcms-icons.woff2') format('woff2'),
+		url('../fonts/govcms-icons.woff') format('woff'),
+		url('../fonts/govcms-icons.ttf') format('truetype'),
+		url('../fonts/govcms-icons.svg#govcms-icons') format('svg');
 }
 
 @mixin icon-styles {
