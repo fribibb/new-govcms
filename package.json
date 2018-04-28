@@ -4,10 +4,10 @@
   "description": "Static mockups for govcms.gov.au",
   "main": "gulpfile.js",
   "dependencies": {
-    "gulp-sass": "^3.1.0"
+    "gulp-sass": "^4.0.1"
   },
   "devDependencies": {
-    "autoprefixer": "^7.2.6",
+    "autoprefixer": "^8.3.0",
     "cssnano": "^3.10.0",
     "fs": "0.0.1-security",
     "gulp": "^3.9.1",
@@ -17,7 +17,7 @@
     "gulp-iconfont": "^9.1.0",
     "gulp-iconfont-css": "^2.1.0",
     "gulp-iconfont-template": "0.0.3",
-    "gulp-imagemin": "^3.4.0",
+    "gulp-imagemin": "^4.1.0",
     "gulp-jshint": "^2.1.0",
     "gulp-pa11y": "0.0.4",
     "gulp-plumber": "^1.2.0",
@@ -29,8 +29,8 @@
     "gulp-webserver": "^0.9.1",
     "jshint": "^2.9.5",
     "postcss-import": "^11.1.0",
-    "postcss-uncss": "^0.15.0",
-    "uncss": "^0.15.0"
+    "postcss-uncss": "^0.16.1",
+    "uncss": "^0.16.2"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
