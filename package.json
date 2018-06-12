@@ -7,14 +7,14 @@
     "gulp-sass": "^4.0.1"
   },
   "devDependencies": {
-    "autoprefixer": "^8.6.0",
+    "autoprefixer": "^8.6.2",
     "cssnano": "^3.10.0",
     "fs": "0.0.1-security",
     "gulp": "^3.9.1",
     "gulp-casperjs": "0.0.7",
     "gulp-compass": "^2.1.0",
     "gulp-concat": "^2.6.1",
-    "gulp-iconfont": "^9.1.0",
+    "gulp-iconfont": "^9.2.0",
     "gulp-iconfont-css": "^2.1.0",
     "gulp-iconfont-template": "0.0.3",
     "gulp-imagemin": "^4.1.0",
